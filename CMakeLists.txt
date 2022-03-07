@@ -13,7 +13,7 @@ set_target_properties(gpu_praktikum PROPERTIES
 
 add_executable(gpu_praktikum main.cu)
 
-set_property(TARGET gpu_praktikum PROPERTIES CUDA_SEPERABLE_COMPILATION ON)
+set_property(TARGET gpu_praktikum PROPERTY CUDA_SEPERABLE_COMPILATION ON)
 
 target_link_libraries(gpu_praktikum ${CUDA_LIBRARIES})
 target_link_libraries(gpu_praktikum ${SDL2_LIBRARY} ${SDL2_IMG_LIBRARY})
