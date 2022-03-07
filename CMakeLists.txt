@@ -8,7 +8,7 @@ find_package(CUDA 10.2 REQUIRED)
 find_package(SDL2 REQUIRED)
 find_package(SDL2_IMAGE REQUIRED)
 
-add_executable(gpu_praktikum main.cu)
+add_executable(gpu_praktikum Main.cu)
 
 set_property(TARGET gpu_praktikum PROPERTY CUDA_SEPERABLE_COMPILATION ON)
 
