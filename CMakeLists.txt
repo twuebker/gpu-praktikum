@@ -8,12 +8,16 @@ find_package(CUDA 10.2 REQUIRED)
 find_package(SDL2 REQUIRED)
 find_package(SDL2_IMAGE REQUIRED)
 
-set_target_properties(gpu_praktikum PROPERTIES
-        CUDA_SEPARABLE_COMPILATION ON)
-
 add_executable(gpu_praktikum main.cu)
 
 set_property(TARGET gpu_praktikum PROPERTY CUDA_SEPERABLE_COMPILATION ON)
+
+set_target_properties(gpu_praktikum PROPERTIES
+        CUDA_SEPARABLE_COMPILATION ON)
+
+set_property(TARGET gpu_praktikum
+        PROPERTY
+        BUILD_RPATH ${CMAKE_CUDA_IMPLICIT_LINK_DIRECTORIES})
 
 target_link_libraries(gpu_praktikum ${CUDA_LIBRARIES})
 target_link_libraries(gpu_praktikum ${SDL2_LIBRARY} ${SDL2_IMG_LIBRARY})
