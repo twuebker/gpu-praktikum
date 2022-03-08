@@ -4,14 +4,17 @@ cmake_minimum_required(VERSION 3.10)
 
 set(CMAKE_MODULE_PATH ${GPU_SOURCE_DIR}/cmake/ ${CMAKE_MODULE_PATH})
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CUDA_STANDARD 17)
+set(CMAKE_CUDA_STANDARD 10.2)
 set(CMAKE_CUDA_STANDARD_REQUIRED TRUE)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
 
 # Setup sources
 set(GPU_SOURCES
-        Main.cu
-	AsteroidsScene.cpp
+        src/Main.cpp
+	src/AsteroidsScene.cpp
         )
 
 find_package(CUDA 10.2 REQUIRED)

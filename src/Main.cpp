@@ -11,7 +11,7 @@ int main(int argc, char** argv)
 	QMainWindow mainWindow;
 	mainWindow.setWindowTitle("Hello World");
 	mainWindow.resize(320, 200);
-	auto asteroids = std::vector<Asteroid>();
+	auto asteroids = std::vector<Asteroid*>();
 	AsteroidsScene scene = AsteroidsScene(&mainWindow, asteroids);
 	mainWindow.show();
 	return QApplication::exec();

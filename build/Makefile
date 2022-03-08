@@ -150,32 +150,32 @@ AsteroidsScene.cpp.s:
 	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/AsteroidsScene.cpp.s
 .PHONY : AsteroidsScene.cpp.s
 
-Main.o: Main.cu.o
+Main.o: Main.cpp.o
 
 .PHONY : Main.o
 
 # target to build an object file
-Main.cu.o:
-	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/Main.cu.o
-.PHONY : Main.cu.o
+Main.cpp.o:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/Main.cpp.o
+.PHONY : Main.cpp.o
 
-Main.i: Main.cu.i
+Main.i: Main.cpp.i
 
 .PHONY : Main.i
 
 # target to preprocess a source file
-Main.cu.i:
-	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/Main.cu.i
-.PHONY : Main.cu.i
+Main.cpp.i:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/Main.cpp.i
+.PHONY : Main.cpp.i
 
-Main.s: Main.cu.s
+Main.s: Main.cpp.s
 
 .PHONY : Main.s
 
 # target to generate assembly for a file
-Main.cu.s:
-	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/Main.cu.s
-.PHONY : Main.cu.s
+Main.cpp.s:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/Main.cpp.s
+.PHONY : Main.cpp.s
 
 # Help Target
 help:
