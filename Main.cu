@@ -1,26 +1,21 @@
 #include <iostream>
 #include <vector>
-#include "MainWindow.h"
-
-namespace asteroids{
-
-using vec2f = std::vector<float, float>;
-
-void render(){
-
-}
+#include <QWindow>
+#include <QApplication>
+#include <QMainWindow>
+#include "AsteroidsScene.h"
 
 int main(int argc, char** argv)
 {
-	asteroids::MainWindow mw = MainWindow("asteroids", 600, 800);
+	QApplication app(argc, argv);
+	QMainWindow mainWindow;
+	mainWindow.setWindowTitle("Hello World");
+	mainWindow.resize(320, 200);
+	auto asteroids = std::vector<Asteroid>();
+	AsteroidsScene scene = AsteroidsScene(&mainWindow, asteroids);
+	mainWindow.show();
+	return QApplication::exec();
 }
 
 
-struct asteroid{
-	std::vector<float> pos;
-	float mass;
 
-};
-
-
-}
