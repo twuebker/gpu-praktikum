@@ -43,19 +43,19 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/theo/gpu-praktikum
+CMAKE_SOURCE_DIR = /home/leonard/geiles-projekt/gpu-praktikum
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/theo/gpu-praktikum/build
+CMAKE_BINARY_DIR = /home/leonard/geiles-projekt/gpu-praktikum/build
 
 # Utility rule file for GPU_autogen.
 
 # Include the progress variables for this target.
 include CMakeFiles/GPU_autogen.dir/progress.make
 
-CMakeFiles/GPU_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC, UIC and RCC for target GPU"
-	/usr/bin/cmake -E cmake_autogen /home/theo/gpu-praktikum/build/CMakeFiles/GPU_autogen.dir ""
+CMakeFiles/GPU_autogen: ../resources/ast.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC, UIC and RCC for target GPU"
+	/usr/bin/cmake -E cmake_autogen /home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU_autogen.dir ""
 
 GPU_autogen: CMakeFiles/GPU_autogen
 GPU_autogen: CMakeFiles/GPU_autogen.dir/build.make
@@ -72,6 +72,6 @@ CMakeFiles/GPU_autogen.dir/clean:
 .PHONY : CMakeFiles/GPU_autogen.dir/clean
 
 CMakeFiles/GPU_autogen.dir/depend:
-	cd /home/theo/gpu-praktikum/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/theo/gpu-praktikum /home/theo/gpu-praktikum /home/theo/gpu-praktikum/build /home/theo/gpu-praktikum/build /home/theo/gpu-praktikum/build/CMakeFiles/GPU_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/leonard/geiles-projekt/gpu-praktikum/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leonard/geiles-projekt/gpu-praktikum /home/leonard/geiles-projekt/gpu-praktikum /home/leonard/geiles-projekt/gpu-praktikum/build /home/leonard/geiles-projekt/gpu-praktikum/build /home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/GPU_autogen.dir/depend
 

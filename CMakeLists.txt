@@ -29,7 +29,7 @@ find_package(Qt5 COMPONENTS
 	Widgets
 	REQUIRED)
 
-add_executable(GPU ${GPU_SOURCES})
+add_executable(GPU ${GPU_SOURCES} res.qrc)
 
 set_property(TARGET GPU PROPERTY CUDA_SEPERABLE_COMPILATION ON)
 

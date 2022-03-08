@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o"
   "CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o"
   "CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o"
   "GPU.pdb"
   "GPU"
 )

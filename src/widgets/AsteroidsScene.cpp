@@ -1,6 +1,8 @@
 #include "AsteroidsScene.h"
 #include <QGraphicsSceneEvent>
 #include <iostream>
+#include <QtWidgets>
+
 AsteroidsScene::AsteroidsScene(std::vector<Asteroid*>& asteroids)
 	: m_asteroids(asteroids) {
 }
@@ -15,5 +17,11 @@ void AsteroidsScene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
 	asteroid->velocity.second = 0.0;
 	asteroid->acceleration.first = 0.0;
 	asteroid->acceleration.second = 0.0;
-	m_asteroids.push_back(asteroid);	
+	m_asteroids.push_back(asteroid);
+
+	QImage image(":/resources/ast.png");	
+	QPixmap pixmap = QPixmap::fromImage(image).scaled(10, 10, Qt::KeepAspectRatio);	
+	QGraphicsPixmapItem *item = new QGraphicsPixmapItem(pixmap);
+	item->setPos(clickPos);
+	addItem(item);
 }

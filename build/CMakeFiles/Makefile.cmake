@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeCUDACompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
+  "../res.qrc"
   "/usr/lib/aarch64-linux-gnu/cmake/Qt5/Qt5Config.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake"
