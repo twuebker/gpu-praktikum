@@ -65,7 +65,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=gpu_praktikum
+CMAKE_PROJECT_NAME:STATIC=GPU
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -75,6 +75,15 @@ CMAKE_READELF:FILEPATH=CMAKE_READELF-NOTFOUND
 
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip
+
+//Value Computed by CMake
+GPU_BINARY_DIR:STATIC=/Users/theo/CLionProjects/gpu-praktikum/cmake-build-debug
+
+//Value Computed by CMake
+GPU_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+GPU_SOURCE_DIR:STATIC=/Users/theo/CLionProjects/gpu-praktikum
 
 //Path to a program.
 _CUDA_NVCC_EXECUTABLE:FILEPATH=_CUDA_NVCC_EXECUTABLE-NOTFOUND

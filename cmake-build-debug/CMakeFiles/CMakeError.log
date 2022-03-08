@@ -15,3 +15,5 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 Checking whether the CUDA compiler is NVIDIA using "" did not match "nvcc: NVIDIA \(R\) Cuda compiler driver":
 Checking whether the CUDA compiler is Clang using "" did not match "(clang version)":
+Checking whether the CUDA compiler is NVIDIA using "" did not match "nvcc: NVIDIA \(R\) Cuda compiler driver":
+Checking whether the CUDA compiler is Clang using "" did not match "(clang version)":
