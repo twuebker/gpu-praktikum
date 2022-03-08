@@ -1,3 +1,6 @@
+#ifndef SRC_WIDGETS_ASTEROIDS_SCENE_H
+#define SRC_WIDGETS_ASTEROIDS_SCENE_H
+
 #include <utility> 
 #include <vector>
 #include <QtGui>
@@ -13,12 +16,11 @@ struct ast{
 class AsteroidsScene : public QGraphicsScene {
 	Q_OBJECT
 public:
-	AsteroidsScene(std::vector<Asteroid*>& asteroids) {
-        m_asteroids = asteroids;
-}
+	AsteroidsScene(std::vector<Asteroid*>& asteroids);
 	
 protected:
 	void mousePressEvent(QGraphicsSceneMouseEvent* event);
 private:
 	std::vector<Asteroid*>& m_asteroids;	
 };
+#endif

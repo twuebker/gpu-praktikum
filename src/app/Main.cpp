@@ -3,7 +3,6 @@
 #include <QWindow>
 #include <QApplication>
 #include "GuiMainWindow.h"
-#include "AsteroidsScene.h"
 
 int main(int argc, char** argv)
 {

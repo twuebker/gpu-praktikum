@@ -1,14 +1,14 @@
-#include "ui_MainWindow.h"
+#include "../ui/ui_MainWindow.h"
 #include <QtWidgets>
-#include "AsteroidsScene"
+#include "../widgets/AsteroidsScene.h"
 
 class GuiMainWindow : public QMainWindow, public Ui::MainWindow
 {
 	Q_OBJECT
 public:
 	GuiMainWindow();
-	~GuiMainWinow();
+
 private:
 	std::vector<Asteroid*> m_asteroids;
-}
+};
 

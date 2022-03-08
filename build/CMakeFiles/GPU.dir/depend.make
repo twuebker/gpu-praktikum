@@ -319,10 +319,18 @@ CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linu
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindow.h
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindowdefs.h
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
+CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QAction
+CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
+CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsScene
+CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsView
+CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHeaderView
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QLayout
+CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMainWindow
+CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMenuBar
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollerProperties
+CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStatusBar
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidget
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgets
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgetsDepends
@@ -455,9 +463,11 @@ CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linu
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidget.h
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidgetaction.h
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwizard.h
+CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: GPU_autogen/ui/ui_MainWindow.h
 
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/app/GuiMainWindow.cpp
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/app/GuiMainWindow.h
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/widgets/AsteroidsScene.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtCore/QEvent
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtCore/QList
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtCore/QMargins
@@ -771,9 +781,18 @@ CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/q
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindow.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindowdefs.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QAction
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsScene
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsView
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHeaderView
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QLayout
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMainWindow
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMenuBar
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollerProperties
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStatusBar
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidget
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgets
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgetsDepends
@@ -906,9 +925,11 @@ CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/q
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidget.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidgetaction.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwizard.h
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: GPU_autogen/ui/ui_MainWindow.h
 
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: ../src/app/GuiMainWindow.h
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: ../src/app/Main.cpp
+CMakeFiles/GPU.dir/src/app/Main.cpp.o: ../src/widgets/AsteroidsScene.h
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtCore/QEvent
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtCore/QList
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtCore/QMargins
@@ -1222,10 +1243,18 @@ CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindow.h
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindowdefs.h
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
+CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QAction
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
+CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
+CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsScene
+CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsView
+CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHeaderView
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QLayout
+CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMainWindow
+CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMenuBar
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollerProperties
+CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStatusBar
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidget
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgets
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgetsDepends
@@ -1358,6 +1387,7 @@ CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidg
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidget.h
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidgetaction.h
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwizard.h
+CMakeFiles/GPU.dir/src/app/Main.cpp.o: GPU_autogen/ui/ui_MainWindow.h
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: ../src/widgets/AsteroidsScene.cpp
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: ../src/widgets/AsteroidsScene.h

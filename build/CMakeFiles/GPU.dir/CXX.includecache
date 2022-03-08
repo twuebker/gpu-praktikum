@@ -33,12 +33,12 @@ GuiMainWindow.h
 /home/theo/gpu-praktikum/src/app/GuiMainWindow.h
 
 /home/theo/gpu-praktikum/src/app/GuiMainWindow.h
-ui_MainWindow.h
-/home/theo/gpu-praktikum/src/app/ui_MainWindow.h
+../ui/ui_MainWindow.h
+/home/theo/gpu-praktikum/src/ui/ui_MainWindow.h
 QtWidgets
 -
-AsteroidsScene
-/home/theo/gpu-praktikum/src/app/AsteroidsScene
+../widgets/AsteroidsScene.h
+/home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
 
 /home/theo/gpu-praktikum/src/app/Main.cpp
 iostream
@@ -51,13 +51,13 @@ QApplication
 -
 GuiMainWindow.h
 /home/theo/gpu-praktikum/src/app/GuiMainWindow.h
-AsteroidsScene.h
-/home/theo/gpu-praktikum/src/app/AsteroidsScene.h
 
 /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.cpp
 AsteroidsScene.h
 /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
 QGraphicsSceneEvent
+-
+iostream
 -
 
 /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
@@ -3316,9 +3316,17 @@ QtGui/qwindowdefs_win.h
 QtGui/qtguiglobal.h
 -
 
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QAction
+qaction.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qaction.h
+
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
 qapplication.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qapplication.h
+
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
+qbuttongroup.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qbuttongroup.h
 
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
 qcommonstyle.h
@@ -3332,13 +3340,33 @@ qgraphicsscene.h
 qgraphicssceneevent.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qgraphicssceneevent.h
 
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsView
+qgraphicsview.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qgraphicsview.h
+
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHeaderView
+qheaderview.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qheaderview.h
+
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QLayout
 qlayout.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qlayout.h
 
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMainWindow
+qmainwindow.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qmainwindow.h
+
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMenuBar
+qmenubar.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qmenubar.h
+
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollerProperties
 qscrollerproperties.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qscrollerproperties.h
+
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStatusBar
+qstatusbar.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qstatusbar.h
 
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidget
 qwidget.h
@@ -4762,5 +4790,27 @@ QtWidgets/qaction.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qdialog.h
+-
+
+GPU_autogen/ui/ui_MainWindow.h
+QtCore/QVariant
+-
+QtWidgets/QAction
+-
+QtWidgets/QApplication
+-
+QtWidgets/QButtonGroup
+-
+QtWidgets/QGraphicsView
+-
+QtWidgets/QHeaderView
+-
+QtWidgets/QMainWindow
+-
+QtWidgets/QMenuBar
+-
+QtWidgets/QStatusBar
+-
+QtWidgets/QWidget
 -
 

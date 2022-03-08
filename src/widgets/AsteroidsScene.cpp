@@ -1,7 +1,11 @@
 #include "AsteroidsScene.h"
 #include <QGraphicsSceneEvent>
-
+#include <iostream>
+AsteroidsScene::AsteroidsScene(std::vector<Asteroid*>& asteroids)
+	: m_asteroids(asteroids) {
+}
 void AsteroidsScene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
+	std::cout << "MOIN" << std::endl;
 	Asteroid* asteroid = new Asteroid();
 	QPointF clickPos = event->scenePos();
 	
