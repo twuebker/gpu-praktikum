@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/theo/gpu-praktikum/AsteroidsScene.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/AsteroidsScene.cpp.o"
-  "/home/theo/gpu-praktikum/Main.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/Main.cpp.o"
+  "/home/theo/gpu-praktikum/build/GPU_autogen/mocs_compilation.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o"
+  "/home/theo/gpu-praktikum/src/app/GuiMainWindow.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o"
+  "/home/theo/gpu-praktikum/src/app/Main.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/src/app/Main.cpp.o"
+  "/home/theo/gpu-praktikum/src/widgets/AsteroidsScene.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,6 +21,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "GPU_autogen/include"
   "/usr/include/aarch64-linux-gnu/qt5"
   "/usr/include/aarch64-linux-gnu/qt5/QtWidgets"
   "/usr/include/aarch64-linux-gnu/qt5/QtGui"

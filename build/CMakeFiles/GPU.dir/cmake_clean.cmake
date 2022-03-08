@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/GPU.dir/Main.cpp.o"
-  "CMakeFiles/GPU.dir/AsteroidsScene.cpp.o"
+  "GPU_autogen"
+  "CMakeFiles/GPU_autogen.dir/AutogenOldSettings.cmake"
+  "CMakeFiles/GPU.dir/src/app/Main.cpp.o"
+  "CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o"
+  "CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o"
+  "CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o"
   "GPU.pdb"
   "GPU"
 )

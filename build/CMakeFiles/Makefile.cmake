@@ -26,6 +26,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/lib/aarch64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake"
+  "/usr/share/cmake-3.10/Modules/AutogenInfo.cmake.in"
   "/usr/share/cmake-3.10/Modules/CMakeCUDAInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
@@ -60,10 +61,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "CMakeFiles/GPU_autogen.dir/AutogenInfo.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/GPU.dir/DependInfo.cmake"
+  "CMakeFiles/GPU_autogen.dir/DependInfo.cmake"
   )

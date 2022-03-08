@@ -13,12 +13,12 @@ struct ast{
 class AsteroidsScene : public QGraphicsScene {
 	Q_OBJECT
 public:
-	AsteroidsScene(QMainWindow* mainWindow, std::vector<Asteroid*> asteroids) : QGraphicsScene(0,0,mainWindow->width(), mainWindow->height(), mainWindow) {
+	AsteroidsScene(std::vector<Asteroid*>& asteroids) {
         m_asteroids = asteroids;
 }
 	
 protected:
 	void mousePressEvent(QGraphicsSceneMouseEvent* event);
 private:
-	std::vector<Asteroid*> m_asteroids;	
+	std::vector<Asteroid*>& m_asteroids;	
 };

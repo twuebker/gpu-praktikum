@@ -1,3 +1,4 @@
 /home/theo/gpu-praktikum/build/CMakeFiles/edit_cache.dir
 /home/theo/gpu-praktikum/build/CMakeFiles/rebuild_cache.dir
 /home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir
+/home/theo/gpu-praktikum/build/CMakeFiles/GPU_autogen.dir

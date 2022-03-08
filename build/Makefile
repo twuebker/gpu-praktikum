@@ -123,59 +123,126 @@ GPU/fast:
 	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/build
 .PHONY : GPU/fast
 
-AsteroidsScene.o: AsteroidsScene.cpp.o
+#=============================================================================
+# Target rules for targets named GPU_autogen
 
-.PHONY : AsteroidsScene.o
+# Build rule for target.
+GPU_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GPU_autogen
+.PHONY : GPU_autogen
 
-# target to build an object file
-AsteroidsScene.cpp.o:
-	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/AsteroidsScene.cpp.o
-.PHONY : AsteroidsScene.cpp.o
+# fast build rule for target.
+GPU_autogen/fast:
+	$(MAKE) -f CMakeFiles/GPU_autogen.dir/build.make CMakeFiles/GPU_autogen.dir/build
+.PHONY : GPU_autogen/fast
 
-AsteroidsScene.i: AsteroidsScene.cpp.i
+GPU_autogen/mocs_compilation.o: GPU_autogen/mocs_compilation.cpp.o
 
-.PHONY : AsteroidsScene.i
-
-# target to preprocess a source file
-AsteroidsScene.cpp.i:
-	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/AsteroidsScene.cpp.i
-.PHONY : AsteroidsScene.cpp.i
-
-AsteroidsScene.s: AsteroidsScene.cpp.s
-
-.PHONY : AsteroidsScene.s
-
-# target to generate assembly for a file
-AsteroidsScene.cpp.s:
-	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/AsteroidsScene.cpp.s
-.PHONY : AsteroidsScene.cpp.s
-
-Main.o: Main.cpp.o
-
-.PHONY : Main.o
+.PHONY : GPU_autogen/mocs_compilation.o
 
 # target to build an object file
-Main.cpp.o:
-	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/Main.cpp.o
-.PHONY : Main.cpp.o
+GPU_autogen/mocs_compilation.cpp.o:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o
+.PHONY : GPU_autogen/mocs_compilation.cpp.o
 
-Main.i: Main.cpp.i
+GPU_autogen/mocs_compilation.i: GPU_autogen/mocs_compilation.cpp.i
 
-.PHONY : Main.i
+.PHONY : GPU_autogen/mocs_compilation.i
 
 # target to preprocess a source file
-Main.cpp.i:
-	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/Main.cpp.i
-.PHONY : Main.cpp.i
+GPU_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.i
+.PHONY : GPU_autogen/mocs_compilation.cpp.i
 
-Main.s: Main.cpp.s
+GPU_autogen/mocs_compilation.s: GPU_autogen/mocs_compilation.cpp.s
 
-.PHONY : Main.s
+.PHONY : GPU_autogen/mocs_compilation.s
 
 # target to generate assembly for a file
-Main.cpp.s:
-	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/Main.cpp.s
-.PHONY : Main.cpp.s
+GPU_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.s
+.PHONY : GPU_autogen/mocs_compilation.cpp.s
+
+src/app/GuiMainWindow.o: src/app/GuiMainWindow.cpp.o
+
+.PHONY : src/app/GuiMainWindow.o
+
+# target to build an object file
+src/app/GuiMainWindow.cpp.o:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o
+.PHONY : src/app/GuiMainWindow.cpp.o
+
+src/app/GuiMainWindow.i: src/app/GuiMainWindow.cpp.i
+
+.PHONY : src/app/GuiMainWindow.i
+
+# target to preprocess a source file
+src/app/GuiMainWindow.cpp.i:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.i
+.PHONY : src/app/GuiMainWindow.cpp.i
+
+src/app/GuiMainWindow.s: src/app/GuiMainWindow.cpp.s
+
+.PHONY : src/app/GuiMainWindow.s
+
+# target to generate assembly for a file
+src/app/GuiMainWindow.cpp.s:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.s
+.PHONY : src/app/GuiMainWindow.cpp.s
+
+src/app/Main.o: src/app/Main.cpp.o
+
+.PHONY : src/app/Main.o
+
+# target to build an object file
+src/app/Main.cpp.o:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/app/Main.cpp.o
+.PHONY : src/app/Main.cpp.o
+
+src/app/Main.i: src/app/Main.cpp.i
+
+.PHONY : src/app/Main.i
+
+# target to preprocess a source file
+src/app/Main.cpp.i:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/app/Main.cpp.i
+.PHONY : src/app/Main.cpp.i
+
+src/app/Main.s: src/app/Main.cpp.s
+
+.PHONY : src/app/Main.s
+
+# target to generate assembly for a file
+src/app/Main.cpp.s:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/app/Main.cpp.s
+.PHONY : src/app/Main.cpp.s
+
+src/widgets/AsteroidsScene.o: src/widgets/AsteroidsScene.cpp.o
+
+.PHONY : src/widgets/AsteroidsScene.o
+
+# target to build an object file
+src/widgets/AsteroidsScene.cpp.o:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o
+.PHONY : src/widgets/AsteroidsScene.cpp.o
+
+src/widgets/AsteroidsScene.i: src/widgets/AsteroidsScene.cpp.i
+
+.PHONY : src/widgets/AsteroidsScene.i
+
+# target to preprocess a source file
+src/widgets/AsteroidsScene.cpp.i:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.i
+.PHONY : src/widgets/AsteroidsScene.cpp.i
+
+src/widgets/AsteroidsScene.s: src/widgets/AsteroidsScene.cpp.s
+
+.PHONY : src/widgets/AsteroidsScene.s
+
+# target to generate assembly for a file
+src/widgets/AsteroidsScene.cpp.s:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.s
+.PHONY : src/widgets/AsteroidsScene.cpp.s
 
 # Help Target
 help:
@@ -186,12 +253,19 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GPU"
-	@echo "... AsteroidsScene.o"
-	@echo "... AsteroidsScene.i"
-	@echo "... AsteroidsScene.s"
-	@echo "... Main.o"
-	@echo "... Main.i"
-	@echo "... Main.s"
+	@echo "... GPU_autogen"
+	@echo "... GPU_autogen/mocs_compilation.o"
+	@echo "... GPU_autogen/mocs_compilation.i"
+	@echo "... GPU_autogen/mocs_compilation.s"
+	@echo "... src/app/GuiMainWindow.o"
+	@echo "... src/app/GuiMainWindow.i"
+	@echo "... src/app/GuiMainWindow.s"
+	@echo "... src/app/Main.o"
+	@echo "... src/app/Main.i"
+	@echo "... src/app/Main.s"
+	@echo "... src/widgets/AsteroidsScene.o"
+	@echo "... src/widgets/AsteroidsScene.i"
+	@echo "... src/widgets/AsteroidsScene.s"
 .PHONY : help
 
 

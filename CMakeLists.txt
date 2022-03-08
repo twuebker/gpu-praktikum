@@ -11,10 +11,15 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
+if(CMAKE_VERSION VERSION_LESS "3.7.0")
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+endif()
+
 # Setup sources
 set(GPU_SOURCES
-        src/Main.cpp
-	src/AsteroidsScene.cpp
+        src/app/Main.cpp
+	src/widgets/AsteroidsScene.cpp
+	src/app/GuiMainWindow.cpp
         )
 
 find_package(CUDA 10.2 REQUIRED)
