@@ -4,8 +4,6 @@ cmake_minimum_required(VERSION 3.10)
 
 set(CMAKE_MODULE_PATH ${GPU_SOURCE_DIR}/cmake/ ${CMAKE_MODULE_PATH})
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CUDA_STANDARD 10.2)
-set(CMAKE_CUDA_STANDARD_REQUIRED TRUE)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -35,6 +33,7 @@ set_property(TARGET GPU PROPERTY CUDA_SEPERABLE_COMPILATION ON)
 
 set_target_properties(GPU PROPERTIES
         CUDA_SEPARABLE_COMPILATION ON)
+set_source_files_properties(src/app/Main.cpp src/app/GuiMainWindow.cpp src/widgets/AsteroidsScene.cpp src/cuda/physics.cu PROPERTIES LANGUAGE CUDA)
 
 #convert the fpic option in Qt5::Core over to INTERFACE_POSITION_INDEPENDENT_CODE
 get_property(core_options TARGET Qt5::Core PROPERTY INTERFACE_COMPILE_OPTIONS)

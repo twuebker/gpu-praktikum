@@ -28,10 +28,6 @@ ISMKEKEPX5/moc_GuiMainWindow.cpp
 RZ4CM6YYJ6/moc_AsteroidsScene.cpp
 /home/theo/gpu-praktikum/build/GPU_autogen/RZ4CM6YYJ6/moc_AsteroidsScene.cpp
 
-/home/theo/gpu-praktikum/src/app/GuiMainWindow.cpp
-GuiMainWindow.h
-/home/theo/gpu-praktikum/src/app/GuiMainWindow.h
-
 /home/theo/gpu-praktikum/src/app/GuiMainWindow.h
 ../ui/ui_MainWindow.h
 /home/theo/gpu-praktikum/src/ui/ui_MainWindow.h
@@ -39,26 +35,6 @@ QtWidgets
 -
 ../widgets/AsteroidsScene.h
 /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
-
-/home/theo/gpu-praktikum/src/app/Main.cpp
-iostream
--
-vector
--
-QWindow
--
-QApplication
--
-GuiMainWindow.h
-/home/theo/gpu-praktikum/src/app/GuiMainWindow.h
-
-/home/theo/gpu-praktikum/src/widgets/AsteroidsScene.cpp
-AsteroidsScene.h
-/home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
-QGraphicsSceneEvent
--
-iostream
--
 
 /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
 utility
@@ -3335,10 +3311,6 @@ qcommonstyle.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsScene
 qgraphicsscene.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h
-
-/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsSceneEvent
-qgraphicssceneevent.h
-/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qgraphicssceneevent.h
 
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsView
 qgraphicsview.h

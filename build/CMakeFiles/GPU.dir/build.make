@@ -59,16 +59,16 @@ include CMakeFiles/GPU.dir/flags.make
 
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: ../src/app/Main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GPU.dir/src/app/Main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/src/app/Main.cpp.o -c /home/theo/gpu-praktikum/src/app/Main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CUDA object CMakeFiles/GPU.dir/src/app/Main.cpp.o"
+	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -dc /home/theo/gpu-praktikum/src/app/Main.cpp -o CMakeFiles/GPU.dir/src/app/Main.cpp.o
 
 CMakeFiles/GPU.dir/src/app/Main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GPU.dir/src/app/Main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theo/gpu-praktikum/src/app/Main.cpp > CMakeFiles/GPU.dir/src/app/Main.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/GPU.dir/src/app/Main.cpp.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
 
 CMakeFiles/GPU.dir/src/app/Main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GPU.dir/src/app/Main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theo/gpu-praktikum/src/app/Main.cpp -o CMakeFiles/GPU.dir/src/app/Main.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/GPU.dir/src/app/Main.cpp.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/GPU.dir/src/app/Main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/GPU.dir/src/app/Main.cpp.o.provides.build: CMakeFiles/GPU.dir/src/app
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: ../src/widgets/AsteroidsScene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o -c /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CUDA object CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o"
+	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -dc /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.cpp -o CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.cpp > CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.cpp -o CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o.provides.build: CMakeFiles/G
 
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/app/GuiMainWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o -c /home/theo/gpu-praktikum/src/app/GuiMainWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CUDA object CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o"
+	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -dc /home/theo/gpu-praktikum/src/app/GuiMainWindow.cpp -o CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o
 
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theo/gpu-praktikum/src/app/GuiMainWindow.cpp > CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
 
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theo/gpu-praktikum/src/app/GuiMainWindow.cpp -o CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o.requires:
 
@@ -163,6 +163,35 @@ GPU_OBJECTS = \
 # External object files for target GPU
 GPU_EXTERNAL_OBJECTS =
 
+CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/src/app/Main.cpp.o
+CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o
+CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o
+CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o
+CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/build.make
+CMakeFiles/GPU.dir/cmake_device_link.o: /usr/local/cuda/lib64/libcudart_static.a
+CMakeFiles/GPU.dir/cmake_device_link.o: /usr/lib/aarch64-linux-gnu/librt.so
+CMakeFiles/GPU.dir/cmake_device_link.o: /usr/lib/aarch64-linux-gnu/libQt5Widgets.so.5.9.5
+CMakeFiles/GPU.dir/cmake_device_link.o: /usr/lib/aarch64-linux-gnu/libQt5Gui.so.5.9.5
+CMakeFiles/GPU.dir/cmake_device_link.o: /usr/lib/aarch64-linux-gnu/libQt5Core.so.5.9.5
+CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/dlink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CUDA device code CMakeFiles/GPU.dir/cmake_device_link.o"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GPU.dir/dlink.txt --verbose=$(VERBOSE)
+
+# Rule to build all files generated by this target.
+CMakeFiles/GPU.dir/build: CMakeFiles/GPU.dir/cmake_device_link.o
+
+.PHONY : CMakeFiles/GPU.dir/build
+
+# Object files for target GPU
+GPU_OBJECTS = \
+"CMakeFiles/GPU.dir/src/app/Main.cpp.o" \
+"CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o" \
+"CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o" \
+"CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o"
+
+# External object files for target GPU
+GPU_EXTERNAL_OBJECTS =
+
 GPU: CMakeFiles/GPU.dir/src/app/Main.cpp.o
 GPU: CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o
 GPU: CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o
@@ -173,8 +202,9 @@ GPU: /usr/lib/aarch64-linux-gnu/librt.so
 GPU: /usr/lib/aarch64-linux-gnu/libQt5Widgets.so.5.9.5
 GPU: /usr/lib/aarch64-linux-gnu/libQt5Gui.so.5.9.5
 GPU: /usr/lib/aarch64-linux-gnu/libQt5Core.so.5.9.5
+GPU: CMakeFiles/GPU.dir/cmake_device_link.o
 GPU: CMakeFiles/GPU.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable GPU"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable GPU"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GPU.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
