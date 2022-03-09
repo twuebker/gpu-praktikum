@@ -1,4 +1,5 @@
 #include "GuiMainWindow.h"
+#include "../cuda/physics.cu"
 
 GuiMainWindow::GuiMainWindow() {
 	setupUi(this);
@@ -10,4 +11,5 @@ GuiMainWindow::GuiMainWindow() {
 }
 
 void GuiMainWindow::calcPhysics() {
+    call_kernel();
 }
