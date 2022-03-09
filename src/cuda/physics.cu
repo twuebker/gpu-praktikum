@@ -51,6 +51,6 @@ float call_kernel(std::vector<Asteroid>& asteroids)
     calculate_forces<<<1, asteroids.size()>>>(d_asteroid, 0.1);  //Wollen wir hier den Pointer oder direkt einen Vector übergeben??
 
     cudaMemcpy(a, d_asteroid, size, cudaMemcpyDeviceToHost);
-	    
+    std::cout << "kernel: " << a[0].pos.first << "," << a[0].pos.second << std::endl;		    
     
 }

@@ -12,4 +12,7 @@ GuiMainWindow::GuiMainWindow() {
 
 void GuiMainWindow::calcPhysics() {
     call_kernel(m_asteroids);
+    for(Asteroid a : m_asteroids) {
+    	std::cout << a.pos.first << "," << a.pos.second << std::endl;
+    }
 }
