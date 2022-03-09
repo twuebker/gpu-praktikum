@@ -11,5 +11,5 @@ GuiMainWindow::GuiMainWindow() {
 }
 
 void GuiMainWindow::calcPhysics() {
-    call_kernel();
+    call_kernel(m_asteroids);
 }
