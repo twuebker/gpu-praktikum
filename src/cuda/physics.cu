@@ -1,11 +1,13 @@
 #include <cuda.h>
 #include <cuda_runtime.h>
+#include <vector>
+#include <AsteroidsScene.h>
 
-__global__ void mein_op_kernel(void) {
+__global__ void calc_asteroid_physics(void) {
 	
 }
 
-float call_kernel(float a, float b) {
+float call_kernel() {
 
 	mein_op_kernel<<<1, 1>>>();
 
