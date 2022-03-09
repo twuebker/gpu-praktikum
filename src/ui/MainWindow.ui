@@ -17,11 +17,14 @@
    <widget class="QGraphicsView" name="asteroidsView">
     <property name="geometry">
      <rect>
-      <x>135</x>
+      <x>75</x>
       <y>91</y>
-      <width>491</width>
-      <height>281</height>
+      <width>631</width>
+      <height>361</height>
      </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
     </property>
    </widget>
   </widget>
