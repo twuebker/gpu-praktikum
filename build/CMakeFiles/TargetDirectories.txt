@@ -1,4 +1,0 @@
-/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/rebuild_cache.dir
-/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU.dir
-/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/edit_cache.dir
-/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU_autogen.dir
