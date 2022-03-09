@@ -12,6 +12,6 @@ public:
 public slots:
 	void calcPhysics();
 private:
-	std::vector<Asteroid*> m_asteroids;
+	std::vector<Asteroid> m_asteroids;
 };
 

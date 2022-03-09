@@ -3,7 +3,7 @@
 #include <iostream>
 #include <QtWidgets>
 
-AsteroidsScene::AsteroidsScene(std::vector<Asteroid*>& asteroids)
+AsteroidsScene::AsteroidsScene(std::vector<Asteroid>& asteroids)
 	: m_asteroids(asteroids) {
 }
 void AsteroidsScene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
