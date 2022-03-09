@@ -9,7 +9,6 @@
 struct ast{
         std::pair<float, float> pos;
         std::pair<float, float> velocity;
-        std::pair<float, float> acceleration;
         float mass;
         } typedef Asteroid;
 
