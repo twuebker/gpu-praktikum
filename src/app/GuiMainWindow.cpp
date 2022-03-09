@@ -10,5 +10,4 @@ GuiMainWindow::GuiMainWindow() {
 }
 
 void GuiMainWindow::calcPhysics() {
-	std::cout << "KING SHIT" << std::endl;	
 }

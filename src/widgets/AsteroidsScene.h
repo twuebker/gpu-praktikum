@@ -16,11 +16,11 @@ struct ast{
 class AsteroidsScene : public QGraphicsScene {
 	Q_OBJECT
 public:
-	AsteroidsScene(std::vector<Asteroid*>& asteroids);
+	AsteroidsScene(std::vector<Asteroid>& asteroids);
 	
 protected:
 	void mousePressEvent(QGraphicsSceneMouseEvent* event);
 private:
-	std::vector<Asteroid*>& m_asteroids;	
+	std::vector<Asteroid>& m_asteroids;	
 };
 #endif

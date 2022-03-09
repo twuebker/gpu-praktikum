@@ -7,9 +7,11 @@ __global__ void calc_asteroid_physics(void) {
 	
 }
 
-float call_kernel() {
+float call_kernel(std::vector<Asteroid>& asteroids) {
+	Asteroid* a = asteroids.data();
+    Asteroid* dA;
+    cudaMalloc(&da, sizeof(Asteroid) * asteroids.size())
+	calc_asteroid_physics<<<1, 1>>>();
 
-	mein_op_kernel<<<1, 1>>>();
-
-	return a + b;
+	
 }
