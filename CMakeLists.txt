@@ -18,6 +18,7 @@ set(GPU_SOURCES
         src/app/Main.cpp
 	src/widgets/AsteroidsScene.cpp
 	src/app/GuiMainWindow.cpp
+	src/widgets/AsteroidPixmapItem.cpp
         )
 
 find_package(CUDA 10.2 REQUIRED)

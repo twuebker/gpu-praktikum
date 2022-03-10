@@ -47,6 +47,16 @@ vector
 /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
 thrust/device_vector.h
 -
+stdio.h
+-
+
+/home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.h
+QtWidgets
+-
+AsteroidsScene.h
+/home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
+utility
+-
 
 /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.cpp
 AsteroidsScene.h
@@ -57,6 +67,8 @@ iostream
 -
 QtWidgets
 -
+AsteroidPixmapItem.h
+/home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.h
 
 /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
 utility

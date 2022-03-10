@@ -16,10 +16,11 @@ class AsteroidsScene : public QGraphicsScene {
 	Q_OBJECT
 public:
 	AsteroidsScene(std::vector<Asteroid>& asteroids);
-	
+	void update();	
 protected:
 	void mousePressEvent(QGraphicsSceneMouseEvent* event);
 private:
 	std::vector<Asteroid>& m_asteroids;	
+	QPixmap m_pixmap;
 };
 #endif

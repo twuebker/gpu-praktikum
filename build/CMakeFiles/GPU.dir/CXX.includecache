@@ -42,6 +42,20 @@ iostream
 QTimer
 -
 
+/home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.cpp
+AsteroidPixmapItem.h
+/home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.h
+iostream
+-
+
+/home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.h
+QtWidgets
+-
+AsteroidsScene.h
+/home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
+utility
+-
+
 /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
 utility
 -

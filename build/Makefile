@@ -244,6 +244,33 @@ src/app/Main.cpp.s:
 	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/app/Main.cpp.s
 .PHONY : src/app/Main.cpp.s
 
+src/widgets/AsteroidPixmapItem.o: src/widgets/AsteroidPixmapItem.cpp.o
+
+.PHONY : src/widgets/AsteroidPixmapItem.o
+
+# target to build an object file
+src/widgets/AsteroidPixmapItem.cpp.o:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o
+.PHONY : src/widgets/AsteroidPixmapItem.cpp.o
+
+src/widgets/AsteroidPixmapItem.i: src/widgets/AsteroidPixmapItem.cpp.i
+
+.PHONY : src/widgets/AsteroidPixmapItem.i
+
+# target to preprocess a source file
+src/widgets/AsteroidPixmapItem.cpp.i:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.i
+.PHONY : src/widgets/AsteroidPixmapItem.cpp.i
+
+src/widgets/AsteroidPixmapItem.s: src/widgets/AsteroidPixmapItem.cpp.s
+
+.PHONY : src/widgets/AsteroidPixmapItem.s
+
+# target to generate assembly for a file
+src/widgets/AsteroidPixmapItem.cpp.s:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.s
+.PHONY : src/widgets/AsteroidPixmapItem.cpp.s
+
 src/widgets/AsteroidsScene.o: src/widgets/AsteroidsScene.cpp.o
 
 .PHONY : src/widgets/AsteroidsScene.o
@@ -293,6 +320,9 @@ help:
 	@echo "... src/app/Main.o"
 	@echo "... src/app/Main.i"
 	@echo "... src/app/Main.s"
+	@echo "... src/widgets/AsteroidPixmapItem.o"
+	@echo "... src/widgets/AsteroidPixmapItem.i"
+	@echo "... src/widgets/AsteroidPixmapItem.s"
 	@echo "... src/widgets/AsteroidsScene.o"
 	@echo "... src/widgets/AsteroidsScene.i"
 	@echo "... src/widgets/AsteroidsScene.s"

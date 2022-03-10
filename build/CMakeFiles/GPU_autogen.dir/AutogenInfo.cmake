@@ -7,7 +7,7 @@ set(AM_CMAKE_CURRENT_SOURCE_DIR "/home/theo/gpu-praktikum/")
 set(AM_CMAKE_CURRENT_BINARY_DIR "/home/theo/gpu-praktikum/build/")
 set(AM_CMAKE_INCLUDE_DIRECTORIES_PROJECT_BEFORE "")
 set(AM_BUILD_DIR "/home/theo/gpu-praktikum/build/GPU_autogen")
-set(AM_SOURCES "/home/theo/gpu-praktikum/src/app/GuiMainWindow.cpp;/home/theo/gpu-praktikum/src/app/Main.cpp;/home/theo/gpu-praktikum/src/widgets/AsteroidsScene.cpp")
+set(AM_SOURCES "/home/theo/gpu-praktikum/src/app/GuiMainWindow.cpp;/home/theo/gpu-praktikum/src/app/Main.cpp;/home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.cpp;/home/theo/gpu-praktikum/src/widgets/AsteroidsScene.cpp")
 set(AM_HEADERS "")
 # Qt environment
 set(AM_QT_VERSION_MAJOR "5")

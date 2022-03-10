@@ -31,6 +31,7 @@ set(CMAKE_CUDA_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/theo/gpu-praktikum/build/GPU_autogen/EWIEGA46WW/qrc_res.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o"
   "/home/theo/gpu-praktikum/build/GPU_autogen/mocs_compilation.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o"
+  "/home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
