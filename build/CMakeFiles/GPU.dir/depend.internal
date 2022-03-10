@@ -323,15 +323,19 @@ CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QAction
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsScene
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsView
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHBoxLayout
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHeaderView
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QLayout
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMainWindow
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMenuBar
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollerProperties
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStatusBar
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QTableWidget
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QVBoxLayout
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgets
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgetsDepends
@@ -786,15 +790,19 @@ CMakeFiles/GPU.dir/src/app/Main.cpp.o
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QAction
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsScene
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsView
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHBoxLayout
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHeaderView
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QLayout
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMainWindow
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMenuBar
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollerProperties
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStatusBar
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QTableWidget
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QVBoxLayout
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgets
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgetsDepends
@@ -1245,11 +1253,23 @@ CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindow.h
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindowdefs.h
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QAction
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsScene
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsSceneEvent
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsView
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHBoxLayout
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHeaderView
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QLayout
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMainWindow
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMenuBar
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollerProperties
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStatusBar
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QTableWidget
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QVBoxLayout
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgets
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgetsDepends
@@ -1382,6 +1402,7 @@ CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidget.h
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidgetaction.h
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwizard.h
+ GPU_autogen/ui/ui_MainWindow.h
 CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o
  /home/theo/gpu-praktikum/build/GPU_autogen/EWIEGA46WW/qrc_res.cpp
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o
@@ -1707,15 +1728,19 @@ CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QAction
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsScene
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsView
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHBoxLayout
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHeaderView
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QLayout
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMainWindow
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMenuBar
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollerProperties
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStatusBar
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QTableWidget
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QVBoxLayout
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgets
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgetsDepends
@@ -2166,10 +2191,22 @@ CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindow.h
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindowdefs.h
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QAction
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsScene
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsView
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHBoxLayout
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHeaderView
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QLayout
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMainWindow
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMenuBar
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollerProperties
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStatusBar
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QTableWidget
+ /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QVBoxLayout
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgets
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QtWidgetsDepends
@@ -2302,3 +2339,4 @@ CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidget.h
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidgetaction.h
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwizard.h
+ GPU_autogen/ui/ui_MainWindow.h

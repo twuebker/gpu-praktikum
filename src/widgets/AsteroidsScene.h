@@ -5,6 +5,7 @@
 #include <vector>
 #include <QtGui>
 #include <QGraphicsScene>
+#include "../ui/ui_MainWindow.h"
 
 struct ast{
         std::pair<float, float> pos;
@@ -15,12 +16,13 @@ struct ast{
 class AsteroidsScene : public QGraphicsScene {
 	Q_OBJECT
 public:
-	AsteroidsScene(std::vector<Asteroid>& asteroids);
+	AsteroidsScene(std::vector<Asteroid>& asteroids, Ui::MainWindow* mainWindow);
 	void update();	
 protected:
 	void mousePressEvent(QGraphicsSceneMouseEvent* event);
 private:
 	std::vector<Asteroid>& m_asteroids;	
 	QPixmap m_pixmap;
+	Ui::MainWindow* m_mainWindow;
 };
 #endif

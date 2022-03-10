@@ -65,6 +65,8 @@ QtGui
 -
 QGraphicsScene
 -
+../ui/ui_MainWindow.h
+/home/theo/gpu-praktikum/src/ui/ui_MainWindow.h
 
 /usr/include/aarch64-linux-gnu/qt5/QtCore/QEvent
 qcoreevent.h
@@ -3328,6 +3330,10 @@ qapplication.h
 qbuttongroup.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qbuttongroup.h
 
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox
+qcheckbox.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qcheckbox.h
+
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
 qcommonstyle.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qcommonstyle.h
@@ -3339,6 +3345,10 @@ qgraphicsscene.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsView
 qgraphicsview.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qgraphicsview.h
+
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHBoxLayout
+qboxlayout.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qboxlayout.h
 
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHeaderView
 qheaderview.h
@@ -3363,6 +3373,14 @@ qscrollerproperties.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStatusBar
 qstatusbar.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qstatusbar.h
+
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QTableWidget
+qtablewidget.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qtablewidget.h
+
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QVBoxLayout
+qboxlayout.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qboxlayout.h
 
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidget
 qwidget.h
@@ -4797,7 +4815,11 @@ QtWidgets/QApplication
 -
 QtWidgets/QButtonGroup
 -
+QtWidgets/QCheckBox
+-
 QtWidgets/QGraphicsView
+-
+QtWidgets/QHBoxLayout
 -
 QtWidgets/QHeaderView
 -
@@ -4806,6 +4828,10 @@ QtWidgets/QMainWindow
 QtWidgets/QMenuBar
 -
 QtWidgets/QStatusBar
+-
+QtWidgets/QTableWidget
+-
+QtWidgets/QVBoxLayout
 -
 QtWidgets/QWidget
 -
