@@ -47,17 +47,6 @@
             <height>270</height>
            </rect>
           </property>
-          <widget class="QWidget" name="verticalLayoutWidget">
-           <property name="geometry">
-            <rect>
-             <x>-1</x>
-             <y>-1</y>
-             <width>151</width>
-             <height>271</height>
-            </rect>
-           </property>
-           <layout class="QVBoxLayout" name="sliderLayout"/>
-          </widget>
          </widget>
         </widget>
        </item>
