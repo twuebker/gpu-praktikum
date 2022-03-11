@@ -30,17 +30,28 @@
         <enum>QLayout::SetMinimumSize</enum>
        </property>
        <item>
-        <widget class="QCheckBox" name="toggleSimulation">
-         <property name="maximumSize">
-          <size>
-           <width>150</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Toggle Simulation</string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="toggleLayout">
+         <item>
+          <widget class="QCheckBox" name="toggleSimulation">
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Toggle Simulation</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="toggleFastplace">
+           <property name="text">
+            <string>Toggle FastPlace</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton">
@@ -65,8 +76,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>332</width>
-            <height>722</height>
+            <width>335</width>
+            <height>717</height>
            </rect>
           </property>
          </widget>
