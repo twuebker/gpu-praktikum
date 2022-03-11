@@ -19,7 +19,8 @@ set(GPU_SOURCES
 	src/widgets/AsteroidsScene.cpp
 	src/app/GuiMainWindow.cpp
 	src/widgets/AsteroidPixmapItem.cpp
-        )
+	src/widgets/MassSlider.cpp
+	)
 
 find_package(CUDA 10.2 REQUIRED)
 find_package(Qt5 COMPONENTS

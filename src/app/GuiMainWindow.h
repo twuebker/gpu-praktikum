@@ -11,8 +11,11 @@ public:
 	GuiMainWindow();
 public slots:
 	void calcPhysics();
+	void toggle(int state);
+	void reset();
 private:
 	std::vector<Asteroid> m_asteroids;
 	AsteroidsScene* m_scene;
+	bool m_animate;
 };
 

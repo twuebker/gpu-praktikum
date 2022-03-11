@@ -60,7 +60,7 @@ void call_kernel(std::vector<Asteroid>& asteroids)
 
     cudaMemcpy(d_asteroid, a,size, cudaMemcpyHostToDevice);
 
-    calculate_forces<<<1, asteroids.size()>>>(d_asteroid, 1, asteroids.size());
+    calculate_forces<<<1, asteroids.size()>>>(d_asteroid, 0.1, asteroids.size());
 
     cudaMemcpy(a, d_asteroid, size, cudaMemcpyDeviceToHost);
 

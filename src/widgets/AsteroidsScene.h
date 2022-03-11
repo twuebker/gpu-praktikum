@@ -18,7 +18,10 @@ class AsteroidsScene : public QGraphicsScene {
 public:
 	AsteroidsScene(std::vector<Asteroid>& asteroids, Ui::MainWindow* mainWindow);
 	void update();	
+	void updateMass(int index, int newMass);
+
 protected:
+	void mouseMoveEvent(QGraphicsSceneMouseEvent* event);
 	void mousePressEvent(QGraphicsSceneMouseEvent* event);
 private:
 	std::vector<Asteroid>& m_asteroids;	

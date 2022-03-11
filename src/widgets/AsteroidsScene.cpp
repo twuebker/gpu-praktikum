@@ -3,11 +3,12 @@
 #include <iostream>
 #include <QtWidgets>
 #include "AsteroidPixmapItem.h"
+#include "MassSlider.h"
 
 AsteroidsScene::AsteroidsScene(std::vector<Asteroid>& asteroids, Ui::MainWindow* mainWindow)
 	: m_asteroids(asteroids), m_mainWindow(mainWindow) {
 	QImage image(":/resources/ast.png");
-        m_pixmap = QPixmap::fromImage(image).scaled(10, 10, Qt::KeepAspectRatio
+        m_pixmap = QPixmap::fromImage(image).scaled(20, 20, Qt::KeepAspectRatio
 );
 	AsteroidPixmapItem* initialItem = new AsteroidPixmapItem(-1, m_pixmap);
 	addItem(initialItem);
@@ -20,7 +21,6 @@ void AsteroidsScene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
 	
 	asteroid.pos.first = clickPos.x();
        	asteroid.pos.second = clickPos.y();
-	std::cout << "initial: " << asteroid.pos.first << "," << asteroid.pos.second << std::endl;
 	asteroid.velocity.first = 0.0;
 	asteroid.velocity.second = 0.0;
 	asteroid.mass = 10.0;
@@ -29,10 +29,33 @@ void AsteroidsScene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
 	AsteroidPixmapItem *item = new AsteroidPixmapItem(m_asteroids.size() - 1, m_pixmap);
 	item->setPos(clickPos);
 	addItem(item);
+	
+	MassSlider* slider = new MassSlider(m_mainWindow, m_asteroids.size() - 1);
+	m_mainWindow->scrollAreaWidgetContents->layout()->addWidget(slider);
+}
 
-	QSlider* slider = new QSlider(Qt::Horizontal);
-	slider->setMaximumWidth(m_mainWindow->sliderLayout->itemAt(0)->sizeHint().width());
-	m_mainWindow->sliderTable->setCellWidget(m_mainWindow->sliderTable->rowCount(),0, slider);
+void AsteroidsScene::mouseMoveEvent(QGraphicsSceneMouseEvent* event) {
+	Asteroid asteroid{};
+        QPointF clickPos = event->scenePos();
+
+        asteroid.pos.first = clickPos.x();
+        asteroid.pos.second = clickPos.y();
+        asteroid.velocity.first = 0.0;
+        asteroid.velocity.second = 0.0;
+        asteroid.mass = 10.0;
+        m_asteroids.push_back(asteroid);
+
+        AsteroidPixmapItem *item = new AsteroidPixmapItem(m_asteroids.size() - 1, m_pixmap);
+        item->setPos(clickPos);
+        addItem(item);
+
+        MassSlider* slider = new MassSlider(m_mainWindow, m_asteroids.size() - 1);
+        m_mainWindow->scrollAreaWidgetContents->layout()->addWidget(slider);
+}
+
+void AsteroidsScene::updateMass(int index, int newMass) {
+	m_asteroids[index].mass = newMass;
+	std::cout << m_asteroids[index].mass << std::endl;
 }
 
 void AsteroidsScene::update() {
