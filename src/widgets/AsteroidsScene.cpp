@@ -13,28 +13,19 @@ AsteroidsScene::AsteroidsScene(std::vector<Asteroid>& asteroids, Ui::MainWindow*
 	AsteroidPixmapItem* initialItem = new AsteroidPixmapItem(-1, m_pixmap);
 	addItem(initialItem);
 	initialItem->hide();
-
+	m_fastPlaceEnabled = false;
 }
 void AsteroidsScene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
-	Asteroid asteroid{};
-	QPointF clickPos = event->scenePos();
-	
-	asteroid.pos.first = clickPos.x();
-       	asteroid.pos.second = clickPos.y();
-	asteroid.velocity.first = 0.0;
-	asteroid.velocity.second = 0.0;
-	asteroid.mass = 10.0;
-	m_asteroids.push_back(asteroid);
-
-	AsteroidPixmapItem *item = new AsteroidPixmapItem(m_asteroids.size() - 1, m_pixmap);
-	item->setPos(clickPos);
-	addItem(item);
-	
-	MassSlider* slider = new MassSlider(m_mainWindow, m_asteroids.size() - 1);
-	m_mainWindow->scrollAreaWidgetContents->layout()->addWidget(slider);
+	addAsteroid(event);
 }
 
 void AsteroidsScene::mouseMoveEvent(QGraphicsSceneMouseEvent* event) {
+	if(m_fastPlaceEnabled) {
+		addAsteroid(event);
+	}
+}
+
+void AsteroidsScene::addAsteroid(QGraphicsSceneMouseEvent* event) {
 	Asteroid asteroid{};
         QPointF clickPos = event->scenePos();
 
@@ -56,6 +47,10 @@ void AsteroidsScene::mouseMoveEvent(QGraphicsSceneMouseEvent* event) {
 void AsteroidsScene::updateMass(int index, int newMass) {
 	m_asteroids[index].mass = newMass;
 	std::cout << m_asteroids[index].mass << std::endl;
+}
+
+void AsteroidsScene::updateFastplace(int state) {
+	m_fastPlaceEnabled = state;
 }
 
 void AsteroidsScene::update() {

@@ -34,7 +34,9 @@ public:
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *leftLayout;
+    QHBoxLayout *toggleLayout;
     QCheckBox *toggleSimulation;
+    QCheckBox *toggleFastplace;
     QPushButton *pushButton;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
@@ -58,11 +60,21 @@ public:
         leftLayout = new QVBoxLayout();
         leftLayout->setObjectName(QStringLiteral("leftLayout"));
         leftLayout->setSizeConstraint(QLayout::SetMinimumSize);
+        toggleLayout = new QHBoxLayout();
+        toggleLayout->setObjectName(QStringLiteral("toggleLayout"));
         toggleSimulation = new QCheckBox(horizontalLayoutWidget);
         toggleSimulation->setObjectName(QStringLiteral("toggleSimulation"));
         toggleSimulation->setMaximumSize(QSize(150, 16777215));
 
-        leftLayout->addWidget(toggleSimulation);
+        toggleLayout->addWidget(toggleSimulation);
+
+        toggleFastplace = new QCheckBox(horizontalLayoutWidget);
+        toggleFastplace->setObjectName(QStringLiteral("toggleFastplace"));
+
+        toggleLayout->addWidget(toggleFastplace);
+
+
+        leftLayout->addLayout(toggleLayout);
 
         pushButton = new QPushButton(horizontalLayoutWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
@@ -75,7 +87,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 332, 722));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 335, 717));
         scrollArea->setWidget(scrollAreaWidgetContents);
 
         leftLayout->addWidget(scrollArea);
@@ -113,6 +125,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
         toggleSimulation->setText(QApplication::translate("MainWindow", "Toggle Simulation", Q_NULLPTR));
+        toggleFastplace->setText(QApplication::translate("MainWindow", "Toggle FastPlace", Q_NULLPTR));
         pushButton->setText(QApplication::translate("MainWindow", "PushButton", Q_NULLPTR));
     } // retranslateUi
 

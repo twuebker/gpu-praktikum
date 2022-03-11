@@ -34,6 +34,6 @@ set(AM_UIC_SEARCH_PATHS "")
 set(AM_RCC_SOURCES "/home/theo/gpu-praktikum/res.qrc")
 set(AM_RCC_BUILDS "/home/theo/gpu-praktikum/build/GPU_autogen/EWIEGA46WW/qrc_res.cpp")
 set(AM_RCC_OPTIONS "{-name;res}")
-set(AM_RCC_INPUTS "{/home/theo/gpu-praktikum/resources/ast.png}")
+set(AM_RCC_INPUTS "{/home/theo/gpu-praktikum/resources/ast.png;/home/theo/gpu-praktikum/resources/background.jpg}")
 # Configurations options
 set(AM_CONFIG_SUFFIX_ "_")

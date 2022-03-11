@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/theo/gpu-praktikum/build
 include CMakeFiles/GPU_autogen.dir/progress.make
 
 CMakeFiles/GPU_autogen: ../resources/ast.png
+CMakeFiles/GPU_autogen: ../resources/background.jpg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC, UIC and RCC for target GPU"
 	/usr/bin/cmake -E cmake_autogen /home/theo/gpu-praktikum/build/CMakeFiles/GPU_autogen.dir ""
 

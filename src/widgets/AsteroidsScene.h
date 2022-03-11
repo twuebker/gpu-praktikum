@@ -19,6 +19,8 @@ public:
 	AsteroidsScene(std::vector<Asteroid>& asteroids, Ui::MainWindow* mainWindow);
 	void update();	
 	void updateMass(int index, int newMass);
+	void addAsteroid(QGraphicsSceneMouseEvent* event);
+	void updateFastplace(int state);
 
 protected:
 	void mouseMoveEvent(QGraphicsSceneMouseEvent* event);
@@ -27,5 +29,6 @@ private:
 	std::vector<Asteroid>& m_asteroids;	
 	QPixmap m_pixmap;
 	Ui::MainWindow* m_mainWindow;
+	bool m_fastPlaceEnabled;
 };
 #endif

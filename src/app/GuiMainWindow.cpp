@@ -12,10 +12,16 @@ GuiMainWindow::GuiMainWindow() {
 	connect(timer, &QTimer::timeout, this, &GuiMainWindow::calcPhysics);
 	connect(this->toggleSimulation, &QCheckBox::stateChanged, this, &GuiMainWindow::toggle);
 	connect(this->pushButton, &QPushButton::pressed, this, &GuiMainWindow::reset);
+	connect(this->toggleFastplace, &QCheckBox::stateChanged, this, &GuiMainWindow::toggleFastPlacing);
 	timer->start(100);
 	scrollAreaWidgetContents->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 	scrollAreaWidgetContents->setLayout(new QVBoxLayout(scrollAreaWidgetContents));
 
+	//QColor color = QColor(0,0,0,255);
+	//QBrush brush = QBrush(color);
+	QImage img = QImage(":/resources/background.jpg");
+	QPixmap pix = QPixmap::fromImage(img);
+	this->asteroidsView->setBackgroundBrush(pix);
 }
 
 void GuiMainWindow::calcPhysics() {
@@ -27,6 +33,10 @@ void GuiMainWindow::calcPhysics() {
 
 void GuiMainWindow::toggle(int state) {
 	m_animate = state;
+}
+
+void GuiMainWindow::toggleFastPlacing(int state) {
+	m_scene->updateFastplace(state);
 }
 
 void GuiMainWindow::reset() {
