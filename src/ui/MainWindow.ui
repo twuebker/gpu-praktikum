@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>741</width>
-    <height>782</height>
+    <width>917</width>
+    <height>805</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,15 +19,24 @@
      <rect>
       <x>159</x>
       <y>200</y>
-      <width>431</width>
-      <height>301</height>
+      <width>646</width>
+      <height>281</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <layout class="QVBoxLayout" name="leftLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMinimumSize</enum>
+       </property>
        <item>
         <widget class="QCheckBox" name="toggleSimulation">
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="text">
           <string>Toggle Simulation</string>
          </property>
@@ -35,6 +44,12 @@
        </item>
        <item>
         <widget class="QScrollArea" name="scrollArea">
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="widgetResizable">
           <bool>true</bool>
          </property>
@@ -43,8 +58,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>150</width>
-            <height>270</height>
+            <width>121</width>
+            <height>250</height>
            </rect>
           </property>
          </widget>
@@ -54,6 +69,18 @@
      </item>
      <item>
       <widget class="QGraphicsView" name="asteroidsView">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>500</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
        </property>
@@ -67,7 +94,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>741</width>
+     <width>917</width>
      <height>37</height>
     </rect>
    </property>
