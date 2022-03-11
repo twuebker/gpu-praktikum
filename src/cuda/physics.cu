@@ -1,3 +1,4 @@
+#define EPS (10)
 #include <cuda.h>
 #include <cuda_runtime.h>
 #include <vector>
@@ -20,9 +21,12 @@ void __global__ calculate_forces(Asteroid* d_a, float dt, int size) 	//DelteTime
 		float2 distance_dir = {ast->pos.first - other.pos.first, ast->pos.second - other.pos.second};
 		float distance = sqrt(distance_dir.x * distance_dir.x + distance_dir.y * distance_dir.y); //Pythagoras r = sqrt(x² + y²)
 		
-		float acceleration = -1.0 * BIG_G * other.mass / (distance * distance);
+		// Bei Distanz gegen 0 geht Kraft gegen unendlich
+		// -> Kraft begrenzen durch Softening Faktor EPS
+		float soften_dist = sqrt(distance * distance + EPS * EPS);
+		float acceleration = -1.0 * BIG_G * other.mass / (soften_dist * soften_dist);
 	       	
-		float2 distance_dir_unit = {distance_dir.x / distance, distance_dir.y / distance}; //Distance Vector normalisiert (durch Länge geteilt)
+		float2 distance_dir_unit = {distance_dir.x / soften_dist, distance_dir.y / soften_dist}; //Distance Vector normalisiert (durch Länge geteilt)
 
 		acc.x += acceleration * distance_dir_unit.x;
 		acc.y += acceleration * distance_dir_unit.y;	
