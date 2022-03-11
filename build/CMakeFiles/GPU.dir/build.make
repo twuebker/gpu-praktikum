@@ -153,9 +153,33 @@ CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o.provides: CMakeFiles/GPU
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o.provides.build: CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o
 
 
+CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: CMakeFiles/GPU.dir/flags.make
+CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: ../src/widgets/MassSlider.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o -c /home/theo/gpu-praktikum/src/widgets/MassSlider.cpp
+
+CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theo/gpu-praktikum/src/widgets/MassSlider.cpp > CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.i
+
+CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theo/gpu-praktikum/src/widgets/MassSlider.cpp -o CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.s
+
+CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o.requires:
+
+.PHONY : CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o.requires
+
+CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o.provides: CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o.requires
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o.provides.build
+.PHONY : CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o.provides
+
+CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o.provides.build: CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o
+
+
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: GPU_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o -c /home/theo/gpu-praktikum/build/GPU_autogen/mocs_compilation.cpp
 
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.i: cmake_force
@@ -179,7 +203,7 @@ CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o: GPU_autogen/EWIEGA46WW/qrc_res.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o -c /home/theo/gpu-praktikum/build/GPU_autogen/EWIEGA46WW/qrc_res.cpp
 
 CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.i: cmake_force
@@ -207,6 +231,7 @@ GPU_OBJECTS = \
 "CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o" \
 "CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o" \
 "CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o" \
+"CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o" \
 "CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o"
 
@@ -217,6 +242,7 @@ CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/src/app/Main.cpp.o
 CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o
 CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o
 CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o
+CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o
 CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o
 CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o
 CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/build.make
@@ -226,7 +252,7 @@ CMakeFiles/GPU.dir/cmake_device_link.o: /usr/lib/aarch64-linux-gnu/libQt5Widgets
 CMakeFiles/GPU.dir/cmake_device_link.o: /usr/lib/aarch64-linux-gnu/libQt5Gui.so.5.9.5
 CMakeFiles/GPU.dir/cmake_device_link.o: /usr/lib/aarch64-linux-gnu/libQt5Core.so.5.9.5
 CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/dlink.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CUDA device code CMakeFiles/GPU.dir/cmake_device_link.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CUDA device code CMakeFiles/GPU.dir/cmake_device_link.o"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GPU.dir/dlink.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -240,6 +266,7 @@ GPU_OBJECTS = \
 "CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o" \
 "CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o" \
 "CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o" \
+"CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o" \
 "CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o"
 
@@ -250,6 +277,7 @@ GPU: CMakeFiles/GPU.dir/src/app/Main.cpp.o
 GPU: CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o
 GPU: CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o
 GPU: CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o
+GPU: CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o
 GPU: CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o
 GPU: CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o
 GPU: CMakeFiles/GPU.dir/build.make
@@ -260,7 +288,7 @@ GPU: /usr/lib/aarch64-linux-gnu/libQt5Gui.so.5.9.5
 GPU: /usr/lib/aarch64-linux-gnu/libQt5Core.so.5.9.5
 GPU: CMakeFiles/GPU.dir/cmake_device_link.o
 GPU: CMakeFiles/GPU.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable GPU"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable GPU"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GPU.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -272,6 +300,7 @@ CMakeFiles/GPU.dir/requires: CMakeFiles/GPU.dir/src/app/Main.cpp.o.requires
 CMakeFiles/GPU.dir/requires: CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o.requires
 CMakeFiles/GPU.dir/requires: CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o.requires
 CMakeFiles/GPU.dir/requires: CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o.requires
+CMakeFiles/GPU.dir/requires: CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o.requires
 CMakeFiles/GPU.dir/requires: CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o.requires
 CMakeFiles/GPU.dir/requires: CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o.requires
 

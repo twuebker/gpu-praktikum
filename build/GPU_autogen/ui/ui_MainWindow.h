@@ -19,8 +19,9 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -32,9 +33,11 @@ public:
     QWidget *centralwidget;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
-    QVBoxLayout *sliderLayout;
+    QVBoxLayout *leftLayout;
     QCheckBox *toggleSimulation;
-    QTableWidget *sliderTable;
+    QPushButton *pushButton;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidgetContents;
     QGraphicsView *asteroidsView;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -43,33 +46,51 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(741, 782);
+        MainWindow->resize(1408, 844);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         horizontalLayoutWidget = new QWidget(centralwidget);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(159, 200, 431, 301));
+        horizontalLayoutWidget->setGeometry(QRect(-3, 0, 1411, 791));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        sliderLayout = new QVBoxLayout();
-        sliderLayout->setObjectName(QStringLiteral("sliderLayout"));
+        leftLayout = new QVBoxLayout();
+        leftLayout->setObjectName(QStringLiteral("leftLayout"));
+        leftLayout->setSizeConstraint(QLayout::SetMinimumSize);
         toggleSimulation = new QCheckBox(horizontalLayoutWidget);
         toggleSimulation->setObjectName(QStringLiteral("toggleSimulation"));
+        toggleSimulation->setMaximumSize(QSize(150, 16777215));
 
-        sliderLayout->addWidget(toggleSimulation);
+        leftLayout->addWidget(toggleSimulation);
 
-        sliderTable = new QTableWidget(horizontalLayoutWidget);
-        sliderTable->setObjectName(QStringLiteral("sliderTable"));
-        sliderTable->setMaximumSize(QSize(150, 16777215));
+        pushButton = new QPushButton(horizontalLayoutWidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
 
-        sliderLayout->addWidget(sliderTable);
+        leftLayout->addWidget(pushButton);
+
+        scrollArea = new QScrollArea(horizontalLayoutWidget);
+        scrollArea->setObjectName(QStringLiteral("scrollArea"));
+        scrollArea->setMaximumSize(QSize(350, 16777215));
+        scrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 332, 722));
+        scrollArea->setWidget(scrollAreaWidgetContents);
+
+        leftLayout->addWidget(scrollArea);
 
 
-        horizontalLayout->addLayout(sliderLayout);
+        horizontalLayout->addLayout(leftLayout);
 
         asteroidsView = new QGraphicsView(horizontalLayoutWidget);
         asteroidsView->setObjectName(QStringLiteral("asteroidsView"));
+        QSizePolicy sizePolicy(QSizePolicy::Maximum, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(asteroidsView->sizePolicy().hasHeightForWidth());
+        asteroidsView->setSizePolicy(sizePolicy);
+        asteroidsView->setMinimumSize(QSize(1050, 0));
         asteroidsView->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
 
         horizontalLayout->addWidget(asteroidsView);
@@ -77,7 +98,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 741, 37));
+        menubar->setGeometry(QRect(0, 0, 1408, 37));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -92,6 +113,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
         toggleSimulation->setText(QApplication::translate("MainWindow", "Toggle Simulation", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("MainWindow", "PushButton", Q_NULLPTR));
     } // retranslateUi
 
 };

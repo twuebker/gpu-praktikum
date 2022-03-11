@@ -69,6 +69,8 @@ QtWidgets
 -
 AsteroidPixmapItem.h
 /home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.h
+MassSlider.h
+/home/theo/gpu-praktikum/src/widgets/MassSlider.h
 
 /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
 utility
@@ -81,6 +83,12 @@ QGraphicsScene
 -
 ../ui/ui_MainWindow.h
 /home/theo/gpu-praktikum/src/ui/ui_MainWindow.h
+
+/home/theo/gpu-praktikum/src/widgets/MassSlider.h
+AsteroidsScene.h
+/home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
+QtWidgets
+-
 
 /usr/include/aarch64-linux-gnu/qt5/QtCore/QEvent
 qcoreevent.h
@@ -3384,6 +3392,14 @@ qmainwindow.h
 qmenubar.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qmenubar.h
 
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QPushButton
+qpushbutton.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qpushbutton.h
+
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollArea
+qscrollarea.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qscrollarea.h
+
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollerProperties
 qscrollerproperties.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qscrollerproperties.h
@@ -3391,10 +3407,6 @@ qscrollerproperties.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStatusBar
 qstatusbar.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qstatusbar.h
-
-/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QTableWidget
-qtablewidget.h
-/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qtablewidget.h
 
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QVBoxLayout
 qboxlayout.h
@@ -4845,9 +4857,11 @@ QtWidgets/QMainWindow
 -
 QtWidgets/QMenuBar
 -
-QtWidgets/QStatusBar
+QtWidgets/QPushButton
 -
-QtWidgets/QTableWidget
+QtWidgets/QScrollArea
+-
+QtWidgets/QStatusBar
 -
 QtWidgets/QVBoxLayout
 -

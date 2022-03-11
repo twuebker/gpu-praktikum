@@ -298,6 +298,33 @@ src/widgets/AsteroidsScene.cpp.s:
 	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.s
 .PHONY : src/widgets/AsteroidsScene.cpp.s
 
+src/widgets/MassSlider.o: src/widgets/MassSlider.cpp.o
+
+.PHONY : src/widgets/MassSlider.o
+
+# target to build an object file
+src/widgets/MassSlider.cpp.o:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o
+.PHONY : src/widgets/MassSlider.cpp.o
+
+src/widgets/MassSlider.i: src/widgets/MassSlider.cpp.i
+
+.PHONY : src/widgets/MassSlider.i
+
+# target to preprocess a source file
+src/widgets/MassSlider.cpp.i:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.i
+.PHONY : src/widgets/MassSlider.cpp.i
+
+src/widgets/MassSlider.s: src/widgets/MassSlider.cpp.s
+
+.PHONY : src/widgets/MassSlider.s
+
+# target to generate assembly for a file
+src/widgets/MassSlider.cpp.s:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.s
+.PHONY : src/widgets/MassSlider.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -326,6 +353,9 @@ help:
 	@echo "... src/widgets/AsteroidsScene.o"
 	@echo "... src/widgets/AsteroidsScene.i"
 	@echo "... src/widgets/AsteroidsScene.s"
+	@echo "... src/widgets/MassSlider.o"
+	@echo "... src/widgets/MassSlider.i"
+	@echo "... src/widgets/MassSlider.s"
 .PHONY : help
 
 
