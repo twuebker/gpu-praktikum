@@ -5,6 +5,7 @@
 #include <vector>
 #include <QtGui>
 #include <QGraphicsScene>
+#include "../app/CreateForceFieldDialog.h"
 #include "../ui/ui_MainWindow.h"
 
 struct ast{
