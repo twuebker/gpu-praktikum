@@ -38,7 +38,7 @@
      <x>190</x>
      <y>120</y>
      <width>178</width>
-     <height>111</height>
+     <height>121</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -61,10 +61,10 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QSpinBox" name="height"/>
+       <widget class="QSpinBox" name="widthBox"/>
       </item>
       <item>
-       <widget class="QSpinBox" name="spinBox_2"/>
+       <widget class="QSpinBox" name="heightBiox"/>
       </item>
      </layout>
     </item>
@@ -79,6 +79,30 @@
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="selection">
+      <item>
+       <property name="text">
+        <string>UP</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DOWN</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RIGHT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>LEFT</string>
+       </property>
+      </item>
      </widget>
     </item>
    </layout>
