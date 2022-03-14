@@ -61,6 +61,13 @@
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="placeAsteroids">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QScrollArea" name="scrollArea">
          <property name="maximumSize">
           <size>
@@ -77,7 +84,7 @@
             <x>0</x>
             <y>0</y>
             <width>348</width>
-            <height>717</height>
+            <height>683</height>
            </rect>
           </property>
          </widget>
