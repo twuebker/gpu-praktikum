@@ -3380,6 +3380,10 @@ qbuttongroup.h
 qcheckbox.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qcheckbox.h
 
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QComboBox
+qcombobox.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qcombobox.h
+
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
 qcommonstyle.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qcommonstyle.h
@@ -4888,6 +4892,8 @@ QtWidgets/QAction
 QtWidgets/QApplication
 -
 QtWidgets/QButtonGroup
+-
+QtWidgets/QComboBox
 -
 QtWidgets/QDialog
 -

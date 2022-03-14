@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QHBoxLayout>
@@ -33,9 +34,10 @@ public:
     QVBoxLayout *verticalLayout;
     QLabel *label;
     QHBoxLayout *horizontalLayout;
-    QSpinBox *height;
-    QSpinBox *spinBox_2;
+    QSpinBox *widthBox;
+    QSpinBox *heightBox;
     QSlider *forceSlider;
+    QComboBox *selection;
 
     void setupUi(QDialog *ForceFieldDialog)
     {
@@ -50,7 +52,7 @@ public:
         buttonBox->setCenterButtons(true);
         verticalLayoutWidget = new QWidget(ForceFieldDialog);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(190, 120, 178, 111));
+        verticalLayoutWidget->setGeometry(QRect(190, 120, 178, 121));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -63,15 +65,15 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        height = new QSpinBox(verticalLayoutWidget);
-        height->setObjectName(QStringLiteral("height"));
+        widthBox = new QSpinBox(verticalLayoutWidget);
+        widthBox->setObjectName(QStringLiteral("widthBox"));
 
-        horizontalLayout->addWidget(height);
+        horizontalLayout->addWidget(widthBox);
 
-        spinBox_2 = new QSpinBox(verticalLayoutWidget);
-        spinBox_2->setObjectName(QStringLiteral("spinBox_2"));
+        heightBox = new QSpinBox(verticalLayoutWidget);
+        heightBox->setObjectName(QStringLiteral("heightBox"));
 
-        horizontalLayout->addWidget(spinBox_2);
+        horizontalLayout->addWidget(heightBox);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -82,6 +84,11 @@ public:
         forceSlider->setOrientation(Qt::Horizontal);
 
         verticalLayout->addWidget(forceSlider);
+
+        selection = new QComboBox(verticalLayoutWidget);
+        selection->setObjectName(QStringLiteral("selection"));
+
+        verticalLayout->addWidget(selection);
 
 
         retranslateUi(ForceFieldDialog);
@@ -95,6 +102,13 @@ public:
     {
         ForceFieldDialog->setWindowTitle(QApplication::translate("ForceFieldDialog", "Dialog", Q_NULLPTR));
         label->setText(QApplication::translate("ForceFieldDialog", "Width x Height", Q_NULLPTR));
+        selection->clear();
+        selection->insertItems(0, QStringList()
+         << QApplication::translate("ForceFieldDialog", "UP", Q_NULLPTR)
+         << QApplication::translate("ForceFieldDialog", "DOWN", Q_NULLPTR)
+         << QApplication::translate("ForceFieldDialog", "RIGHT", Q_NULLPTR)
+         << QApplication::translate("ForceFieldDialog", "LEFT", Q_NULLPTR)
+        );
     } // retranslateUi
 
 };

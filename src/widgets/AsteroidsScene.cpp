@@ -103,9 +103,9 @@ void AsteroidsScene::update() {
 
 void AsteroidsScene::fillAnimationLevels() {
 	for(int i = 1; i < 17; i++) {
-		std::string name = "W401-" + std::to_string(i) + ".png";
+		std::string name = ":/resources/W401-" + std::to_string(i) + ".png";
 		QImage image = QImage(QString::fromStdString(name));
-		QPixmap pm = QPixmap::fromImage(image);
+		QPixmap pm = QPixmap::fromImage(image).scaled(20,20,Qt::KeepAspectRatio);
 		m_animationLevels.push_back(pm);
 	}
 }

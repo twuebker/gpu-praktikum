@@ -13,11 +13,11 @@ void CreateForceFieldDialog::accept() {
 }
 
 int CreateForceFieldDialog::getWidth() {
-	return this->width->value();
+	return this->widthBox->value();
 }
 
 int CreateForceFieldDialog::getHeight() {
-	return this->height->value();
+	return this->heightBox->value();
 }
 
 int CreateForceFieldDialog::getForce() {

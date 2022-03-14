@@ -325,6 +325,7 @@ CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/q
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QComboBox
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialog
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialogButtonBox
@@ -801,6 +802,7 @@ CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidg
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox
+CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QComboBox
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialog
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialogButtonBox
@@ -1277,6 +1279,7 @@ CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: /usr/include/aarch64-linux-
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox
+CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QComboBox
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialog
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialogButtonBox
@@ -1433,7 +1436,6 @@ CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: GPU_autogen/ui/ui_MainWindo
 
 CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o: GPU_autogen/EWIEGA46WW/qrc_res.cpp
 
-CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: GPU_autogen/ISMKEKEPX5/moc_CreateForceFieldDialog.cpp
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: GPU_autogen/ISMKEKEPX5/moc_GuiMainWindow.cpp
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: GPU_autogen/RZ4CM6YYJ6/moc_AsteroidsScene.cpp
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: GPU_autogen/RZ4CM6YYJ6/moc_ForceFieldPixmapItem.cpp
@@ -1760,6 +1762,7 @@ CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linu
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox
+CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QComboBox
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialog
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialogButtonBox
@@ -2231,6 +2234,7 @@ CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: /usr/include/aarch64-li
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QAction
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
+CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QComboBox
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialog
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialogButtonBox
@@ -2698,6 +2702,7 @@ CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: /usr/include/aarch64-li
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox
+CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QComboBox
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialog
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialogButtonBox
@@ -3624,6 +3629,7 @@ CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: /usr/include/aarch64-linux-gnu/
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QButtonGroup
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox
+CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QComboBox
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCommonStyle
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialog
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialogButtonBox
