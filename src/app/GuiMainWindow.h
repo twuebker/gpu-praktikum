@@ -13,9 +13,11 @@ public slots:
 	void calcPhysics();
 	void toggle(int state);
 	void toggleFastPlacing(int state);
+	void updatePlaceAsteroids();
 	void reset();
 private:
 	std::vector<Asteroid> m_asteroids;
+	std::vector<ForceField> m_forceFields;
 	AsteroidsScene* m_scene;
 	bool m_animate;
 };

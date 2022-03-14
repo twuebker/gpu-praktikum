@@ -2,5 +2,21 @@
 <qresource>
 	<file>resources/ast.png</file>
 	<file>resources/background.jpg</file>
+	<file>resources/W401-1.png</file>
+	<file>resources/W401-2.png</file>
+	<file>resources/W401-3.png</file>
+	<file>resources/W401-4.png</file>
+	<file>resources/W401-5.png</file>
+	<file>resources/W401-6.png</file>
+	<file>resources/W401-7.png</file>
+	<file>resources/W401-8.png</file>
+	<file>resources/W401-9.png</file>
+	<file>resources/W401-10.png</file>
+	<file>resources/W401-11.png</file>
+	<file>resources/W401-12.png</file>
+	<file>resources/W401-13.png</file>
+	<file>resources/W401-14.png</file>
+	<file>resources/W401-15.png</file>
+	<file>resources/W401-16.png</file>
 </qresource>
 </RCC>

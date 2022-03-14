@@ -23,3 +23,7 @@ int CreateForceFieldDialog::getHeight() {
 int CreateForceFieldDialog::getForce() {
 	return this->forceSlider->value();
 }
+
+int CreateForceFieldDialog::getDirection() {
+	return this->selection->currentIndex();
+}

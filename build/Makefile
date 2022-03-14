@@ -190,6 +190,33 @@ GPU_autogen/mocs_compilation.cpp.s:
 	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.s
 .PHONY : GPU_autogen/mocs_compilation.cpp.s
 
+src/app/CreateForceFieldDialog.o: src/app/CreateForceFieldDialog.cpp.o
+
+.PHONY : src/app/CreateForceFieldDialog.o
+
+# target to build an object file
+src/app/CreateForceFieldDialog.cpp.o:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o
+.PHONY : src/app/CreateForceFieldDialog.cpp.o
+
+src/app/CreateForceFieldDialog.i: src/app/CreateForceFieldDialog.cpp.i
+
+.PHONY : src/app/CreateForceFieldDialog.i
+
+# target to preprocess a source file
+src/app/CreateForceFieldDialog.cpp.i:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.i
+.PHONY : src/app/CreateForceFieldDialog.cpp.i
+
+src/app/CreateForceFieldDialog.s: src/app/CreateForceFieldDialog.cpp.s
+
+.PHONY : src/app/CreateForceFieldDialog.s
+
+# target to generate assembly for a file
+src/app/CreateForceFieldDialog.cpp.s:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.s
+.PHONY : src/app/CreateForceFieldDialog.cpp.s
+
 src/app/GuiMainWindow.o: src/app/GuiMainWindow.cpp.o
 
 .PHONY : src/app/GuiMainWindow.o
@@ -298,6 +325,33 @@ src/widgets/AsteroidsScene.cpp.s:
 	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.s
 .PHONY : src/widgets/AsteroidsScene.cpp.s
 
+src/widgets/ForceFieldPixmapItem.o: src/widgets/ForceFieldPixmapItem.cpp.o
+
+.PHONY : src/widgets/ForceFieldPixmapItem.o
+
+# target to build an object file
+src/widgets/ForceFieldPixmapItem.cpp.o:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o
+.PHONY : src/widgets/ForceFieldPixmapItem.cpp.o
+
+src/widgets/ForceFieldPixmapItem.i: src/widgets/ForceFieldPixmapItem.cpp.i
+
+.PHONY : src/widgets/ForceFieldPixmapItem.i
+
+# target to preprocess a source file
+src/widgets/ForceFieldPixmapItem.cpp.i:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.i
+.PHONY : src/widgets/ForceFieldPixmapItem.cpp.i
+
+src/widgets/ForceFieldPixmapItem.s: src/widgets/ForceFieldPixmapItem.cpp.s
+
+.PHONY : src/widgets/ForceFieldPixmapItem.s
+
+# target to generate assembly for a file
+src/widgets/ForceFieldPixmapItem.cpp.s:
+	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.s
+.PHONY : src/widgets/ForceFieldPixmapItem.cpp.s
+
 src/widgets/MassSlider.o: src/widgets/MassSlider.cpp.o
 
 .PHONY : src/widgets/MassSlider.o
@@ -341,6 +395,9 @@ help:
 	@echo "... GPU_autogen/mocs_compilation.o"
 	@echo "... GPU_autogen/mocs_compilation.i"
 	@echo "... GPU_autogen/mocs_compilation.s"
+	@echo "... src/app/CreateForceFieldDialog.o"
+	@echo "... src/app/CreateForceFieldDialog.i"
+	@echo "... src/app/CreateForceFieldDialog.s"
 	@echo "... src/app/GuiMainWindow.o"
 	@echo "... src/app/GuiMainWindow.i"
 	@echo "... src/app/GuiMainWindow.s"
@@ -353,6 +410,9 @@ help:
 	@echo "... src/widgets/AsteroidsScene.o"
 	@echo "... src/widgets/AsteroidsScene.i"
 	@echo "... src/widgets/AsteroidsScene.s"
+	@echo "... src/widgets/ForceFieldPixmapItem.o"
+	@echo "... src/widgets/ForceFieldPixmapItem.i"
+	@echo "... src/widgets/ForceFieldPixmapItem.s"
 	@echo "... src/widgets/MassSlider.o"
 	@echo "... src/widgets/MassSlider.i"
 	@echo "... src/widgets/MassSlider.s"

@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/theo/gpu-praktikum/src/app/CreateForceFieldDialog.h
+QDialog
+-
+QtWidgets
+-
+../ui/ui_ForceFieldDialog.h
+/home/theo/gpu-praktikum/src/ui/ui_ForceFieldDialog.h
+
 /home/theo/gpu-praktikum/src/app/GuiMainWindow.cpp
 GuiMainWindow.h
 /home/theo/gpu-praktikum/src/app/GuiMainWindow.h
@@ -67,6 +75,8 @@ iostream
 -
 QtWidgets
 -
+string
+-
 AsteroidPixmapItem.h
 /home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.h
 MassSlider.h
@@ -81,8 +91,22 @@ QtGui
 -
 QGraphicsScene
 -
+../app/CreateForceFieldDialog.h
+/home/theo/gpu-praktikum/src/app/CreateForceFieldDialog.h
 ../ui/ui_MainWindow.h
 /home/theo/gpu-praktikum/src/ui/ui_MainWindow.h
+ForceFieldPixmapItem.h
+/home/theo/gpu-praktikum/src/widgets/ForceFieldPixmapItem.h
+
+/home/theo/gpu-praktikum/src/widgets/ForceFieldPixmapItem.h
+QtWidgets
+-
+vector
+-
+QtGui
+-
+utility
+-
 
 /home/theo/gpu-praktikum/src/widgets/MassSlider.h
 AsteroidsScene.h
@@ -3360,6 +3384,14 @@ qcheckbox.h
 qcommonstyle.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qcommonstyle.h
 
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialog
+qdialog.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qdialog.h
+
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialogButtonBox
+qdialogbuttonbox.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qdialogbuttonbox.h
+
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGraphicsScene
 qgraphicsscene.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h
@@ -3379,6 +3411,10 @@ qboxlayout.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QHeaderView
 qheaderview.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qheaderview.h
+
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QLabel
+qlabel.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qlabel.h
 
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QLayout
 qlayout.h
@@ -3403,6 +3439,14 @@ qscrollarea.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollerProperties
 qscrollerproperties.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qscrollerproperties.h
+
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QSlider
+qslider.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qslider.h
+
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QSpinBox
+qspinbox.h
+/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qspinbox.h
 
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStatusBar
 qstatusbar.h
@@ -4834,6 +4878,34 @@ QtWidgets/qaction.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qdialog.h
+-
+
+GPU_autogen/ui/ui_ForceFieldDialog.h
+QtCore/QVariant
+-
+QtWidgets/QAction
+-
+QtWidgets/QApplication
+-
+QtWidgets/QButtonGroup
+-
+QtWidgets/QDialog
+-
+QtWidgets/QDialogButtonBox
+-
+QtWidgets/QHBoxLayout
+-
+QtWidgets/QHeaderView
+-
+QtWidgets/QLabel
+-
+QtWidgets/QSlider
+-
+QtWidgets/QSpinBox
+-
+QtWidgets/QVBoxLayout
+-
+QtWidgets/QWidget
 -
 
 GPU_autogen/ui/ui_MainWindow.h

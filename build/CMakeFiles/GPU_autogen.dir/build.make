@@ -53,6 +53,22 @@ CMAKE_BINARY_DIR = /home/theo/gpu-praktikum/build
 # Include the progress variables for this target.
 include CMakeFiles/GPU_autogen.dir/progress.make
 
+CMakeFiles/GPU_autogen: ../resources/W401-1.png
+CMakeFiles/GPU_autogen: ../resources/W401-10.png
+CMakeFiles/GPU_autogen: ../resources/W401-11.png
+CMakeFiles/GPU_autogen: ../resources/W401-12.png
+CMakeFiles/GPU_autogen: ../resources/W401-13.png
+CMakeFiles/GPU_autogen: ../resources/W401-14.png
+CMakeFiles/GPU_autogen: ../resources/W401-15.png
+CMakeFiles/GPU_autogen: ../resources/W401-16.png
+CMakeFiles/GPU_autogen: ../resources/W401-2.png
+CMakeFiles/GPU_autogen: ../resources/W401-3.png
+CMakeFiles/GPU_autogen: ../resources/W401-4.png
+CMakeFiles/GPU_autogen: ../resources/W401-5.png
+CMakeFiles/GPU_autogen: ../resources/W401-6.png
+CMakeFiles/GPU_autogen: ../resources/W401-7.png
+CMakeFiles/GPU_autogen: ../resources/W401-8.png
+CMakeFiles/GPU_autogen: ../resources/W401-9.png
 CMakeFiles/GPU_autogen: ../resources/ast.png
 CMakeFiles/GPU_autogen: ../resources/background.jpg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC, UIC and RCC for target GPU"

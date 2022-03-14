@@ -6,13 +6,15 @@ GuiMainWindow::GuiMainWindow() {
 	m_animate = false;
 	this->pushButton->setText("Reset");
  	m_asteroids = std::vector<Asteroid>();
-	m_scene = new AsteroidsScene(m_asteroids, this);	
+	m_forceFields = std::vector<ForceField>();
+	m_scene = new AsteroidsScene(m_asteroids, m_forceFields, this);	
 	this->asteroidsView->setScene(m_scene);
 	auto* timer = new QTimer(this);
 	connect(timer, &QTimer::timeout, this, &GuiMainWindow::calcPhysics);
 	connect(this->toggleSimulation, &QCheckBox::stateChanged, this, &GuiMainWindow::toggle);
 	connect(this->pushButton, &QPushButton::pressed, this, &GuiMainWindow::reset);
 	connect(this->toggleFastplace, &QCheckBox::stateChanged, this, &GuiMainWindow::toggleFastPlacing);
+	connect(this->placeAsteroids, &QPushButton::pressed, this, &GuiMainWindow::updatePlaceAsteroids);
 	timer->start(100);
 	scrollAreaWidgetContents->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 	scrollAreaWidgetContents->setLayout(new QVBoxLayout(scrollAreaWidgetContents));
@@ -39,6 +41,9 @@ void GuiMainWindow::toggleFastPlacing(int state) {
 	m_scene->updateFastplace(state);
 }
 
+void GuiMainWindow::updatePlaceAsteroids() {
+	m_scene->updatePlaceAsteroids();
+}
 void GuiMainWindow::reset() {
 	m_asteroids.clear();
 	QLayoutItem* item;

@@ -38,6 +38,7 @@ public:
     QCheckBox *toggleSimulation;
     QCheckBox *toggleFastplace;
     QPushButton *pushButton;
+    QPushButton *placeAsteroids;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QGraphicsView *asteroidsView;
@@ -48,12 +49,12 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1408, 844);
+        MainWindow->resize(1448, 867);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         horizontalLayoutWidget = new QWidget(centralwidget);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(-3, 0, 1411, 791));
+        horizontalLayoutWidget->setGeometry(QRect(10, 10, 1429, 791));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -81,13 +82,18 @@ public:
 
         leftLayout->addWidget(pushButton);
 
+        placeAsteroids = new QPushButton(horizontalLayoutWidget);
+        placeAsteroids->setObjectName(QStringLiteral("placeAsteroids"));
+
+        leftLayout->addWidget(placeAsteroids);
+
         scrollArea = new QScrollArea(horizontalLayoutWidget);
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
         scrollArea->setMaximumSize(QSize(350, 16777215));
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 335, 717));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 348, 683));
         scrollArea->setWidget(scrollAreaWidgetContents);
 
         leftLayout->addWidget(scrollArea);
@@ -110,7 +116,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1408, 37));
+        menubar->setGeometry(QRect(0, 0, 1448, 37));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -127,6 +133,7 @@ public:
         toggleSimulation->setText(QApplication::translate("MainWindow", "Toggle Simulation", Q_NULLPTR));
         toggleFastplace->setText(QApplication::translate("MainWindow", "Toggle FastPlace", Q_NULLPTR));
         pushButton->setText(QApplication::translate("MainWindow", "PushButton", Q_NULLPTR));
+        placeAsteroids->setText(QApplication::translate("MainWindow", "PushButton", Q_NULLPTR));
     } // retranslateUi
 
 };
