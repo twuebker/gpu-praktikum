@@ -8,26 +8,7 @@
 #include "../app/CreateForceFieldDialog.h"
 #include "../ui/ui_MainWindow.h"
 #include "ForceFieldPixmapItem.h"
-
-enum class Direction {
-	UP,
-	DOWN,
-	RIGHT,
-	LEFT,
-};
-
-struct field{
-	std::pair<float, float> leftCorner;
-	std::pair<float, float> rightCorner;
-	float force;
-	Direction dir;
-} typedef ForceField;
-
-struct ast{
-        std::pair<float, float> pos;
-        std::pair<float, float> velocity;
-        float mass;
-        } typedef Asteroid;
+#include "../data/data.h"
 
 class AsteroidsScene : public QGraphicsScene {
 	Q_OBJECT

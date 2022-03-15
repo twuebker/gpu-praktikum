@@ -2,7 +2,6 @@
 #include <cuda.h>
 #include <cuda_runtime.h>
 #include <vector>
-#include "../widgets/AsteroidsScene.h"
 #include <thrust/device_vector.h>
 #include <stdio.h>
 

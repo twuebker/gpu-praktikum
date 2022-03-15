@@ -1,3 +1,6 @@
+#ifndef GUI_MAIN_WINDOW_H
+#define GUI_MAIN_WINDOW_H
+
 #include "../ui/ui_MainWindow.h"
 #include <QtWidgets>
 #include "../widgets/AsteroidsScene.h"
@@ -22,3 +25,5 @@ private:
 	bool m_animate;
 };
 
+
+#endif

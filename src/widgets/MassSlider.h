@@ -1,3 +1,6 @@
+#ifndef MASS_SLIDER_H
+#define MASS_SLIDER_H
+
 #include "AsteroidsScene.h"
 #include <QtWidgets>
 
@@ -11,3 +14,5 @@ private:
 	Ui::MainWindow* m_mainWindow;
 	int m_index;
 };
+
+#endif

@@ -33,11 +33,24 @@ find_package(Qt5 COMPONENTS
 
 add_executable(GPU ${GPU_SOURCES} res.qrc)
 
+set(MESS_SOURCES 
+	src/mess/Main.cpp
+	)
+
+add_executable(MESS ${MESS_SOURCES})
+
 set_property(TARGET GPU PROPERTY CUDA_SEPERABLE_COMPILATION ON)
+set_property(TARGET MESS PROPERTY CUDA_SEPERABLE_COMPILATION ON)
 
 set_target_properties(GPU PROPERTIES
         CUDA_SEPARABLE_COMPILATION ON)
 set_source_files_properties(src/app/Main.cpp src/app/GuiMainWindow.cpp src/widgets/AsteroidsScene.cpp src/cuda/physics.cu PROPERTIES LANGUAGE CUDA)
+
+set_target_properties(MESS PROPERTIES
+        CUDA_SEPARABLE_COMPILATION ON)
+set_source_files_properties(src/mess/Main.cpp PROPERTIES LANGUAGE CUDA)
+
+
 
 #convert the fpic option in Qt5::Core over to INTERFACE_POSITION_INDEPENDENT_CODE
 get_property(core_options TARGET Qt5::Core PROPERTY INTERFACE_COMPILE_OPTIONS)
@@ -50,4 +63,8 @@ target_link_libraries(GPU Qt5::Widgets
 			  Qt5::Core
 			  Qt5::Gui)
 
+target_link_libraries(MESS ${CUDA_LIBRARIES})
+target_link_libraries(MESS Qt5::Widgets
+                          Qt5::Core
+                          Qt5::Gui)
 
