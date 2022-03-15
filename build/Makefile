@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named MESS
+
+# Build rule for target.
+MESS: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MESS
+.PHONY : MESS
+
+# fast build rule for target.
+MESS/fast:
+	$(MAKE) -f CMakeFiles/MESS.dir/build.make CMakeFiles/MESS.dir/build
+.PHONY : MESS/fast
+
+#=============================================================================
 # Target rules for targets named GPU
 
 # Build rule for target.
@@ -122,6 +135,19 @@ GPU: cmake_check_build_system
 GPU/fast:
 	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/build
 .PHONY : GPU/fast
+
+#=============================================================================
+# Target rules for targets named MESS_autogen
+
+# Build rule for target.
+MESS_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MESS_autogen
+.PHONY : MESS_autogen
+
+# fast build rule for target.
+MESS_autogen/fast:
+	$(MAKE) -f CMakeFiles/MESS_autogen.dir/build.make CMakeFiles/MESS_autogen.dir/build
+.PHONY : MESS_autogen/fast
 
 #=============================================================================
 # Target rules for targets named GPU_autogen
@@ -189,6 +215,33 @@ GPU_autogen/mocs_compilation.s: GPU_autogen/mocs_compilation.cpp.s
 GPU_autogen/mocs_compilation.cpp.s:
 	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.s
 .PHONY : GPU_autogen/mocs_compilation.cpp.s
+
+MESS_autogen/mocs_compilation.o: MESS_autogen/mocs_compilation.cpp.o
+
+.PHONY : MESS_autogen/mocs_compilation.o
+
+# target to build an object file
+MESS_autogen/mocs_compilation.cpp.o:
+	$(MAKE) -f CMakeFiles/MESS.dir/build.make CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.o
+.PHONY : MESS_autogen/mocs_compilation.cpp.o
+
+MESS_autogen/mocs_compilation.i: MESS_autogen/mocs_compilation.cpp.i
+
+.PHONY : MESS_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+MESS_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles/MESS.dir/build.make CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.i
+.PHONY : MESS_autogen/mocs_compilation.cpp.i
+
+MESS_autogen/mocs_compilation.s: MESS_autogen/mocs_compilation.cpp.s
+
+.PHONY : MESS_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+MESS_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles/MESS.dir/build.make CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.s
+.PHONY : MESS_autogen/mocs_compilation.cpp.s
 
 src/app/CreateForceFieldDialog.o: src/app/CreateForceFieldDialog.cpp.o
 
@@ -270,6 +323,33 @@ src/app/Main.s: src/app/Main.cpp.s
 src/app/Main.cpp.s:
 	$(MAKE) -f CMakeFiles/GPU.dir/build.make CMakeFiles/GPU.dir/src/app/Main.cpp.s
 .PHONY : src/app/Main.cpp.s
+
+src/mess/Main.o: src/mess/Main.cpp.o
+
+.PHONY : src/mess/Main.o
+
+# target to build an object file
+src/mess/Main.cpp.o:
+	$(MAKE) -f CMakeFiles/MESS.dir/build.make CMakeFiles/MESS.dir/src/mess/Main.cpp.o
+.PHONY : src/mess/Main.cpp.o
+
+src/mess/Main.i: src/mess/Main.cpp.i
+
+.PHONY : src/mess/Main.i
+
+# target to preprocess a source file
+src/mess/Main.cpp.i:
+	$(MAKE) -f CMakeFiles/MESS.dir/build.make CMakeFiles/MESS.dir/src/mess/Main.cpp.i
+.PHONY : src/mess/Main.cpp.i
+
+src/mess/Main.s: src/mess/Main.cpp.s
+
+.PHONY : src/mess/Main.s
+
+# target to generate assembly for a file
+src/mess/Main.cpp.s:
+	$(MAKE) -f CMakeFiles/MESS.dir/build.make CMakeFiles/MESS.dir/src/mess/Main.cpp.s
+.PHONY : src/mess/Main.cpp.s
 
 src/widgets/AsteroidPixmapItem.o: src/widgets/AsteroidPixmapItem.cpp.o
 
@@ -386,8 +466,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... MESS"
 	@echo "... rebuild_cache"
 	@echo "... GPU"
+	@echo "... MESS_autogen"
 	@echo "... GPU_autogen"
 	@echo "... GPU_autogen/EWIEGA46WW/qrc_res.o"
 	@echo "... GPU_autogen/EWIEGA46WW/qrc_res.i"
@@ -395,6 +477,9 @@ help:
 	@echo "... GPU_autogen/mocs_compilation.o"
 	@echo "... GPU_autogen/mocs_compilation.i"
 	@echo "... GPU_autogen/mocs_compilation.s"
+	@echo "... MESS_autogen/mocs_compilation.o"
+	@echo "... MESS_autogen/mocs_compilation.i"
+	@echo "... MESS_autogen/mocs_compilation.s"
 	@echo "... src/app/CreateForceFieldDialog.o"
 	@echo "... src/app/CreateForceFieldDialog.i"
 	@echo "... src/app/CreateForceFieldDialog.s"
@@ -404,6 +489,9 @@ help:
 	@echo "... src/app/Main.o"
 	@echo "... src/app/Main.i"
 	@echo "... src/app/Main.s"
+	@echo "... src/mess/Main.o"
+	@echo "... src/mess/Main.i"
+	@echo "... src/mess/Main.s"
 	@echo "... src/widgets/AsteroidPixmapItem.o"
 	@echo "... src/widgets/AsteroidPixmapItem.i"
 	@echo "... src/widgets/AsteroidPixmapItem.s"

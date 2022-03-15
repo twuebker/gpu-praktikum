@@ -7,10 +7,10 @@
 
 
 enum class Direction {
-        UP,
-        DOWN,
         RIGHT,
-        LEFT,
+      	UP,
+	LEFT,
+	DOWN,
 };
 
 struct field{

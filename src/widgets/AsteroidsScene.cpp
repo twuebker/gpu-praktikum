@@ -74,7 +74,7 @@ void AsteroidsScene::addForceField(QGraphicsSceneMouseEvent* event) {
 	field.force = dialog.getForce();
 	m_forceFields.push_back(field);
 
-	ForceFieldPixmapItem* item = new ForceFieldPixmapItem(m_animationLevels);
+	ForceFieldPixmapItem* item = new ForceFieldPixmapItem(m_animationLevels, dialog.getWidth(), dialog.getHeight());
 	item->setPos(clickPos);
 	addItem(item);
 }

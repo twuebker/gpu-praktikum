@@ -1,0 +1,1 @@
+/usr/local/cuda/bin/nvcc    -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/MESS.dir/src/mess/Main.cpp.o CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.o -o CMakeFiles/MESS.dir/cmake_device_link.o  -L/usr/local/cuda/targets/aarch64-linux/lib/stubs  -L/usr/local/cuda/targets/aarch64-linux/lib 

@@ -11,12 +11,12 @@ class ForceFieldPixmapItem : public QObject, public QGraphicsPixmapItem {
 	Q_PROPERTY(int m_animationLevel READ animationLevel WRITE setAnimationLevel)
 
 public: 
-	ForceFieldPixmapItem(const std::vector<QPixmap>& animationLevels);
+	ForceFieldPixmapItem(const std::vector<QPixmap>& animationLevels, int width, int height);
 public slots:
 	void changePixmap(QVariant variant);	
 private:
 	int m_animationLevel;
-	const std::vector<QPixmap>& m_animationLevels;
+	std::vector<QPixmap> m_animationLevels;
 	int animationLevel();
 	void setAnimationLevel(int level);
 };

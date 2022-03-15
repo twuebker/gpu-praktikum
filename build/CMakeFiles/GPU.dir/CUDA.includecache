@@ -51,11 +51,15 @@ cuda_runtime.h
 -
 vector
 -
-../widgets/AsteroidsScene.h
-/home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
 thrust/device_vector.h
 -
 stdio.h
+-
+
+/home/theo/gpu-praktikum/src/data/data.h
+utility
+-
+vector
 -
 
 /home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.h
@@ -97,6 +101,8 @@ QGraphicsScene
 /home/theo/gpu-praktikum/src/ui/ui_MainWindow.h
 ForceFieldPixmapItem.h
 /home/theo/gpu-praktikum/src/widgets/ForceFieldPixmapItem.h
+../data/data.h
+/home/theo/gpu-praktikum/src/data/data.h
 
 /home/theo/gpu-praktikum/src/widgets/ForceFieldPixmapItem.h
 QtWidgets

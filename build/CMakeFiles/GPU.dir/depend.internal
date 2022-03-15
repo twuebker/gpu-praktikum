@@ -6,6 +6,7 @@ CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o
  /home/theo/gpu-praktikum/src/app/GuiMainWindow.cpp
  /home/theo/gpu-praktikum/src/app/GuiMainWindow.h
  /home/theo/gpu-praktikum/src/cuda/physics.cu
+ /home/theo/gpu-praktikum/src/data/data.h
  /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
  /home/theo/gpu-praktikum/src/widgets/ForceFieldPixmapItem.h
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QEvent
@@ -483,6 +484,7 @@ CMakeFiles/GPU.dir/src/app/Main.cpp.o
  /home/theo/gpu-praktikum/src/app/CreateForceFieldDialog.h
  /home/theo/gpu-praktikum/src/app/GuiMainWindow.h
  /home/theo/gpu-praktikum/src/app/Main.cpp
+ /home/theo/gpu-praktikum/src/data/data.h
  /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
  /home/theo/gpu-praktikum/src/widgets/ForceFieldPixmapItem.h
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QEvent
@@ -958,6 +960,7 @@ CMakeFiles/GPU.dir/src/app/Main.cpp.o
  GPU_autogen/ui/ui_MainWindow.h
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o
  /home/theo/gpu-praktikum/src/app/CreateForceFieldDialog.h
+ /home/theo/gpu-praktikum/src/data/data.h
  /home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.h
  /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.cpp
  /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
@@ -1443,6 +1446,7 @@ CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o
  /home/theo/gpu-praktikum/build/GPU_autogen/mocs_compilation.cpp
  /home/theo/gpu-praktikum/src/app/CreateForceFieldDialog.h
  /home/theo/gpu-praktikum/src/app/GuiMainWindow.h
+ /home/theo/gpu-praktikum/src/data/data.h
  /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
  /home/theo/gpu-praktikum/src/widgets/ForceFieldPixmapItem.h
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QEvent
@@ -2382,6 +2386,7 @@ CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o
  GPU_autogen/ui/ui_ForceFieldDialog.h
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o
  /home/theo/gpu-praktikum/src/app/CreateForceFieldDialog.h
+ /home/theo/gpu-praktikum/src/data/data.h
  /home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.cpp
  /home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.h
  /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
@@ -3309,6 +3314,7 @@ CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwizard.h
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o
  /home/theo/gpu-praktikum/src/app/CreateForceFieldDialog.h
+ /home/theo/gpu-praktikum/src/data/data.h
  /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.h
  /home/theo/gpu-praktikum/src/widgets/ForceFieldPixmapItem.h
  /home/theo/gpu-praktikum/src/widgets/MassSlider.cpp

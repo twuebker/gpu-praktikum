@@ -5,6 +5,7 @@ CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/app/CreateForceFieldDialo
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/app/GuiMainWindow.cpp
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/app/GuiMainWindow.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/cuda/physics.cu
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/data/data.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/widgets/AsteroidsScene.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/widgets/ForceFieldPixmapItem.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtCore/QEvent
@@ -482,6 +483,7 @@ CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: GPU_autogen/ui/ui_MainWindow.h
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: ../src/app/CreateForceFieldDialog.h
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: ../src/app/GuiMainWindow.h
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: ../src/app/Main.cpp
+CMakeFiles/GPU.dir/src/app/Main.cpp.o: ../src/data/data.h
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: ../src/widgets/AsteroidsScene.h
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: ../src/widgets/ForceFieldPixmapItem.h
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtCore/QEvent
@@ -957,6 +959,7 @@ CMakeFiles/GPU.dir/src/app/Main.cpp.o: GPU_autogen/ui/ui_ForceFieldDialog.h
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: GPU_autogen/ui/ui_MainWindow.h
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: ../src/app/CreateForceFieldDialog.h
+CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: ../src/data/data.h
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: ../src/widgets/AsteroidPixmapItem.h
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: ../src/widgets/AsteroidsScene.cpp
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: ../src/widgets/AsteroidsScene.h
@@ -1442,6 +1445,7 @@ CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: GPU_autogen/RZ4CM6YYJ6/mo
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: GPU_autogen/mocs_compilation.cpp
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: ../src/app/CreateForceFieldDialog.h
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: ../src/app/GuiMainWindow.h
+CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: ../src/data/data.h
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: ../src/widgets/AsteroidsScene.h
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: ../src/widgets/ForceFieldPixmapItem.h
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtCore/QEvent
@@ -2381,6 +2385,7 @@ CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: /usr/include/aarch64-li
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: GPU_autogen/ui/ui_ForceFieldDialog.h
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: ../src/app/CreateForceFieldDialog.h
+CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: ../src/data/data.h
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: ../src/widgets/AsteroidPixmapItem.cpp
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: ../src/widgets/AsteroidPixmapItem.h
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: ../src/widgets/AsteroidsScene.h
@@ -3308,6 +3313,7 @@ CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o: /usr/include/aarch64-
 CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwizard.h
 
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: ../src/app/CreateForceFieldDialog.h
+CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: ../src/data/data.h
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: ../src/widgets/AsteroidsScene.h
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: ../src/widgets/ForceFieldPixmapItem.h
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: ../src/widgets/MassSlider.cpp
