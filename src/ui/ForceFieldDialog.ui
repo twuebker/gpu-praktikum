@@ -85,22 +85,22 @@
      <widget class="QComboBox" name="selection">
       <item>
        <property name="text">
-        <string>UP</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>DOWN</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
         <string>RIGHT</string>
        </property>
       </item>
       <item>
        <property name="text">
+        <string>UP</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
         <string>LEFT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DOWN</string>
        </property>
       </item>
      </widget>
