@@ -113,6 +113,8 @@ QtGui
 -
 utility
 -
+../data/data.h
+/home/theo/gpu-praktikum/src/data/data.h
 
 /home/theo/gpu-praktikum/src/widgets/MassSlider.h
 AsteroidsScene.h

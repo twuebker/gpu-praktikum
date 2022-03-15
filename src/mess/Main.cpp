@@ -39,7 +39,7 @@ int main(int argc, char* argv[]){
 		if(std::string(argv[1]) == "CPU"){
 			cpu(asteroids, forceFields);
 		} else if(std::string(argv[1]) == "GPU"){
-			call_kernel(asteroids);
+			call_kernel(asteroids, forceFields);
 		}
 	}
 

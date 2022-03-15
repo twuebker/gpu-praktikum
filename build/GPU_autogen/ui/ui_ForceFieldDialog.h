@@ -104,10 +104,10 @@ public:
         label->setText(QApplication::translate("ForceFieldDialog", "Width x Height", Q_NULLPTR));
         selection->clear();
         selection->insertItems(0, QStringList()
-         << QApplication::translate("ForceFieldDialog", "UP", Q_NULLPTR)
-         << QApplication::translate("ForceFieldDialog", "DOWN", Q_NULLPTR)
          << QApplication::translate("ForceFieldDialog", "RIGHT", Q_NULLPTR)
+         << QApplication::translate("ForceFieldDialog", "UP", Q_NULLPTR)
          << QApplication::translate("ForceFieldDialog", "LEFT", Q_NULLPTR)
+         << QApplication::translate("ForceFieldDialog", "DOWN", Q_NULLPTR)
         );
     } // retranslateUi
 

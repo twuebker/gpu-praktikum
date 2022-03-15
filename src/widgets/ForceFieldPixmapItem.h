@@ -5,13 +5,14 @@
 #include <vector>
 #include <QtGui>
 #include <utility>
+#include "../data/data.h"
 
 class ForceFieldPixmapItem : public QObject, public QGraphicsPixmapItem {
 	Q_OBJECT
 	Q_PROPERTY(int m_animationLevel READ animationLevel WRITE setAnimationLevel)
 
 public: 
-	ForceFieldPixmapItem(const std::vector<QPixmap>& animationLevels, int width, int height);
+	ForceFieldPixmapItem(const std::vector<QPixmap>& animationLevels, int width, int height, Direction dir);
 public slots:
 	void changePixmap(QVariant variant);	
 private:

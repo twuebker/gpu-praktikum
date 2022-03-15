@@ -29,7 +29,7 @@ GuiMainWindow::GuiMainWindow() {
 
 void GuiMainWindow::calcPhysics() {
 	if(m_animate) {
-		call_kernel(m_asteroids);
+		call_kernel(m_asteroids, m_forceFields);
 		m_scene->update();
 	}
 }

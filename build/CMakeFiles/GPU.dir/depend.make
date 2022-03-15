@@ -2861,6 +2861,7 @@ CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: /usr/include/aarch64-li
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: GPU_autogen/ui/ui_ForceFieldDialog.h
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: GPU_autogen/ui/ui_MainWindow.h
 
+CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o: ../src/data/data.h
 CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o: ../src/widgets/ForceFieldPixmapItem.cpp
 CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o: ../src/widgets/ForceFieldPixmapItem.h
 CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtCore/QEvent

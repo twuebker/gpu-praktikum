@@ -117,6 +117,8 @@ QtGui
 -
 utility
 -
+../data/data.h
+/home/theo/gpu-praktikum/src/data/data.h
 
 /home/theo/gpu-praktikum/src/widgets/MassSlider.cpp
 MassSlider.h

@@ -5,7 +5,7 @@
 #include <thrust/device_vector.h>
 #include <stdio.h>
 
-void __global__ calculate_forces(Asteroid* d_a, float dt, int size) 	//DelteTime ist die Zeit die zwischen zwei Berechnungen vergeht. Mussen irgendwie
+void __global__ calculate_forces(Asteroid* d_a, float dt, int size, ForceField* d_f, int sizeFF) 	//DelteTime ist die Zeit die zwischen zwei Berechnungen vergeht. Mussen irgendwie
 {	
 	//in der MainLoop dafür die Zeit stoppen und hier übergeben
 	float BIG_G = 9.81; //Gravitationkonstante, aber am Ende voll abhängig wie groß unsere Zahlen so sind
@@ -30,7 +30,29 @@ void __global__ calculate_forces(Asteroid* d_a, float dt, int size) 	//DelteTime
 		acc.x += acceleration * distance_dir_unit.x;
 		acc.y += acceleration * distance_dir_unit.y;	
 	}
-
+	
+	for(int i = 0; i < sizeFF; i++) {
+		ForceField force = d_f[i];
+		if(!(ast->pos.first >= force.leftCorner.first && ast->pos.first <= force.rightCorner.first && ast->pos.second >= force.leftCorner.second && ast->pos.second <= force.rightCorner.second)) {
+			continue;
+		}
+		switch(force.dir) {
+				case Direction::UP:
+						acc.y -= force.force /  ast->mass;
+						break;
+				case Direction::DOWN:
+						acc.y += force.force / ast->mass;
+						break;
+				case Direction::LEFT:
+						acc.x -= force.force / ast->mass;
+						break;
+				case Direction::RIGHT:
+						acc.x += force.force / ast-> mass;		
+						break;
+				default:
+					break;		
+		}
+	}
 	__syncthreads(); //Synchronisiert alle Threads im Block. Können also so doch nur einen Block haben da sonst
                         //die späteren Blocke mit veränderten Daten arbeiten
 
@@ -44,24 +66,31 @@ void __global__ calculate_forces(Asteroid* d_a, float dt, int size) 	//DelteTime
 
 }	
 
-
-void call_kernel(std::vector<Asteroid>& asteroids)
+void call_kernel(std::vector<Asteroid>& asteroids, std::vector<ForceField>& forceFields)
 {
+	std::cout << "Begin" << std::endl;
 	if(asteroids.empty()) {
 		return;
 	}
     Asteroid* a = asteroids.data();
     Asteroid* d_asteroid;
-     	
+
+    ForceField* f = forceFields.data();
+    ForceField* d_forceField;
+    std::cout << "MOIN" << std::endl;
     int size = sizeof(Asteroid) * asteroids.size();
-
+	int sizeFF = sizeof(ForceField) * forceFields.size();
     cudaMalloc(&d_asteroid, size);
-
+	cudaMalloc(&d_forceField, sizeFF);
+	
     cudaMemcpy(d_asteroid, a,size, cudaMemcpyHostToDevice);
-
-    calculate_forces<<<1, asteroids.size()>>>(d_asteroid, 0.1, asteroids.size());
-
+	cudaMemcpy(d_forceField, f, sizeFF, cudaMemcpyHostToDevice);
+	std::cout << "HALLO" << std::endl;
+    calculate_forces<<<1, asteroids.size()>>>(d_asteroid, 0.1, asteroids.size(), d_forceField, forceFields.size());
+	std::cout << "ALLES GECALCT" << std::endl;
     cudaMemcpy(a, d_asteroid, size, cudaMemcpyDeviceToHost);
-
+	std::cout << "HI" << std::endl;
     cudaFree(d_asteroid);
+	cudaFree(d_forceField);
+	std::cout << "FERTIG" << std::endl;
 }

@@ -72,9 +72,10 @@ void AsteroidsScene::addForceField(QGraphicsSceneMouseEvent* event) {
 	field.rightCorner.first = clickPos.x() + dialog.getWidth();
 	field.rightCorner.second = clickPos.y() + dialog.getHeight();
 	field.force = dialog.getForce();
+	field.dir = (Direction)dialog.getDirection();
 	m_forceFields.push_back(field);
 
-	ForceFieldPixmapItem* item = new ForceFieldPixmapItem(m_animationLevels, dialog.getWidth(), dialog.getHeight());
+	ForceFieldPixmapItem* item = new ForceFieldPixmapItem(m_animationLevels, dialog.getWidth(), dialog.getHeight(), (Direction)dialog.getDirection());
 	item->setPos(clickPos);
 	addItem(item);
 }
@@ -94,7 +95,7 @@ void AsteroidsScene::updatePlaceAsteroids() {
 void AsteroidsScene::update() {
 	for(QGraphicsItem* item : this->items()) {
 		auto* ast = dynamic_cast<AsteroidPixmapItem*>(item);
-		if(ast->getIndex() == -1) {
+		if(ast == nullptr || ast->getIndex() == -1) {
 			continue;
 		}
 		ast->update(m_asteroids[ast->getIndex()]);
