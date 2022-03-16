@@ -59,7 +59,8 @@ void GuiMainWindow::updatePlaceAsteroids() {
 }
 
 void GuiMainWindow::updateAnimationSpeed() {
-	m_timer->setInterval(this->animationSpeedSlider->value());
+std::cout << this->animationSpeedSlider->value() << std::endl;	
+m_timer->setInterval(this->animationSpeedSlider->value());
 }
 void GuiMainWindow::reset() {
 	m_changed = true;
