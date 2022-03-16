@@ -21,6 +21,9 @@ public slots:
 private:
 	std::vector<Asteroid> m_asteroids;
 	std::vector<ForceField> m_forceFields;
+	Asteroid* d_asteroid;
+	ForceField* d_forceField;
+	bool m_changed;
 	AsteroidsScene* m_scene;
 	bool m_animate;
 };

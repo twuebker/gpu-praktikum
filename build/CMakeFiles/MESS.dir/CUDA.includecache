@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/theo/gpu-praktikum/src/cuda/physics.cu
+/home/theo/gpu-praktikum/src/cuda/physics_v1.cu
 cuda.h
 -
 cuda_runtime.h
@@ -41,8 +41,8 @@ chrono
 -
 ../data/data.h
 /home/theo/gpu-praktikum/src/data/data.h
-../cuda/physics.cu
-/home/theo/gpu-praktikum/src/cuda/physics.cu
+../cuda/physics_v1.cu
+/home/theo/gpu-praktikum/src/cuda/physics_v1.cu
 CPU.cpp
 /home/theo/gpu-praktikum/src/mess/CPU.cpp
 

@@ -17,8 +17,8 @@ QtWidgets
 /home/theo/gpu-praktikum/src/app/GuiMainWindow.cpp
 GuiMainWindow.h
 /home/theo/gpu-praktikum/src/app/GuiMainWindow.h
-../cuda/physics.cu
-/home/theo/gpu-praktikum/src/cuda/physics.cu
+../cuda/physics_v2.cu
+/home/theo/gpu-praktikum/src/cuda/physics_v2.cu
 
 /home/theo/gpu-praktikum/src/app/GuiMainWindow.h
 ../ui/ui_MainWindow.h
@@ -44,12 +44,14 @@ QApplication
 GuiMainWindow.h
 /home/theo/gpu-praktikum/src/app/GuiMainWindow.h
 
-/home/theo/gpu-praktikum/src/cuda/physics.cu
+/home/theo/gpu-praktikum/src/cuda/physics_v2.cu
 cuda.h
 -
 cuda_runtime.h
 -
 vector
+-
+utility
 -
 thrust/device_vector.h
 -

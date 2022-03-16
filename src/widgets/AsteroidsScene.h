@@ -20,7 +20,8 @@ public:
 	void addAsteroid(QGraphicsSceneMouseEvent* event);
 	void updateFastplace(int state);
 	void updatePlaceAsteroids();
-
+	void setChanged(bool changed);
+	bool isChanged();
 protected:
 	void mouseMoveEvent(QGraphicsSceneMouseEvent* event);
 	void mousePressEvent(QGraphicsSceneMouseEvent* event);
@@ -32,6 +33,7 @@ private:
 	Ui::MainWindow* m_mainWindow;
 	bool m_fastPlaceEnabled;
 	bool m_placeAsteroids;
+	bool m_changed;
 	void fillAnimationLevels();
 };
 #endif

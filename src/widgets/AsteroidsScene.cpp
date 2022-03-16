@@ -43,14 +43,14 @@ void AsteroidsScene::mouseMoveEvent(QGraphicsSceneMouseEvent* event) {
 void AsteroidsScene::addAsteroid(QGraphicsSceneMouseEvent* event) {
 	Asteroid asteroid{};
         QPointF clickPos = event->scenePos();
-
+	
         asteroid.pos.first = clickPos.x();
         asteroid.pos.second = clickPos.y();
         asteroid.velocity.first = 0.0;
         asteroid.velocity.second = 0.0;
         asteroid.mass = 10.0;
         m_asteroids.push_back(asteroid);
-
+	m_changed = true;
         AsteroidPixmapItem *item = new AsteroidPixmapItem(m_asteroids.size() - 1, m_pixmap);
         item->setPos(clickPos);
         addItem(item);
@@ -74,7 +74,7 @@ void AsteroidsScene::addForceField(QGraphicsSceneMouseEvent* event) {
 	field.force = dialog.getForce();
 	field.dir = (Direction)dialog.getDirection();
 	m_forceFields.push_back(field);
-
+	m_changed = true;
 	ForceFieldPixmapItem* item = new ForceFieldPixmapItem(m_animationLevels, dialog.getWidth(), dialog.getHeight(), (Direction)dialog.getDirection());
 	item->setPos(clickPos);
 	addItem(item);
@@ -82,7 +82,7 @@ void AsteroidsScene::addForceField(QGraphicsSceneMouseEvent* event) {
 
 void AsteroidsScene::updateMass(int index, int newMass) {
 	m_asteroids[index].mass = newMass;
-	std::cout << m_asteroids[index].mass << std::endl;
+	m_changed = true;
 }
 
 void AsteroidsScene::updateFastplace(int state) {
@@ -109,4 +109,12 @@ void AsteroidsScene::fillAnimationLevels() {
 		QPixmap pm = QPixmap::fromImage(image).scaled(20,20,Qt::KeepAspectRatio);
 		m_animationLevels.push_back(pm);
 	}
+}
+
+void AsteroidsScene::setChanged(bool changed) {
+	m_changed = changed;
+}
+
+bool AsteroidsScene::isChanged() {
+	return m_changed;
 }

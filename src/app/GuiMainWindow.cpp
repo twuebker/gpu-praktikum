@@ -1,7 +1,9 @@
 #include "GuiMainWindow.h"
-#include "../cuda/physics.cu"
+#include "../cuda/physics_v2.cu"
 
 GuiMainWindow::GuiMainWindow() {
+	d_asteroid = nullptr;
+	d_forceField = nullptr;
 	setupUi(this);
 	m_animate = false;
 	this->pushButton->setText("Reset");
@@ -15,7 +17,7 @@ GuiMainWindow::GuiMainWindow() {
 	connect(this->pushButton, &QPushButton::pressed, this, &GuiMainWindow::reset);
 	connect(this->toggleFastplace, &QCheckBox::stateChanged, this, &GuiMainWindow::toggleFastPlacing);
 	connect(this->placeAsteroids, &QPushButton::pressed, this, &GuiMainWindow::updatePlaceAsteroids);
-	timer->start(100);
+	timer->start(1000);
 	this->placeAsteroids->setText("Place Asteroids");
 	scrollAreaWidgetContents->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 	scrollAreaWidgetContents->setLayout(new QVBoxLayout(scrollAreaWidgetContents));
@@ -29,7 +31,16 @@ GuiMainWindow::GuiMainWindow() {
 
 void GuiMainWindow::calcPhysics() {
 	if(m_animate) {
-		call_kernel(m_asteroids, m_forceFields);
+		if(m_scene->isChanged() || m_changed) {
+			std::cout << "We changed" << std::endl;
+			freeDeviceMemory(d_asteroid, d_forceField);
+			std::pair<Asteroid*, ForceField*> resultPair = updateMemory(m_asteroids, m_forceFields);
+			d_asteroid = resultPair.first;
+			d_forceField = resultPair.second;
+			m_changed = false;
+			m_scene->setChanged(false);
+		}
+		call_kernel_v2(m_asteroids.data(), d_asteroid, d_forceField, m_asteroids.size(), m_forceFields.size());
 		m_scene->update();
 	}
 }
@@ -46,6 +57,7 @@ void GuiMainWindow::updatePlaceAsteroids() {
 	m_scene->updatePlaceAsteroids();
 }
 void GuiMainWindow::reset() {
+	m_changed = true;
 	m_asteroids.clear();
 	QLayoutItem* item;
 	while( (item = scrollAreaWidgetContents->layout()->takeAt(0)) != nullptr) {

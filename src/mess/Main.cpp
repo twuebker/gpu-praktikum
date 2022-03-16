@@ -3,7 +3,7 @@
 #include <iostream>
 #include <chrono>
 #include "../data/data.h"
-#include "../cuda/physics.cu"
+#include "../cuda/physics_v1.cu"
 #include "CPU.cpp"
 
 void print_asteroids(std::vector<Asteroid> asteroids){
@@ -39,7 +39,7 @@ int main(int argc, char* argv[]){
 		if(std::string(argv[1]) == "CPU"){
 			cpu(asteroids, forceFields);
 		} else if(std::string(argv[1]) == "GPU"){
-			call_kernel(asteroids, forceFields);
+			call_kernel_v1(asteroids, forceFields);
 		}
 	}
 

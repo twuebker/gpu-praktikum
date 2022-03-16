@@ -2,6 +2,7 @@
 #include <cuda.h>
 #include <cuda_runtime.h>
 #include <vector>
+#include <utility>
 #include <thrust/device_vector.h>
 #include <stdio.h>
 
@@ -59,38 +60,37 @@ void __global__ calculate_forces(Asteroid* d_a, float dt, int size, ForceField* 
 
 	ast->velocity.first += acc.x * dt;
 	ast->velocity.second += acc.y * dt;
-
-	//printf("wert der draufkommt: %f, %f\n", ast->velocity.first * dt, ast->velocity.second * dt);
+	
+	printf("pos: %f, %f\n", ast->pos.first, ast->pos.second);
+	printf("wert der draufkommt: %f, %f\n", ast->velocity.first * dt, ast->velocity.second * dt);
 	ast->pos.first += ast->velocity.first * dt;
 	ast->pos.second += ast->velocity.second * dt;
 
 }	
 
-void call_kernel(std::vector<Asteroid>& asteroids, std::vector<ForceField>& forceFields)
+void freeDeviceMemory(Asteroid* d_asteroid, ForceField* d_forceField) {
+	cudaFree(d_asteroid);
+	cudaFree(d_forceField);
+}
+
+std::pair<Asteroid*, ForceField*> updateMemory(std::vector<Asteroid>& asteroids, std::vector<ForceField>& forceFields) {
+	Asteroid* d_asteroid;
+	ForceField* d_forceField;
+	int size = sizeof(Asteroid) * asteroids.size();
+	int sizeFF = sizeof(ForceField) * forceFields.size();
+	cudaMalloc(&d_asteroid, size);
+	cudaMalloc(&d_forceField, sizeFF);
+	cudaMemcpy(d_asteroid, asteroids.data(), size, cudaMemcpyHostToDevice);
+	cudaMemcpy(d_forceField, forceFields.data(), sizeFF, cudaMemcpyHostToDevice);
+	return std::make_pair(d_asteroid, d_forceField);
+}
+
+void call_kernel_v2(Asteroid* a, Asteroid* d_asteroid, ForceField* d_forceField, int sizeAsteroids, int sizeForceFields)
 {
-	std::cout << "Begin" << std::endl;
-	if(asteroids.empty()) {
+	if(sizeAsteroids == 0) {
 		return;
 	}
-    Asteroid* a = asteroids.data();
-    Asteroid* d_asteroid;
-
-    ForceField* f = forceFields.data();
-    ForceField* d_forceField;
-    std::cout << "MOIN" << std::endl;
-    int size = sizeof(Asteroid) * asteroids.size();
-	int sizeFF = sizeof(ForceField) * forceFields.size();
-    cudaMalloc(&d_asteroid, size);
-	cudaMalloc(&d_forceField, sizeFF);
-	
-    cudaMemcpy(d_asteroid, a,size, cudaMemcpyHostToDevice);
-	cudaMemcpy(d_forceField, f, sizeFF, cudaMemcpyHostToDevice);
-	std::cout << "HALLO" << std::endl;
-    calculate_forces<<<1, asteroids.size()>>>(d_asteroid, 0.1, asteroids.size(), d_forceField, forceFields.size());
-	std::cout << "ALLES GECALCT" << std::endl;
-    cudaMemcpy(a, d_asteroid, size, cudaMemcpyDeviceToHost);
-	std::cout << "HI" << std::endl;
-    cudaFree(d_asteroid);
-	cudaFree(d_forceField);
-	std::cout << "FERTIG" << std::endl;
+	calculate_forces<<<1, sizeAsteroids>>>(d_asteroid, 0.1, sizeAsteroids, d_forceField, sizeForceFields);
+	cudaMemcpy(a, d_asteroid, sizeof(Asteroid) * sizeAsteroids, cudaMemcpyDeviceToHost);
+	std::cout << "Pos nach dem kernel: " << a[0].pos.first << "," << a[0].pos.second << std::endl;
 }
