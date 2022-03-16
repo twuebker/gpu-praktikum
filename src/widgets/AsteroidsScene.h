@@ -16,6 +16,7 @@ public:
 	AsteroidsScene(std::vector<Asteroid>& asteroids, std::vector<ForceField>& forceFields, Ui::MainWindow* mainWindow);
 	void update();	
 	void updateMass(int index, int newMass);
+	void updateAsteroidUi(int index, int newMass);
 	void addForceField(QGraphicsSceneMouseEvent* event);
 	void addAsteroid(QGraphicsSceneMouseEvent* event);
 	void updateFastplace(int state);

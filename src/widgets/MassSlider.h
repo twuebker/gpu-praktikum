@@ -10,6 +10,7 @@ public:
 	MassSlider(Ui::MainWindow* mainWindow, int index);
 public slots:
 	void changeMass();
+	void changeUi(int mass);
 private:
 	Ui::MainWindow* m_mainWindow;
 	int m_index;

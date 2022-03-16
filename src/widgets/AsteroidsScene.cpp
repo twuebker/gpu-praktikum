@@ -51,12 +51,15 @@ void AsteroidsScene::addAsteroid(QGraphicsSceneMouseEvent* event) {
         asteroid.mass = 10.0;
         m_asteroids.push_back(asteroid);
 	m_changed = true;
+	std::cout << "Create Item" << std::endl;
         AsteroidPixmapItem *item = new AsteroidPixmapItem(m_asteroids.size() - 1, m_pixmap);
         item->setPos(clickPos);
         addItem(item);
-
+	std::cout << "Create slider" <<std::endl;
         MassSlider* slider = new MassSlider(m_mainWindow, m_asteroids.size() - 1);
+	std::cout << "Slider created" << std::endl;
         m_mainWindow->scrollAreaWidgetContents->layout()->addWidget(slider);
+	std::cout << "Asteroid placed!" << std::endl;
 }
 
 void AsteroidsScene::addForceField(QGraphicsSceneMouseEvent* event) {
@@ -84,6 +87,16 @@ void AsteroidsScene::updateMass(int index, int newMass) {
 	m_asteroids[index].mass = newMass;
 	m_changed = true;
 }
+
+void AsteroidsScene::updateAsteroidUi(int index, int newMass) {
+	QGraphicsItem* posItem = itemAt(m_asteroids[index].pos.first, m_asteroids[index].pos.second, QTransform());
+	if(posItem == nullptr) std::cout << "Moin pos" << std::endl;
+
+        AsteroidPixmapItem *item = dynamic_cast<AsteroidPixmapItem*>(posItem );
+	if(item == nullptr) std::cout << "Moin" << std::endl;
+        item->setPixmap(m_pixmap.scaled(newMass / 1000.0 * 40.0 + 20, newMass / 1000.0 * 40.0 + 20));
+}
+
 
 void AsteroidsScene::updateFastplace(int state) {
 	m_fastPlaceEnabled = state;
