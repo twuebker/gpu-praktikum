@@ -63,7 +63,30 @@
        <item>
         <widget class="QPushButton" name="placeAsteroids">
          <property name="text">
-          <string>PushButton</string>
+          <string>Switch Placing Asteroids / ForceFields</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Animation Speed:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="animationSpeedSlider">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>1000</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
         </widget>
        </item>
@@ -84,7 +107,7 @@
             <x>0</x>
             <y>0</y>
             <width>348</width>
-            <height>683</height>
+            <height>625</height>
            </rect>
           </property>
          </widget>
