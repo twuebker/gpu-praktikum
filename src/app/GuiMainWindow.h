@@ -17,6 +17,7 @@ public slots:
 	void toggle(int state);
 	void toggleFastPlacing(int state);
 	void updatePlaceAsteroids();
+	void updateAnimationSpeed();
 	void reset();
 private:
 	std::vector<Asteroid> m_asteroids;

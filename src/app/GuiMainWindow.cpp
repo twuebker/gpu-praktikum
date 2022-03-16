@@ -11,13 +11,14 @@ GuiMainWindow::GuiMainWindow() {
 	m_forceFields = std::vector<ForceField>();
 	m_scene = new AsteroidsScene(m_asteroids, m_forceFields, this);	
 	this->asteroidsView->setScene(m_scene);
-	auto* timer = new QTimer(this);
-	connect(timer, &QTimer::timeout, this, &GuiMainWindow::calcPhysics);
+	m_timer = new QTimer(this);
+	connect(m_timer, &QTimer::timeout, this, &GuiMainWindow::calcPhysics);
 	connect(this->toggleSimulation, &QCheckBox::stateChanged, this, &GuiMainWindow::toggle);
 	connect(this->pushButton, &QPushButton::pressed, this, &GuiMainWindow::reset);
 	connect(this->toggleFastplace, &QCheckBox::stateChanged, this, &GuiMainWindow::toggleFastPlacing);
 	connect(this->placeAsteroids, &QPushButton::pressed, this, &GuiMainWindow::updatePlaceAsteroids);
-	timer->start(1000);
+	connect(this->animationSpeedSlider, &QSlider::sliderReleased, this, &GuiMainWindow::updateAnimationSpeed);
+	m_timer->start(1000);
 	this->placeAsteroids->setText("Place Asteroids");
 	scrollAreaWidgetContents->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 	scrollAreaWidgetContents->setLayout(new QVBoxLayout(scrollAreaWidgetContents));
@@ -55,6 +56,10 @@ void GuiMainWindow::toggleFastPlacing(int state) {
 
 void GuiMainWindow::updatePlaceAsteroids() {
 	m_scene->updatePlaceAsteroids();
+}
+
+void GuiMainWindow::updateAnimationSpeed() {
+	m_timer->setInterval(this->animationSpeedSlider->value());
 }
 void GuiMainWindow::reset() {
 	m_changed = true;
