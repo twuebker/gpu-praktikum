@@ -4945,6 +4945,8 @@ QtWidgets/QHBoxLayout
 -
 QtWidgets/QHeaderView
 -
+QtWidgets/QLabel
+-
 QtWidgets/QMainWindow
 -
 QtWidgets/QMenuBar
@@ -4952,6 +4954,8 @@ QtWidgets/QMenuBar
 QtWidgets/QPushButton
 -
 QtWidgets/QScrollArea
+-
+QtWidgets/QSlider
 -
 QtWidgets/QStatusBar
 -

@@ -61,8 +61,6 @@ void __global__ calculate_forces_v2(Asteroid* d_a, float dt, int size, ForceFiel
 	ast->velocity.first += acc.x * dt;
 	ast->velocity.second += acc.y * dt;
 	
-	printf("pos: %f, %f\n", ast->pos.first, ast->pos.second);
-	printf("wert der draufkommt: %f, %f\n", ast->velocity.first * dt, ast->velocity.second * dt);
 	ast->pos.first += ast->velocity.first * dt;
 	ast->pos.second += ast->velocity.second * dt;
 
@@ -92,5 +90,4 @@ void call_kernel_v2(Asteroid* a, Asteroid* d_asteroid, ForceField* d_forceField,
 	}
 	calculate_forces_v2<<<1, sizeAsteroids>>>(d_asteroid, 0.1, sizeAsteroids, d_forceField, sizeForceFields);
 	cudaMemcpy(a, d_asteroid, sizeof(Asteroid) * sizeAsteroids, cudaMemcpyDeviceToHost);
-	std::cout << "Pos nach dem kernel: " << a[0].pos.first << "," << a[0].pos.second << std::endl;
 }

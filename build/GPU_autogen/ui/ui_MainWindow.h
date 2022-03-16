@@ -17,10 +17,12 @@
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -39,6 +41,8 @@ public:
     QCheckBox *toggleFastplace;
     QPushButton *pushButton;
     QPushButton *placeAsteroids;
+    QLabel *label;
+    QSlider *animationSpeedSlider;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QGraphicsView *asteroidsView;
@@ -87,13 +91,27 @@ public:
 
         leftLayout->addWidget(placeAsteroids);
 
+        label = new QLabel(horizontalLayoutWidget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setAlignment(Qt::AlignCenter);
+
+        leftLayout->addWidget(label);
+
+        animationSpeedSlider = new QSlider(horizontalLayoutWidget);
+        animationSpeedSlider->setObjectName(QStringLiteral("animationSpeedSlider"));
+        animationSpeedSlider->setMinimum(1);
+        animationSpeedSlider->setMaximum(1000);
+        animationSpeedSlider->setOrientation(Qt::Horizontal);
+
+        leftLayout->addWidget(animationSpeedSlider);
+
         scrollArea = new QScrollArea(horizontalLayoutWidget);
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
         scrollArea->setMaximumSize(QSize(350, 16777215));
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 348, 683));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 348, 625));
         scrollArea->setWidget(scrollAreaWidgetContents);
 
         leftLayout->addWidget(scrollArea);
@@ -133,7 +151,8 @@ public:
         toggleSimulation->setText(QApplication::translate("MainWindow", "Toggle Simulation", Q_NULLPTR));
         toggleFastplace->setText(QApplication::translate("MainWindow", "Toggle FastPlace", Q_NULLPTR));
         pushButton->setText(QApplication::translate("MainWindow", "PushButton", Q_NULLPTR));
-        placeAsteroids->setText(QApplication::translate("MainWindow", "PushButton", Q_NULLPTR));
+        placeAsteroids->setText(QApplication::translate("MainWindow", "Switch Placing Asteroids / ForceFields", Q_NULLPTR));
+        label->setText(QApplication::translate("MainWindow", "Interval to run kernel in ms:", Q_NULLPTR));
     } // retranslateUi
 
 };

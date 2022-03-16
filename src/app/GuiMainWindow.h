@@ -20,6 +20,7 @@ public slots:
 	void updateAnimationSpeed();
 	void reset();
 private:
+	QTimer* m_timer;
 	std::vector<Asteroid> m_asteroids;
 	std::vector<ForceField> m_forceFields;
 	Asteroid* d_asteroid;

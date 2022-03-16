@@ -69,7 +69,7 @@ int main(int argc, char* argv[]){
 	} else if(std::string(argv[1]) == "GPU"){
 		gpu_v1(asteroids, forceFields, iterations);
 	} else if(std::string(argv[1]) == "GPUV2"){
-		
+		gpu_v2(asteroids, forceFields, iterations);
 	}
 	
 
@@ -77,7 +77,7 @@ int main(int argc, char* argv[]){
 
 	std::cout << "Calculation took " << std::chrono::duration_cast<std::chrono::microseconds>(end - start).count() / iterations << " microseconds each." << std::endl;
 
-
+	return 1;
 
 }
 
