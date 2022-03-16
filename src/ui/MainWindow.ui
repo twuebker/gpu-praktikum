@@ -80,7 +80,7 @@
        <item>
         <widget class="QSlider" name="animationSpeedSlider">
          <property name="minimum">
-          <number>10</number>
+          <number>1</number>
          </property>
          <property name="maximum">
           <number>1000</number>

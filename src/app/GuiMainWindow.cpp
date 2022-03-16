@@ -19,7 +19,6 @@ GuiMainWindow::GuiMainWindow() {
 	connect(this->placeAsteroids, &QPushButton::pressed, this, &GuiMainWindow::updatePlaceAsteroids);
 	connect(this->animationSpeedSlider, &QSlider::sliderReleased, this, &GuiMainWindow::updateAnimationSpeed);
 	m_timer->start(1000);
-	this->placeAsteroids->setText("Place Asteroids");
 	scrollAreaWidgetContents->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 	scrollAreaWidgetContents->setLayout(new QVBoxLayout(scrollAreaWidgetContents));
 
