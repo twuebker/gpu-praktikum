@@ -70,7 +70,7 @@
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>Animation Speed:</string>
+          <string>Interval to run kernel in ms:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
