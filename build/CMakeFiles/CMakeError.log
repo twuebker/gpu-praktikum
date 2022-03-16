@@ -1,25 +1,25 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp
+Change Dir: /home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_49097/fast"
-/usr/bin/make -f CMakeFiles/cmTC_49097.dir/build.make CMakeFiles/cmTC_49097.dir/build
-make[1]: Entering directory '/home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_49097.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -std=gnu++1z -o CMakeFiles/cmTC_49097.dir/CheckSymbolExists.cxx.o -c /home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-Linking CXX executable cmTC_49097
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49097.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_49097.dir/CheckSymbolExists.cxx.o  -o cmTC_49097 
-CMakeFiles/cmTC_49097.dir/CheckSymbolExists.cxx.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_ff3ab/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ff3ab.dir/build.make CMakeFiles/cmTC_ff3ab.dir/build
+make[1]: Entering directory '/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ff3ab.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -std=gnu++1z -o CMakeFiles/cmTC_ff3ab.dir/CheckSymbolExists.cxx.o -c /home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_ff3ab
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff3ab.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_ff3ab.dir/CheckSymbolExists.cxx.o  -o cmTC_ff3ab 
+CMakeFiles/cmTC_ff3ab.dir/CheckSymbolExists.cxx.o: In function `main':
 CheckSymbolExists.cxx:(.text+0x14): undefined reference to `pthread_create'
 CheckSymbolExists.cxx:(.text+0x18): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_49097.dir/build.make:97: recipe for target 'cmTC_49097' failed
-make[1]: *** [cmTC_49097] Error 1
-make[1]: Leaving directory '/home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_49097/fast' failed
-make: *** [cmTC_49097/fast] Error 2
+CMakeFiles/cmTC_ff3ab.dir/build.make:97: recipe for target 'cmTC_ff3ab' failed
+make[1]: *** [cmTC_ff3ab] Error 1
+make[1]: Leaving directory '/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ff3ab/fast' failed
+make: *** [cmTC_ff3ab/fast] Error 2
 
-File /home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+File /home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
 #include <pthread.h>
 
@@ -35,22 +35,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp
+Change Dir: /home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f907a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f907a.dir/build.make CMakeFiles/cmTC_f907a.dir/build
-make[1]: Entering directory '/home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f907a.dir/CheckFunctionExists.cxx.o
-/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -std=gnu++1z -o CMakeFiles/cmTC_f907a.dir/CheckFunctionExists.cxx.o -c /home/theo/gpu-praktikum/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_f907a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f907a.dir/link.txt --verbose=1
-/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_f907a.dir/CheckFunctionExists.cxx.o  -o cmTC_f907a -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_4607a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4607a.dir/build.make CMakeFiles/cmTC_4607a.dir/build
+make[1]: Entering directory '/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4607a.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -std=gnu++1z -o CMakeFiles/cmTC_4607a.dir/CheckFunctionExists.cxx.o -c /home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_4607a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4607a.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_4607a.dir/CheckFunctionExists.cxx.o  -o cmTC_4607a -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_f907a.dir/build.make:97: recipe for target 'cmTC_f907a' failed
-make[1]: *** [cmTC_f907a] Error 1
-make[1]: Leaving directory '/home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_f907a/fast' failed
-make: *** [cmTC_f907a/fast] Error 2
+CMakeFiles/cmTC_4607a.dir/build.make:97: recipe for target 'cmTC_4607a' failed
+make[1]: *** [cmTC_4607a] Error 1
+make[1]: Leaving directory '/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4607a/fast' failed
+make: *** [cmTC_4607a/fast] Error 2
 
 

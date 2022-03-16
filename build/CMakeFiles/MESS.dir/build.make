@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/theo/gpu-praktikum
+CMAKE_SOURCE_DIR = /home/leonard/geiles-projekt/gpu-praktikum
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/theo/gpu-praktikum/build
+CMAKE_BINARY_DIR = /home/leonard/geiles-projekt/gpu-praktikum/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MESS.dir/depend.make
@@ -59,8 +59,8 @@ include CMakeFiles/MESS.dir/flags.make
 
 CMakeFiles/MESS.dir/src/mess/Main.cpp.o: CMakeFiles/MESS.dir/flags.make
 CMakeFiles/MESS.dir/src/mess/Main.cpp.o: ../src/mess/Main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CUDA object CMakeFiles/MESS.dir/src/mess/Main.cpp.o"
-	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -dc /home/theo/gpu-praktikum/src/mess/Main.cpp -o CMakeFiles/MESS.dir/src/mess/Main.cpp.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CUDA object CMakeFiles/MESS.dir/src/mess/Main.cpp.o"
+	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -dc /home/leonard/geiles-projekt/gpu-praktikum/src/mess/Main.cpp -o CMakeFiles/MESS.dir/src/mess/Main.cpp.o
 
 CMakeFiles/MESS.dir/src/mess/Main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/MESS.dir/src/mess/Main.cpp.i"
@@ -83,16 +83,16 @@ CMakeFiles/MESS.dir/src/mess/Main.cpp.o.provides.build: CMakeFiles/MESS.dir/src/
 
 CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.o: CMakeFiles/MESS.dir/flags.make
 CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.o: MESS_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.o -c /home/theo/gpu-praktikum/build/MESS_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.o -c /home/leonard/geiles-projekt/gpu-praktikum/build/MESS_autogen/mocs_compilation.cpp
 
 CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theo/gpu-praktikum/build/MESS_autogen/mocs_compilation.cpp > CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leonard/geiles-projekt/gpu-praktikum/build/MESS_autogen/mocs_compilation.cpp > CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theo/gpu-praktikum/build/MESS_autogen/mocs_compilation.cpp -o CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leonard/geiles-projekt/gpu-praktikum/build/MESS_autogen/mocs_compilation.cpp -o CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.o.requires:
 
@@ -122,7 +122,7 @@ CMakeFiles/MESS.dir/cmake_device_link.o: /usr/lib/aarch64-linux-gnu/libQt5Widget
 CMakeFiles/MESS.dir/cmake_device_link.o: /usr/lib/aarch64-linux-gnu/libQt5Gui.so.5.9.5
 CMakeFiles/MESS.dir/cmake_device_link.o: /usr/lib/aarch64-linux-gnu/libQt5Core.so.5.9.5
 CMakeFiles/MESS.dir/cmake_device_link.o: CMakeFiles/MESS.dir/dlink.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CUDA device code CMakeFiles/MESS.dir/cmake_device_link.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CUDA device code CMakeFiles/MESS.dir/cmake_device_link.o"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MESS.dir/dlink.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -148,7 +148,7 @@ MESS: /usr/lib/aarch64-linux-gnu/libQt5Gui.so.5.9.5
 MESS: /usr/lib/aarch64-linux-gnu/libQt5Core.so.5.9.5
 MESS: CMakeFiles/MESS.dir/cmake_device_link.o
 MESS: CMakeFiles/MESS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable MESS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable MESS"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MESS.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -166,6 +166,6 @@ CMakeFiles/MESS.dir/clean:
 .PHONY : CMakeFiles/MESS.dir/clean
 
 CMakeFiles/MESS.dir/depend:
-	cd /home/theo/gpu-praktikum/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/theo/gpu-praktikum /home/theo/gpu-praktikum /home/theo/gpu-praktikum/build /home/theo/gpu-praktikum/build /home/theo/gpu-praktikum/build/CMakeFiles/MESS.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/leonard/geiles-projekt/gpu-praktikum/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leonard/geiles-projekt/gpu-praktikum /home/leonard/geiles-projekt/gpu-praktikum /home/leonard/geiles-projekt/gpu-praktikum/build /home/leonard/geiles-projekt/gpu-praktikum/build /home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/MESS.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/MESS.dir/depend
 

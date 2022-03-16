@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/theo/gpu-praktikum
+CMAKE_SOURCE_DIR = /home/leonard/geiles-projekt/gpu-praktikum
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/theo/gpu-praktikum/build
+CMAKE_BINARY_DIR = /home/leonard/geiles-projekt/gpu-praktikum/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/GPU.dir/depend.make
@@ -59,8 +59,8 @@ include CMakeFiles/GPU.dir/flags.make
 
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/src/app/Main.cpp.o: ../src/app/Main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CUDA object CMakeFiles/GPU.dir/src/app/Main.cpp.o"
-	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -dc /home/theo/gpu-praktikum/src/app/Main.cpp -o CMakeFiles/GPU.dir/src/app/Main.cpp.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CUDA object CMakeFiles/GPU.dir/src/app/Main.cpp.o"
+	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -dc /home/leonard/geiles-projekt/gpu-praktikum/src/app/Main.cpp -o CMakeFiles/GPU.dir/src/app/Main.cpp.o
 
 CMakeFiles/GPU.dir/src/app/Main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/GPU.dir/src/app/Main.cpp.i"
@@ -83,8 +83,8 @@ CMakeFiles/GPU.dir/src/app/Main.cpp.o.provides.build: CMakeFiles/GPU.dir/src/app
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o: ../src/widgets/AsteroidsScene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CUDA object CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o"
-	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -dc /home/theo/gpu-praktikum/src/widgets/AsteroidsScene.cpp -o CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CUDA object CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o"
+	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -dc /home/leonard/geiles-projekt/gpu-praktikum/src/widgets/AsteroidsScene.cpp -o CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.i"
@@ -107,8 +107,8 @@ CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o.provides.build: CMakeFiles/G
 
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/app/GuiMainWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CUDA object CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o"
-	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -dc /home/theo/gpu-praktikum/src/app/GuiMainWindow.cpp -o CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CUDA object CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o"
+	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -dc /home/leonard/geiles-projekt/gpu-praktikum/src/app/GuiMainWindow.cpp -o CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o
 
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.i"
@@ -131,16 +131,16 @@ CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o.provides.build: CMakeFiles/GPU.di
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: ../src/widgets/AsteroidPixmapItem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o -c /home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o -c /home/leonard/geiles-projekt/gpu-praktikum/src/widgets/AsteroidPixmapItem.cpp
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.cpp > CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leonard/geiles-projekt/gpu-praktikum/src/widgets/AsteroidPixmapItem.cpp > CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.i
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.cpp -o CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leonard/geiles-projekt/gpu-praktikum/src/widgets/AsteroidPixmapItem.cpp -o CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.s
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o: ../src/widgets/ForceFieldPixmapItem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o -c /home/theo/gpu-praktikum/src/widgets/ForceFieldPixmapItem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o -c /home/leonard/geiles-projekt/gpu-praktikum/src/widgets/ForceFieldPixmapItem.cpp
 
 CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theo/gpu-praktikum/src/widgets/ForceFieldPixmapItem.cpp > CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leonard/geiles-projekt/gpu-praktikum/src/widgets/ForceFieldPixmapItem.cpp > CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.i
 
 CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theo/gpu-praktikum/src/widgets/ForceFieldPixmapItem.cpp -o CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leonard/geiles-projekt/gpu-praktikum/src/widgets/ForceFieldPixmapItem.cpp -o CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.s
 
 CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o.provides.build: CMakeF
 
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o: ../src/widgets/MassSlider.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o -c /home/theo/gpu-praktikum/src/widgets/MassSlider.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o -c /home/leonard/geiles-projekt/gpu-praktikum/src/widgets/MassSlider.cpp
 
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theo/gpu-praktikum/src/widgets/MassSlider.cpp > CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leonard/geiles-projekt/gpu-praktikum/src/widgets/MassSlider.cpp > CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.i
 
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theo/gpu-praktikum/src/widgets/MassSlider.cpp -o CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leonard/geiles-projekt/gpu-praktikum/src/widgets/MassSlider.cpp -o CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.s
 
 CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o.provides.build: CMakeFiles/GPU.d
 
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: ../src/app/CreateForceFieldDialog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o -c /home/theo/gpu-praktikum/src/app/CreateForceFieldDialog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o -c /home/leonard/geiles-projekt/gpu-praktikum/src/app/CreateForceFieldDialog.cpp
 
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theo/gpu-praktikum/src/app/CreateForceFieldDialog.cpp > CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leonard/geiles-projekt/gpu-praktikum/src/app/CreateForceFieldDialog.cpp > CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.i
 
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theo/gpu-praktikum/src/app/CreateForceFieldDialog.cpp -o CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leonard/geiles-projekt/gpu-praktikum/src/app/CreateForceFieldDialog.cpp -o CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.s
 
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o: GPU_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o -c /home/theo/gpu-praktikum/build/GPU_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o -c /home/leonard/geiles-projekt/gpu-praktikum/build/GPU_autogen/mocs_compilation.cpp
 
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theo/gpu-praktikum/build/GPU_autogen/mocs_compilation.cpp > CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leonard/geiles-projekt/gpu-praktikum/build/GPU_autogen/mocs_compilation.cpp > CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theo/gpu-praktikum/build/GPU_autogen/mocs_compilation.cpp -o CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leonard/geiles-projekt/gpu-praktikum/build/GPU_autogen/mocs_compilation.cpp -o CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o: CMakeFiles/GPU.dir/flags.make
 CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o: GPU_autogen/EWIEGA46WW/qrc_res.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o -c /home/theo/gpu-praktikum/build/GPU_autogen/EWIEGA46WW/qrc_res.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o -c /home/leonard/geiles-projekt/gpu-praktikum/build/GPU_autogen/EWIEGA46WW/qrc_res.cpp
 
 CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theo/gpu-praktikum/build/GPU_autogen/EWIEGA46WW/qrc_res.cpp > CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leonard/geiles-projekt/gpu-praktikum/build/GPU_autogen/EWIEGA46WW/qrc_res.cpp > CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.i
 
 CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theo/gpu-praktikum/build/GPU_autogen/EWIEGA46WW/qrc_res.cpp -o CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leonard/geiles-projekt/gpu-praktikum/build/GPU_autogen/EWIEGA46WW/qrc_res.cpp -o CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.s
 
 CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o.requires:
 
@@ -304,7 +304,7 @@ CMakeFiles/GPU.dir/cmake_device_link.o: /usr/lib/aarch64-linux-gnu/libQt5Widgets
 CMakeFiles/GPU.dir/cmake_device_link.o: /usr/lib/aarch64-linux-gnu/libQt5Gui.so.5.9.5
 CMakeFiles/GPU.dir/cmake_device_link.o: /usr/lib/aarch64-linux-gnu/libQt5Core.so.5.9.5
 CMakeFiles/GPU.dir/cmake_device_link.o: CMakeFiles/GPU.dir/dlink.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CUDA device code CMakeFiles/GPU.dir/cmake_device_link.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CUDA device code CMakeFiles/GPU.dir/cmake_device_link.o"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GPU.dir/dlink.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -344,7 +344,7 @@ GPU: /usr/lib/aarch64-linux-gnu/libQt5Gui.so.5.9.5
 GPU: /usr/lib/aarch64-linux-gnu/libQt5Core.so.5.9.5
 GPU: CMakeFiles/GPU.dir/cmake_device_link.o
 GPU: CMakeFiles/GPU.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable GPU"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable GPU"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GPU.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -369,6 +369,6 @@ CMakeFiles/GPU.dir/clean:
 .PHONY : CMakeFiles/GPU.dir/clean
 
 CMakeFiles/GPU.dir/depend:
-	cd /home/theo/gpu-praktikum/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/theo/gpu-praktikum /home/theo/gpu-praktikum /home/theo/gpu-praktikum/build /home/theo/gpu-praktikum/build /home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/leonard/geiles-projekt/gpu-praktikum/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leonard/geiles-projekt/gpu-praktikum /home/leonard/geiles-projekt/gpu-praktikum /home/leonard/geiles-projekt/gpu-praktikum/build /home/leonard/geiles-projekt/gpu-praktikum/build /home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/GPU.dir/depend
 

@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/theo/gpu-praktikum
+CMAKE_SOURCE_DIR = /home/leonard/geiles-projekt/gpu-praktikum
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/theo/gpu-praktikum/build
+CMAKE_BINARY_DIR = /home/leonard/geiles-projekt/gpu-praktikum/build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -78,11 +67,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/theo/gpu-praktikum/build/CMakeFiles /home/theo/gpu-praktikum/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles /home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/theo/gpu-praktikum/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MESS
-
-# Build rule for target.
-MESS: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MESS
-.PHONY : MESS
-
-# fast build rule for target.
-MESS/fast:
-	$(MAKE) -f CMakeFiles/MESS.dir/build.make CMakeFiles/MESS.dir/build
-.PHONY : MESS/fast
-
-#=============================================================================
 # Target rules for targets named GPU
 
 # Build rule for target.
@@ -137,17 +124,17 @@ GPU/fast:
 .PHONY : GPU/fast
 
 #=============================================================================
-# Target rules for targets named MESS_autogen
+# Target rules for targets named MESS
 
 # Build rule for target.
-MESS_autogen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MESS_autogen
-.PHONY : MESS_autogen
+MESS: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MESS
+.PHONY : MESS
 
 # fast build rule for target.
-MESS_autogen/fast:
-	$(MAKE) -f CMakeFiles/MESS_autogen.dir/build.make CMakeFiles/MESS_autogen.dir/build
-.PHONY : MESS_autogen/fast
+MESS/fast:
+	$(MAKE) -f CMakeFiles/MESS.dir/build.make CMakeFiles/MESS.dir/build
+.PHONY : MESS/fast
 
 #=============================================================================
 # Target rules for targets named GPU_autogen
@@ -161,6 +148,19 @@ GPU_autogen: cmake_check_build_system
 GPU_autogen/fast:
 	$(MAKE) -f CMakeFiles/GPU_autogen.dir/build.make CMakeFiles/GPU_autogen.dir/build
 .PHONY : GPU_autogen/fast
+
+#=============================================================================
+# Target rules for targets named MESS_autogen
+
+# Build rule for target.
+MESS_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MESS_autogen
+.PHONY : MESS_autogen
+
+# fast build rule for target.
+MESS_autogen/fast:
+	$(MAKE) -f CMakeFiles/MESS_autogen.dir/build.make CMakeFiles/MESS_autogen.dir/build
+.PHONY : MESS_autogen/fast
 
 GPU_autogen/EWIEGA46WW/qrc_res.o: GPU_autogen/EWIEGA46WW/qrc_res.cpp.o
 
@@ -465,12 +465,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... MESS"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... GPU"
-	@echo "... MESS_autogen"
+	@echo "... MESS"
 	@echo "... GPU_autogen"
+	@echo "... MESS_autogen"
 	@echo "... GPU_autogen/EWIEGA46WW/qrc_res.o"
 	@echo "... GPU_autogen/EWIEGA46WW/qrc_res.i"
 	@echo "... GPU_autogen/EWIEGA46WW/qrc_res.s"

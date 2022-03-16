@@ -18,7 +18,7 @@ GuiMainWindow::GuiMainWindow() {
 	connect(this->toggleFastplace, &QCheckBox::stateChanged, this, &GuiMainWindow::toggleFastPlacing);
 	connect(this->placeAsteroids, &QPushButton::pressed, this, &GuiMainWindow::updatePlaceAsteroids);
 	connect(this->animationSpeedSlider, &QSlider::sliderReleased, this, &GuiMainWindow::updateAnimationSpeed);
-	m_timer->start(1000);
+	m_timer->start(100);
 	scrollAreaWidgetContents->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 	scrollAreaWidgetContents->setLayout(new QVBoxLayout(scrollAreaWidgetContents));
 

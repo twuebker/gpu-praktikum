@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/theo/gpu-praktikum/src/cuda/physics_v1.cu
+/home/leonard/geiles-projekt/gpu-praktikum/src/cuda/physics_v1.cu
 cuda.h
 -
 cuda_runtime.h
@@ -18,19 +18,33 @@ thrust/device_vector.h
 stdio.h
 -
 
-/home/theo/gpu-praktikum/src/data/data.h
+/home/leonard/geiles-projekt/gpu-praktikum/src/cuda/physics_v2.cu
+cuda.h
+-
+cuda_runtime.h
+-
+vector
+-
+utility
+-
+thrust/device_vector.h
+-
+stdio.h
+-
+
+/home/leonard/geiles-projekt/gpu-praktikum/src/data/data.h
 utility
 -
 vector
 -
 
-/home/theo/gpu-praktikum/src/mess/CPU.cpp
+/home/leonard/geiles-projekt/gpu-praktikum/src/mess/CPU.cpp
 cmath
 -
 ../data/data.h
-/home/theo/gpu-praktikum/src/data/data.h
+/home/leonard/geiles-projekt/gpu-praktikum/src/data/data.h
 
-/home/theo/gpu-praktikum/src/mess/Main.cpp
+/home/leonard/geiles-projekt/gpu-praktikum/src/mess/Main.cpp
 cmath
 -
 string
@@ -40,9 +54,11 @@ iostream
 chrono
 -
 ../data/data.h
-/home/theo/gpu-praktikum/src/data/data.h
+/home/leonard/geiles-projekt/gpu-praktikum/src/data/data.h
 ../cuda/physics_v1.cu
-/home/theo/gpu-praktikum/src/cuda/physics_v1.cu
+/home/leonard/geiles-projekt/gpu-praktikum/src/cuda/physics_v1.cu
+../cuda/physics_v2.cu
+/home/leonard/geiles-projekt/gpu-praktikum/src/cuda/physics_v2.cu
 CPU.cpp
-/home/theo/gpu-praktikum/src/mess/CPU.cpp
+/home/leonard/geiles-projekt/gpu-praktikum/src/mess/CPU.cpp
 

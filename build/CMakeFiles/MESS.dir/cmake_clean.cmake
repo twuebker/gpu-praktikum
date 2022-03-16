@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "MESS_autogen"
-  "CMakeFiles/MESS_autogen.dir/AutogenOldSettings.cmake"
   "GPU_autogen"
   "CMakeFiles/GPU_autogen.dir/AutogenOldSettings.cmake"
+  "MESS_autogen"
+  "CMakeFiles/MESS_autogen.dir/AutogenOldSettings.cmake"
   "CMakeFiles/MESS.dir/src/mess/Main.cpp.o"
   "CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/MESS.dir/cmake_device_link.o"

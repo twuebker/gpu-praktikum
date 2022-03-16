@@ -6,7 +6,7 @@
 #include <thrust/device_vector.h>
 #include <stdio.h>
 
-void __global__ calculate_forces(Asteroid* d_a, float dt, int size, ForceField* d_f, int sizeFF) 	//DelteTime ist die Zeit die zwischen zwei Berechnungen vergeht. Mussen irgendwie
+void __global__ calculate_forces_v2(Asteroid* d_a, float dt, int size, ForceField* d_f, int sizeFF) 	//DelteTime ist die Zeit die zwischen zwei Berechnungen vergeht. Mussen irgendwie
 {	
 	//in der MainLoop dafür die Zeit stoppen und hier übergeben
 	float BIG_G = 9.81; //Gravitationkonstante, aber am Ende voll abhängig wie groß unsere Zahlen so sind
@@ -90,7 +90,7 @@ void call_kernel_v2(Asteroid* a, Asteroid* d_asteroid, ForceField* d_forceField,
 	if(sizeAsteroids == 0) {
 		return;
 	}
-	calculate_forces<<<1, sizeAsteroids>>>(d_asteroid, 0.1, sizeAsteroids, d_forceField, sizeForceFields);
+	calculate_forces_v2<<<1, sizeAsteroids>>>(d_asteroid, 0.1, sizeAsteroids, d_forceField, sizeForceFields);
 	cudaMemcpy(a, d_asteroid, sizeof(Asteroid) * sizeAsteroids, cudaMemcpyDeviceToHost);
 	std::cout << "Pos nach dem kernel: " << a[0].pos.first << "," << a[0].pos.second << std::endl;
 }
