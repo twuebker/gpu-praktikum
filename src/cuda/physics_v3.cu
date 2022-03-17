@@ -6,14 +6,10 @@
 #include <thrust/device_vector.h>
 #include <stdio.h>
 
-struct accVec {
-	float x;
-	float y;
-} typedef AccelerationVector;
-
 void __global__ calculate_forces_v3(Asteroid* d_a, float dt, int size, ForceField* d_f, int sizeFF) 	//DelteTime ist die Zeit die zwischen zwei Berechnungen vergeht. Mussen irgendwie
 {	
-	extern __shared__ AccelerationVector accs[];
+	extern __shared__ float2 accs[];
+	printf("IM KERNEL\n");
 	int i = threadIdx.x;
 	int j = threadIdx.y;
 	Asteroid* asteroidI = &d_a[i];
@@ -38,8 +34,8 @@ void __global__ calculate_forces_v3(Asteroid* d_a, float dt, int size, ForceFiel
 
 	} else {
 	
-		for(int i = 0; i < sizeFF; i++) {
-			ForceField force = d_f[i];
+		for(int k = 0; k < sizeFF; k++) {
+			ForceField force = d_f[k];
 			if(!(asteroidI->pos.first >= force.leftCorner.first && asteroidI->pos.first <= force.rightCorner.first && asteroidI->pos.second >= force.leftCorner.second && asteroidI->pos.second <= force.rightCorner.second)) {
 				continue;
 			}
@@ -81,6 +77,10 @@ void __global__ calculate_forces_v3(Asteroid* d_a, float dt, int size, ForceFiel
 		
         	ast->pos.first += ast->velocity.first * dt;
         	ast->pos.second += ast->velocity.second * dt;
+		if(i == 1) {
+                        printf("adding %f, %f to ast 1\n", ast->velocity.first, ast->velocity.second);
+                }
+
 	}
 
 	
@@ -104,12 +104,28 @@ std::pair<Asteroid*, ForceField*> updateMemory(std::vector<Asteroid>& asteroids,
 	return std::make_pair(d_asteroid, d_forceField);
 }
 
+#define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
+inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort=true)
+{
+   if (code != cudaSuccess) 
+   {
+      fprintf(stderr,"GPUassert: %s %s %d\n", cudaGetErrorString(code), file, line);
+      if (abort) exit(code);
+   }
+}
+
 void call_kernel_v3(Asteroid* a, Asteroid* d_asteroid, ForceField* d_forceField, int sizeAsteroids, int sizeForceFields)
 {
 	if(sizeAsteroids == 0) {
 		return;
 	}
-	int sharedArraySize = sizeof(AccelerationVector) * sizeAsteroids * sizeAsteroids;
+	std::cout << "Kernel invoked" << std::endl;
+	int sharedArraySize = sizeof(float2) * sizeAsteroids * sizeAsteroids;
 	calculate_forces_v3<<<1, dim3(sizeAsteroids, sizeAsteroids), sharedArraySize>>>(d_asteroid, 0.1, sizeAsteroids, d_forceField, sizeForceFields);
+	gpuErrchk( cudaPeekAtLastError() );
+	gpuErrchk( cudaDeviceSynchronize() );
 	cudaMemcpy(a, d_asteroid, sizeof(Asteroid) * sizeAsteroids, cudaMemcpyDeviceToHost);
+	if(sizeAsteroids >= 2) {
+		std::cout << "Pos: " << a[1].pos.first << "," << a[1].pos.second << std::endl;
+	}
 }
