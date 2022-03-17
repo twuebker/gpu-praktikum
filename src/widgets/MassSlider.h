@@ -3,15 +3,17 @@
 
 #include "AsteroidsScene.h"
 #include <QtWidgets>
+#include "AsteroidPixmapItem.h"
 
 class MassSlider : public QSlider {
 
 public:
-	MassSlider(Ui::MainWindow* mainWindow, int index);
+	MassSlider(AsteroidPixmapItem* item, Ui::MainWindow* mainWindow, int index);
 public slots:
 	void changeMass();
 	void changeUi(int mass);
 private:
+	AsteroidPixmapItem* m_associatedItem;
 	Ui::MainWindow* m_mainWindow;
 	int m_index;
 };

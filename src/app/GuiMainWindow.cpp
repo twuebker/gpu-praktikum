@@ -1,5 +1,5 @@
 #include "GuiMainWindow.h"
-#include "../cuda/physics_v2.cu"
+#include "../cuda/physics_v3.cu"
 
 GuiMainWindow::GuiMainWindow() {
 	d_asteroid = nullptr;
@@ -32,7 +32,6 @@ GuiMainWindow::GuiMainWindow() {
 void GuiMainWindow::calcPhysics() {
 	if(m_animate) {
 		if(m_scene->isChanged() || m_changed) {
-			std::cout << "We changed" << std::endl;
 			freeDeviceMemory(d_asteroid, d_forceField);
 			std::pair<Asteroid*, ForceField*> resultPair = updateMemory(m_asteroids, m_forceFields);
 			d_asteroid = resultPair.first;
@@ -40,7 +39,7 @@ void GuiMainWindow::calcPhysics() {
 			m_changed = false;
 			m_scene->setChanged(false);
 		}
-		call_kernel_v2(m_asteroids.data(), d_asteroid, d_forceField, m_asteroids.size(), m_forceFields.size());
+		call_kernel_v3(m_asteroids.data(), d_asteroid, d_forceField, m_asteroids.size(), m_forceFields.size());
 		m_scene->update();
 	}
 }

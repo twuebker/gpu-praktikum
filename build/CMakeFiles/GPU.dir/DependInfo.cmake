@@ -5,9 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CUDA
-  "/home/leonard/geiles-projekt/gpu-praktikum/src/app/GuiMainWindow.cpp" "/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o"
-  "/home/leonard/geiles-projekt/gpu-praktikum/src/app/Main.cpp" "/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU.dir/src/app/Main.cpp.o"
-  "/home/leonard/geiles-projekt/gpu-praktikum/src/widgets/AsteroidsScene.cpp" "/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o"
+  "/home/theo/gpu-praktikum/src/app/GuiMainWindow.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o"
+  "/home/theo/gpu-praktikum/src/app/Main.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/src/app/Main.cpp.o"
+  "/home/theo/gpu-praktikum/src/widgets/AsteroidsScene.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o"
   )
 set(CMAKE_CUDA_COMPILER_ID "NVIDIA")
 
@@ -29,12 +29,12 @@ set(CMAKE_CUDA_TARGET_INCLUDE_PATH
   "/usr/lib/aarch64-linux-gnu/qt5/mkspecs/linux-g++"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/leonard/geiles-projekt/gpu-praktikum/build/GPU_autogen/EWIEGA46WW/qrc_res.cpp" "/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o"
-  "/home/leonard/geiles-projekt/gpu-praktikum/build/GPU_autogen/mocs_compilation.cpp" "/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o"
-  "/home/leonard/geiles-projekt/gpu-praktikum/src/app/CreateForceFieldDialog.cpp" "/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o"
-  "/home/leonard/geiles-projekt/gpu-praktikum/src/widgets/AsteroidPixmapItem.cpp" "/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o"
-  "/home/leonard/geiles-projekt/gpu-praktikum/src/widgets/ForceFieldPixmapItem.cpp" "/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o"
-  "/home/leonard/geiles-projekt/gpu-praktikum/src/widgets/MassSlider.cpp" "/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o"
+  "/home/theo/gpu-praktikum/build/GPU_autogen/EWIEGA46WW/qrc_res.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o"
+  "/home/theo/gpu-praktikum/build/GPU_autogen/mocs_compilation.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o"
+  "/home/theo/gpu-praktikum/src/app/CreateForceFieldDialog.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o"
+  "/home/theo/gpu-praktikum/src/widgets/AsteroidPixmapItem.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o"
+  "/home/theo/gpu-praktikum/src/widgets/ForceFieldPixmapItem.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o"
+  "/home/theo/gpu-praktikum/src/widgets/MassSlider.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

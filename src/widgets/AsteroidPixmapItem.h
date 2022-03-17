@@ -1,6 +1,10 @@
+#ifndef AsteroidPixmapItem_h
+#define AsteroidPixmapItem_h
+
 #include <QtWidgets>
-#include "AsteroidsScene.h"
+#include "../data/data.h"
 #include <utility>
+
 class AsteroidPixmapItem : public QGraphicsPixmapItem {
 
 public:
@@ -12,3 +16,4 @@ public:
 private:			
 	int m_index;
 };
+#endif

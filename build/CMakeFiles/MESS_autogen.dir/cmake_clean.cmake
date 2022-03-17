@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "GPU_autogen"
-  "CMakeFiles/GPU_autogen.dir/AutogenOldSettings.cmake"
   "MESS_autogen"
   "CMakeFiles/MESS_autogen.dir/AutogenOldSettings.cmake"
+  "GPU_autogen"
+  "CMakeFiles/GPU_autogen.dir/AutogenOldSettings.cmake"
   "CMakeFiles/MESS_autogen"
 )
 

@@ -101,6 +101,7 @@ public:
         animationSpeedSlider->setObjectName(QStringLiteral("animationSpeedSlider"));
         animationSpeedSlider->setMinimum(1);
         animationSpeedSlider->setMaximum(1000);
+        animationSpeedSlider->setValue(100);
         animationSpeedSlider->setOrientation(Qt::Horizontal);
 
         leftLayout->addWidget(animationSpeedSlider);

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "GPU_autogen"
-  "CMakeFiles/GPU_autogen.dir/AutogenOldSettings.cmake"
   "MESS_autogen"
   "CMakeFiles/MESS_autogen.dir/AutogenOldSettings.cmake"
+  "GPU_autogen"
+  "CMakeFiles/GPU_autogen.dir/AutogenOldSettings.cmake"
   "CMakeFiles/GPU.dir/src/app/Main.cpp.o"
   "CMakeFiles/GPU.dir/src/widgets/AsteroidsScene.cpp.o"
   "CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o"

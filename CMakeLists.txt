@@ -44,7 +44,7 @@ set_property(TARGET MESS PROPERTY CUDA_SEPERABLE_COMPILATION ON)
 
 set_target_properties(GPU PROPERTIES
         CUDA_SEPARABLE_COMPILATION ON)
-set_source_files_properties(src/app/Main.cpp src/app/GuiMainWindow.cpp src/widgets/AsteroidsScene.cpp src/cuda/physics_v1.cu src/cuda/physics_v2.cu PROPERTIES LANGUAGE CUDA)
+set_source_files_properties(src/app/Main.cpp src/app/GuiMainWindow.cpp src/widgets/AsteroidsScene.cpp src/cuda/physics_v1.cu src/cuda/physics_v2.cu src/cuda/physics_v3.cu PROPERTIES LANGUAGE CUDA)
 
 set_target_properties(MESS PROPERTIES
         CUDA_SEPARABLE_COMPILATION ON)

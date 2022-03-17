@@ -1,6 +1,6 @@
-/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/rebuild_cache.dir
-/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/edit_cache.dir
-/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU.dir
-/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/MESS.dir
-/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/GPU_autogen.dir
-/home/leonard/geiles-projekt/gpu-praktikum/build/CMakeFiles/MESS_autogen.dir
+/home/theo/gpu-praktikum/build/CMakeFiles/edit_cache.dir
+/home/theo/gpu-praktikum/build/CMakeFiles/MESS.dir
+/home/theo/gpu-praktikum/build/CMakeFiles/rebuild_cache.dir
+/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir
+/home/theo/gpu-praktikum/build/CMakeFiles/MESS_autogen.dir
+/home/theo/gpu-praktikum/build/CMakeFiles/GPU_autogen.dir

@@ -9,6 +9,7 @@
 #include "../ui/ui_MainWindow.h"
 #include "ForceFieldPixmapItem.h"
 #include "../data/data.h"
+#include "AsteroidPixmapItem.h"
 
 class AsteroidsScene : public QGraphicsScene {
 	Q_OBJECT
@@ -16,7 +17,7 @@ public:
 	AsteroidsScene(std::vector<Asteroid>& asteroids, std::vector<ForceField>& forceFields, Ui::MainWindow* mainWindow);
 	void update();	
 	void updateMass(int index, int newMass);
-	void updateAsteroidUi(int index, int newMass);
+	void updateAsteroidUi(AsteroidPixmapItem* item, int index, int newMass);
 	void addForceField(QGraphicsSceneMouseEvent* event);
 	void addAsteroid(QGraphicsSceneMouseEvent* event);
 	void updateFastplace(int state);
