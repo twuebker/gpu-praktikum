@@ -3,6 +3,7 @@
 
 CMakeFiles/MESS.dir/src/mess/Main.cpp.o: ../src/cuda/physics_v1.cu
 CMakeFiles/MESS.dir/src/mess/Main.cpp.o: ../src/cuda/physics_v2.cu
+CMakeFiles/MESS.dir/src/mess/Main.cpp.o: ../src/cuda/physics_v3.cu
 CMakeFiles/MESS.dir/src/mess/Main.cpp.o: ../src/data/data.h
 CMakeFiles/MESS.dir/src/mess/Main.cpp.o: ../src/mess/CPU.cpp
 CMakeFiles/MESS.dir/src/mess/Main.cpp.o: ../src/mess/Main.cpp

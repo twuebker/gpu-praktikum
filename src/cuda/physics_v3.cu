@@ -6,15 +6,21 @@
 #include <thrust/device_vector.h>
 #include <stdio.h>
 
+#define blockSize  16
+#define blockFloat 16.0
+
 void __global__ calculate_forces_v3(Asteroid* d_a, float dt, int size, ForceField* d_f,
-        int sizeFF)    //DelteTime ist die Zeit die zwischen zwei Berechnungen vergeht. Mussen irgendwie
+        int sizeFF, float2* accs)
 {
-    extern __shared__ float2 accs[];
-    printf("IM KERNEL\n");
-    int i = threadIdx.x;
-    int j = threadIdx.y;
-    Asteroid* asteroidI = &d_a[i];
-    Asteroid* asteroidJ = &d_a[j];
+    int i = blockIdx.x * blockDim.x + threadIdx.x;
+    int j = blockIdx.y * blockDim.y + threadIdx.y;
+    
+    Asteroid* asteroidI;
+    Asteroid* asteroidJ;
+    if(i < size && j < size) {
+	   
+    	asteroidI = &d_a[i];
+    	asteroidJ = &d_a[j];
 
     float BIG_G = 9.81; //Gravitationkonstante, aber am Ende voll abhängig wie groß unsere Zahlen so sind
     float2 acc = {0, 0}; //Acceleration in x and y direction
@@ -63,55 +69,64 @@ void __global__ calculate_forces_v3(Asteroid* d_a, float dt, int size, ForceFiel
             }
         }
     }
-    accs[j*size+i].x = acc.x;
-    accs[j*size+i].y = acc.y;
-
+    accs[threadIdx.y * blockDim.x + threadIdx.x].x = acc.x;
+    accs[threadIdx.y * blockDim.x + threadIdx.x].y = acc.y;
+}
     __syncthreads(); //Synchronisiert alle Threads im Block. Können also so doch nur einen Block haben da sonst
     //die späteren Blocke mit veränderten Daten arbeiten
-    for (unsigned int s = 1; s<size; s *= 2)
+    // Size 5: Threads 0 - 4, shared arr size 25, i,j zwischen 0 - 4
+
+    for (unsigned int s = 1; s<blockDim.x; s *= 2)
     {
-        if (j%(2*s)==0)
+        if (threadIdx.y%(2*s)==0 && i < size && j < size && blockIdx.y * blockDim.y + (threadIdx.y + s) < size)
         {
-            accs[j*size+i].x += accs[(j+s)*size+i].x;
-            accs[j*size+i].y += accs[(j+s)*size+i].y;
+            accs[threadIdx.y* blockDim.x + threadIdx.x].x += accs[(threadIdx.y+s)*blockDim.x + threadIdx.x].x;
+            accs[threadIdx.y* blockDim.x + threadIdx.x].y += accs[(threadIdx.y+s)*blockDim.x + threadIdx.x].y;
         }
         __syncthreads();
     }
 
-    if (i==j)
+    if (threadIdx.x == threadIdx.y && i < size && j < size)
     {
         Asteroid* ast = &d_a[i];
-        ast->velocity.first += accs[i].x*dt;
-        ast->velocity.second += accs[i].y*dt;
-
-        ast->pos.first += ast->velocity.first*dt;
-        ast->pos.second += ast->velocity.second*dt;
-        if (i==1)
-        {
-            printf("adding %f, %f to ast 1\n", ast->velocity.first, ast->velocity.second);
-        }
-
+        ast->velocity.first += accs[threadIdx.x].x*dt;
+        ast->velocity.second += accs[threadIdx.x].y*dt;
     }
+
 
 }
 
-void freeDeviceMemory(Asteroid* d_asteroid, ForceField* d_forceField)
+void __global__ updatePositions(Asteroid* d_asteroid, int size, float dt) {
+	int i = blockIdx.x * blockDim.x + threadIdx.x;
+	if(i < size) {
+		Asteroid* ast = &d_asteroid[i];
+		ast->pos.first += ast->velocity.first * dt;
+		ast->pos.second += ast->velocity.second * dt;
+	}
+}
+
+
+void freeDeviceMemory_v3(Asteroid* d_asteroid, ForceField* d_forceField, float2* d_accs)
 {
     cudaFree(d_asteroid);
     cudaFree(d_forceField);
+    cudaFree(d_accs);
 }
 
-std::pair<Asteroid*, ForceField*> updateMemory(std::vector<Asteroid>& asteroids, std::vector<ForceField>& forceFields)
+std::tuple<Asteroid*, ForceField*, float2*> updateMemory_v3(std::vector<Asteroid>& asteroids, std::vector<ForceField>& forceFields)
 {
     Asteroid* d_asteroid;
     ForceField* d_forceField;
+    float2* d_accs;
     int size = sizeof(Asteroid)*asteroids.size();
     int sizeFF = sizeof(ForceField)*forceFields.size();
+    int sizeAccs = sizeof(float2)* blockSize * blockSize;
     cudaMalloc(&d_asteroid, size);
     cudaMalloc(&d_forceField, sizeFF);
+    cudaMalloc(&d_accs, sizeAccs);
     cudaMemcpy(d_asteroid, asteroids.data(), size, cudaMemcpyHostToDevice);
     cudaMemcpy(d_forceField, forceFields.data(), sizeFF, cudaMemcpyHostToDevice);
-    return std::make_pair(d_asteroid, d_forceField);
+    return std::make_tuple(d_asteroid, d_forceField, d_accs);
 }
 
 #define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
@@ -124,21 +139,20 @@ inline void gpuAssert(cudaError_t code, const char* file, int line, bool abort =
     }
 }
 
-void call_kernel_v3(Asteroid* a, Asteroid* d_asteroid, ForceField* d_forceField, int sizeAsteroids, int sizeForceFields)
+void call_kernel_v3(Asteroid* a, Asteroid* d_asteroid, ForceField* d_forceField, int sizeAsteroids, int sizeForceFields, float2* d_accs)
 {
     if (sizeAsteroids==0)
     {
         return;
     }
-    std::cout << "Kernel invoked" << std::endl;
-    int sharedArraySize = sizeof(float2)*sizeAsteroids*sizeAsteroids;
-    calculate_forces_v3<<<1, dim3(sizeAsteroids, sizeAsteroids), sharedArraySize>>>(d_asteroid, 0.1, sizeAsteroids,
-            d_forceField, sizeForceFields);
+	dim3 dim(std::ceil(sizeAsteroids / blockFloat), std::ceil(sizeAsteroids / blockFloat));
+    calculate_forces_v3<<<dim, dim3(blockSize, blockSize)>>>(d_asteroid, 0.1, sizeAsteroids,
+            d_forceField, sizeForceFields, d_accs);
     gpuErrchk(cudaPeekAtLastError());
     gpuErrchk(cudaDeviceSynchronize());
+
+    updatePositions<<<std::ceil(sizeAsteroids / blockFloat * blockFloat), blockSize * blockSize>>>(d_asteroid, sizeAsteroids, 0.1);	
+    
     cudaMemcpy(a, d_asteroid, sizeof(Asteroid)*sizeAsteroids, cudaMemcpyDeviceToHost);
-    if (sizeAsteroids>=2)
-    {
-        std::cout << "Pos: " << a[1].pos.first << "," << a[1].pos.second << std::endl;
-    }
 }
+

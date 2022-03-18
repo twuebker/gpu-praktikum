@@ -10,7 +10,9 @@ void __global__ calculate_forces(Asteroid* d_a, float dt, int size, ForceField* 
 	//in der MainLoop dafür die Zeit stoppen und hier übergeben
 	float BIG_G = 9.81; //Gravitationkonstante, aber am Ende voll abhängig wie groß unsere Zahlen so sind
 	int astId = blockIdx.x * blockDim.x + threadIdx.x;
-	Asteroid* ast = &d_a[astId];
+	Asteroid* ast;
+	if(astId < size) {
+	ast = &d_a[astId];
 	float2 acc = {0,0}; //Acceleration in x and y direction
 
 	for(int i = 0; i < size; i++){
@@ -53,18 +55,23 @@ void __global__ calculate_forces(Asteroid* d_a, float dt, int size, ForceField* 
 					break;		
 		}
 	}
-	__syncthreads(); //Synchronisiert alle Threads im Block. Können also so doch nur einen Block haben da sonst
-                        //die späteren Blocke mit veränderten Daten arbeiten
 
 
-	ast->velocity.first += acc.x * dt;
-	ast->velocity.second += acc.y * dt;
+		ast->velocity.first += acc.x * dt;
+		ast->velocity.second += acc.y * dt;
 
-	//printf("wert der draufkommt: %f, %f\n", ast->velocity.first * dt, ast->velocity.second * dt);
-	ast->pos.first += ast->velocity.first * dt;
-	ast->pos.second += ast->velocity.second * dt;
-
+		ast->pos.first += ast->velocity.first * dt;
+		ast->pos.second += ast->velocity.second * dt;
+	}
 }	
+
+void __global__ updatePositions_v1(Asteroid* d_asteroid, int size, float dt) {
+	if(blockIdx.x * blockDim.x + threadIdx.x < size) {
+		Asteroid* ast = &d_asteroid[blockIdx.x * blockDim.x + threadIdx.x];
+		ast->pos.first = ast->velocity.first;
+		ast->pos.second = ast->velocity.second;
+	}
+}
 
 void call_kernel_v1(std::vector<Asteroid>& asteroids, std::vector<ForceField>& forceFields)
 {
@@ -83,8 +90,9 @@ void call_kernel_v1(std::vector<Asteroid>& asteroids, std::vector<ForceField>& f
 	
     cudaMemcpy(d_asteroid, a,size, cudaMemcpyHostToDevice);
 	cudaMemcpy(d_forceField, f, sizeFF, cudaMemcpyHostToDevice);
-    calculate_forces<<<1, asteroids.size()>>>(d_asteroid, 0.1, asteroids.size(), d_forceField, forceFields.size());
+    calculate_forces<<<std::ceil(asteroids.size() / 256.0), 256>>>(d_asteroid, 0.1, asteroids.size(), d_forceField, forceFields.size());
     cudaMemcpy(a, d_asteroid, size, cudaMemcpyDeviceToHost);
+    updatePositions_v1<<<std::ceil(asteroids.size() / 256.0), 256>>>(d_asteroid, asteroids.size(), 0.1);
     cudaFree(d_asteroid);
 	cudaFree(d_forceField);
 }

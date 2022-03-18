@@ -19,6 +19,10 @@ GuiMainWindow.h
 /home/theo/gpu-praktikum/src/app/GuiMainWindow.h
 ../cuda/physics_v3.cu
 /home/theo/gpu-praktikum/src/cuda/physics_v3.cu
+cuda.h
+-
+cuda_runtime.h
+-
 
 /home/theo/gpu-praktikum/src/app/GuiMainWindow.h
 ../ui/ui_MainWindow.h
@@ -30,6 +34,8 @@ QtWidgets
 iostream
 -
 QTimer
+-
+utility
 -
 
 /home/theo/gpu-praktikum/src/app/Main.cpp

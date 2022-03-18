@@ -11,8 +11,10 @@ void __global__ calculate_forces_v2(Asteroid* d_a, float dt, int size, ForceFiel
 	//in der MainLoop dafür die Zeit stoppen und hier übergeben
 	float BIG_G = 9.81; //Gravitationkonstante, aber am Ende voll abhängig wie groß unsere Zahlen so sind
 	int astId = blockIdx.x * blockDim.x + threadIdx.x;
-	Asteroid* ast = &d_a[astId];
-	float2 acc = {0,0}; //Acceleration in x and y direction
+	float2 acc = {0,0};
+	Asteroid* ast;
+	if(astId < size) {	
+       	ast = &d_a[astId];
 
 	for(int i = 0; i < size; i++){
 		if(i == astId) continue; //Keine Gravity zu sich selber
@@ -54,17 +56,29 @@ void __global__ calculate_forces_v2(Asteroid* d_a, float dt, int size, ForceFiel
 					break;		
 		}
 	}
-	__syncthreads(); //Synchronisiert alle Threads im Block. Können also so doch nur einen Block haben da sonst
-                        //die späteren Blocke mit veränderten Daten arbeiten
-
-
+	
 	ast->velocity.first += acc.x * dt;
 	ast->velocity.second += acc.y * dt;
 	
-	ast->pos.first += ast->velocity.first * dt;
-	ast->pos.second += ast->velocity.second * dt;
-
+	}
 }	
+#define gpuErrchk_v2(ans) { gpuAssert_v2((ans), __FILE__, __LINE__); }
+inline void gpuAssert_v2(cudaError_t code, const char* file, int line, bool abort = true)
+{
+    if (code!=cudaSuccess)
+    {
+        fprintf(stderr, "GPUassert: %s %s %d\n", cudaGetErrorString(code), file, line);
+        if (abort) exit(code);
+    }
+}
+
+void __global__ updatePositions_v2(Asteroid* d_asteroid, int size, float dt) {
+	if(blockIdx.x * blockDim.x + threadIdx.x < size) {
+		Asteroid* ast = &d_asteroid[blockIdx.x * blockDim.x + threadIdx.x];
+		ast->pos.first += ast->velocity.first * dt;
+		ast->pos.second += ast->velocity.second * dt;
+	}
+}
 
 void freeDeviceMemory(Asteroid* d_asteroid, ForceField* d_forceField) {
 	cudaFree(d_asteroid);
@@ -88,6 +102,9 @@ void call_kernel_v2(Asteroid* a, Asteroid* d_asteroid, ForceField* d_forceField,
 	if(sizeAsteroids == 0) {
 		return;
 	}
-	calculate_forces_v2<<<1, sizeAsteroids>>>(d_asteroid, 0.1, sizeAsteroids, d_forceField, sizeForceFields);
+	calculate_forces_v2<<<std::ceil(sizeAsteroids / 256.0), 256>>>(d_asteroid, 0.1, sizeAsteroids, d_forceField, sizeForceFields);
+	gpuErrchk_v2(cudaPeekAtLastError());
+	gpuErrchk_v2(cudaDeviceSynchronize());
+	updatePositions_v2<<<std::ceil(sizeAsteroids / 256.0), 256>>>(d_asteroid, sizeAsteroids, 0.1);
 	cudaMemcpy(a, d_asteroid, sizeof(Asteroid) * sizeAsteroids, cudaMemcpyDeviceToHost);
 }

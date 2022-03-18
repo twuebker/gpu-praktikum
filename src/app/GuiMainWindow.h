@@ -6,6 +6,7 @@
 #include "../widgets/AsteroidsScene.h"
 #include <iostream>
 #include <QTimer>
+#include <utility>
 
 class GuiMainWindow : public QMainWindow, public Ui::MainWindow
 {

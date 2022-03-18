@@ -63,6 +63,8 @@ iostream
 -
 QTimer
 -
+utility
+-
 
 /home/theo/gpu-praktikum/src/data/data.h
 utility
