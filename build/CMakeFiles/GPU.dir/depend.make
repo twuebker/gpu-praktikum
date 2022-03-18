@@ -4,7 +4,7 @@
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/app/CreateForceFieldDialog.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/app/GuiMainWindow.cpp
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/app/GuiMainWindow.h
-CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/cuda/physics_v3.cu
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/cuda/physics_v2.cu
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/data/data.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/widgets/AsteroidPixmapItem.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/widgets/AsteroidsScene.h

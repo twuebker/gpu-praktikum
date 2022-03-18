@@ -1,6 +1,6 @@
-/home/theo/gpu-praktikum/build/CMakeFiles/edit_cache.dir
-/home/theo/gpu-praktikum/build/CMakeFiles/MESS.dir
-/home/theo/gpu-praktikum/build/CMakeFiles/rebuild_cache.dir
-/home/theo/gpu-praktikum/build/CMakeFiles/GPU.dir
-/home/theo/gpu-praktikum/build/CMakeFiles/MESS_autogen.dir
-/home/theo/gpu-praktikum/build/CMakeFiles/GPU_autogen.dir
+/home/daniel/gpu-praktikum/build/CMakeFiles/edit_cache.dir
+/home/daniel/gpu-praktikum/build/CMakeFiles/MESS.dir
+/home/daniel/gpu-praktikum/build/CMakeFiles/rebuild_cache.dir
+/home/daniel/gpu-praktikum/build/CMakeFiles/GPU.dir
+/home/daniel/gpu-praktikum/build/CMakeFiles/MESS_autogen.dir
+/home/daniel/gpu-praktikum/build/CMakeFiles/GPU_autogen.dir

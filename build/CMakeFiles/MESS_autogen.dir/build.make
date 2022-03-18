@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/theo/gpu-praktikum
+CMAKE_SOURCE_DIR = /home/daniel/gpu-praktikum
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/theo/gpu-praktikum/build
+CMAKE_BINARY_DIR = /home/daniel/gpu-praktikum/build
 
 # Utility rule file for MESS_autogen.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/theo/gpu-praktikum/build
 include CMakeFiles/MESS_autogen.dir/progress.make
 
 CMakeFiles/MESS_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/theo/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC, UIC and RCC for target MESS"
-	/usr/bin/cmake -E cmake_autogen /home/theo/gpu-praktikum/build/CMakeFiles/MESS_autogen.dir ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/daniel/gpu-praktikum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC, UIC and RCC for target MESS"
+	/usr/bin/cmake -E cmake_autogen /home/daniel/gpu-praktikum/build/CMakeFiles/MESS_autogen.dir ""
 
 MESS_autogen: CMakeFiles/MESS_autogen
 MESS_autogen: CMakeFiles/MESS_autogen.dir/build.make
@@ -72,6 +72,6 @@ CMakeFiles/MESS_autogen.dir/clean:
 .PHONY : CMakeFiles/MESS_autogen.dir/clean
 
 CMakeFiles/MESS_autogen.dir/depend:
-	cd /home/theo/gpu-praktikum/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/theo/gpu-praktikum /home/theo/gpu-praktikum /home/theo/gpu-praktikum/build /home/theo/gpu-praktikum/build /home/theo/gpu-praktikum/build/CMakeFiles/MESS_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/daniel/gpu-praktikum/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/daniel/gpu-praktikum /home/daniel/gpu-praktikum /home/daniel/gpu-praktikum/build /home/daniel/gpu-praktikum/build /home/daniel/gpu-praktikum/build/CMakeFiles/MESS_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/MESS_autogen.dir/depend
 

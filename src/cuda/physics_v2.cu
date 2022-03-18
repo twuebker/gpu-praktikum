@@ -80,12 +80,12 @@ void __global__ updatePositions_v2(Asteroid* d_asteroid, int size, float dt) {
 	}
 }
 
-void freeDeviceMemory(Asteroid* d_asteroid, ForceField* d_forceField) {
+void freeDeviceMemory_v2(Asteroid* d_asteroid, ForceField* d_forceField) {
 	cudaFree(d_asteroid);
 	cudaFree(d_forceField);
 }
 
-std::pair<Asteroid*, ForceField*> updateMemory(std::vector<Asteroid>& asteroids, std::vector<ForceField>& forceFields) {
+std::pair<Asteroid*, ForceField*> updateMemory_v2(std::vector<Asteroid>& asteroids, std::vector<ForceField>& forceFields) {
 	Asteroid* d_asteroid;
 	ForceField* d_forceField;
 	int size = sizeof(Asteroid) * asteroids.size();

@@ -30,7 +30,7 @@ void gpu_v1(std::vector<Asteroid> asteroids, std::vector<ForceField> forceFields
 
 void gpu_v2(std::vector<Asteroid> asteroids, std::vector<ForceField> forceFields, int iterations){
 	auto start = std::chrono::steady_clock::now();
-	std::pair<Asteroid*, ForceField*> data = updateMemory(asteroids, forceFields);
+	std::pair<Asteroid*, ForceField*> data = updateMemory_v2(asteroids, forceFields);
 	Asteroid* ast = data.first;
 	ForceField* fields = data.second;
 	for(int i = 0; i < iterations; i++){
