@@ -4,6 +4,7 @@
 #include <vector>
 #include <thrust/device_vector.h>
 #include <stdio.h>
+#include "../mess/MessSaver.h"
 
 void __global__ calculate_forces(Asteroid* d_a, float dt, int size, ForceField* d_f, int sizeFF) 	//DelteTime ist die Zeit die zwischen zwei Berechnungen vergeht. Mussen irgendwie
 {	
@@ -85,14 +86,29 @@ void call_kernel_v1(std::vector<Asteroid>& asteroids, std::vector<ForceField>& f
     ForceField* d_forceField;
     int size = sizeof(Asteroid) * asteroids.size();
 	int sizeFF = sizeof(ForceField) * forceFields.size();
-    cudaMalloc(&d_asteroid, size);
+
+	auto start = std::chrono::steady_clock::now();
+    	cudaMalloc(&d_asteroid, size);
 	cudaMalloc(&d_forceField, sizeFF);
 	
     cudaMemcpy(d_asteroid, a,size, cudaMemcpyHostToDevice);
 	cudaMemcpy(d_forceField, f, sizeFF, cudaMemcpyHostToDevice);
+	auto end = std::chrono::steady_clock::now();
+	float dif = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+	MessSaver::add("GPUV1 Hinkopieren", dif);
+	start = std::chrono::steady_clock::now();
     calculate_forces<<<std::ceil(asteroids.size() / 256.0), 256>>>(d_asteroid, 0.1, asteroids.size(), d_forceField, forceFields.size());
-    cudaMemcpy(a, d_asteroid, size, cudaMemcpyDeviceToHost);
+	
     updatePositions_v1<<<std::ceil(asteroids.size() / 256.0), 256>>>(d_asteroid, asteroids.size(), 0.1);
+	end = std::chrono::steady_clock::now();
+	dif = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+	MessSaver::add("GPUV1 Berechnen", dif);
+	start = std::chrono::steady_clock::now();
+    cudaMemcpy(a, d_asteroid, size, cudaMemcpyDeviceToHost);
     cudaFree(d_asteroid);
 	cudaFree(d_forceField);
+	end = std::chrono::steady_clock::now();
+	dif = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+	MessSaver::add("GPUV1 Zurückkopieren", dif);
+
 }

@@ -22,6 +22,7 @@ set(GPU_SOURCES
 	src/widgets/ForceFieldPixmapItem.cpp
 	src/widgets/MassSlider.cpp
 	src/app/CreateForceFieldDialog.cpp
+	src/mess/MessSaver.cpp
 	)
 
 find_package(CUDA 10.2 REQUIRED)
@@ -35,6 +36,7 @@ add_executable(GPU ${GPU_SOURCES} res.qrc)
 
 set(MESS_SOURCES 
 	src/mess/Main.cpp
+	src/mess/MessSaver.cpp
 	)
 
 add_executable(MESS ${MESS_SOURCES})

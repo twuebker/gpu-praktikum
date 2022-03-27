@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CUDA
-  "/home/daniel/gpu-praktikum/src/mess/Main.cpp" "/home/daniel/gpu-praktikum/build/CMakeFiles/MESS.dir/src/mess/Main.cpp.o"
+  "/home/theo/gpu-praktikum/src/mess/Main.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/MESS.dir/src/mess/Main.cpp.o"
   )
 set(CMAKE_CUDA_COMPILER_ID "NVIDIA")
 
@@ -27,7 +27,8 @@ set(CMAKE_CUDA_TARGET_INCLUDE_PATH
   "/usr/lib/aarch64-linux-gnu/qt5/mkspecs/linux-g++"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/daniel/gpu-praktikum/build/MESS_autogen/mocs_compilation.cpp" "/home/daniel/gpu-praktikum/build/CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.o"
+  "/home/theo/gpu-praktikum/build/MESS_autogen/mocs_compilation.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/MESS.dir/MESS_autogen/mocs_compilation.cpp.o"
+  "/home/theo/gpu-praktikum/src/mess/MessSaver.cpp" "/home/theo/gpu-praktikum/build/CMakeFiles/MESS.dir/src/mess/MessSaver.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

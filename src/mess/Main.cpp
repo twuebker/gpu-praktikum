@@ -9,23 +9,27 @@
 #include "../cuda/physics_v2.cu"
 #include "../cuda/physics_v3.cu"
 #include "CPU.cpp"
+#include "MessSaver.h"
 
 void cpu_v1(std::vector<Asteroid> asteroids, std::vector<ForceField> forceFields, int iterations){
-        auto start = std::chrono::steady_clock::now();
+	auto start = std::chrono::steady_clock::now();
 	for(int i = 0; i < iterations; i++){
                 cpu(asteroids, forceFields);
         }
 	auto end = std::chrono::steady_clock::now();
-	std::cout << "CPU took " << std::chrono::duration_cast<std::chrono::microseconds>(end - start).count() / iterations << " Microseconds per Iteration." << std::endl;
+        float dif = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+        MessSaver::add("GPUV1", dif);
 }
 
 void gpu_v1(std::vector<Asteroid> asteroids, std::vector<ForceField> forceFields, int iterations){
         auto start = std::chrono::steady_clock::now();
 	for(int i = 0; i < iterations; i++){
-                call_kernel_v1(asteroids, forceFields);
-        }
+		call_kernel_v1(asteroids, forceFields);
+	}
 	auto end = std::chrono::steady_clock::now();
-        std::cout << "GPUV1 took " << std::chrono::duration_cast<std::chrono::microseconds>(end - start).count() / iterations << " Microseconds per Iteration." << std::endl;
+        float dif = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+        MessSaver::add("GPUV1", dif);
+	
 }
 
 void gpu_v2(std::vector<Asteroid> asteroids, std::vector<ForceField> forceFields, int iterations){
@@ -37,7 +41,9 @@ void gpu_v2(std::vector<Asteroid> asteroids, std::vector<ForceField> forceFields
 		call_kernel_v2(asteroids.data(), ast, fields, asteroids.size(), forceFields.size()); 
 	}
 	auto end = std::chrono::steady_clock::now();
-        std::cout << "GPUV2 took " << std::chrono::duration_cast<std::chrono::microseconds>(end - start).count() / iterations << " Microsecondper Iteration." << std::endl;
+        float dif = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+        MessSaver::add("GPUV2", dif);
+
 }
 
 void gpu_v3(std::vector<Asteroid> asteroids, std::vector<ForceField> forceFields, int iterations) {
@@ -50,7 +56,9 @@ void gpu_v3(std::vector<Asteroid> asteroids, std::vector<ForceField> forceFields
                 call_kernel_v3(asteroids.data(), ast, fields, asteroids.size(), forceFields.size(), accs);
         }
 	auto end = std::chrono::steady_clock::now();
-        std::cout << "GPUV3 took " << std::chrono::duration_cast<std::chrono::microseconds>(end - start).count() / iterations << " Microseconds per Iteration." << std::endl;
+        float dif = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+        MessSaver::add("GPUV3", dif);
+
 }
 
 
@@ -104,7 +112,8 @@ int main(int argc, char* argv[]){
 
 		gpu_v3(asteroids, forceFields, iterations);
 	}
-
+	
+	MessSaver::printAll();
 
 	return 1;
 

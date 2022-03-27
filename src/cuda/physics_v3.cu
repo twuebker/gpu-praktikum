@@ -121,11 +121,15 @@ std::tuple<Asteroid*, ForceField*, float2*> updateMemory_v3(std::vector<Asteroid
     int size = sizeof(Asteroid)*asteroids.size();
     int sizeFF = sizeof(ForceField)*forceFields.size();
     int sizeAccs = sizeof(float2)* blockSize * blockSize;
+    auto start = std::chrono::steady_clock::now();
     cudaMalloc(&d_asteroid, size);
     cudaMalloc(&d_forceField, sizeFF);
     cudaMalloc(&d_accs, sizeAccs);
     cudaMemcpy(d_asteroid, asteroids.data(), size, cudaMemcpyHostToDevice);
     cudaMemcpy(d_forceField, forceFields.data(), sizeFF, cudaMemcpyHostToDevice);
+    auto end = std::chrono::steady_clock::now();
+    float dif = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+    MessSaver::add("GPUV3 Hinkopieren", dif);
     return std::make_tuple(d_asteroid, d_forceField, d_accs);
 }
 
@@ -146,13 +150,21 @@ void call_kernel_v3(Asteroid* a, Asteroid* d_asteroid, ForceField* d_forceField,
         return;
     }
 	dim3 dim(std::ceil(sizeAsteroids / blockFloat), std::ceil(sizeAsteroids / blockFloat));
+	auto start = std::chrono::steady_clock::now();
+
     calculate_forces_v3<<<dim, dim3(blockSize, blockSize)>>>(d_asteroid, 0.1, sizeAsteroids,
             d_forceField, sizeForceFields, d_accs);
     gpuErrchk(cudaPeekAtLastError());
     gpuErrchk(cudaDeviceSynchronize());
 
     updatePositions<<<std::ceil(sizeAsteroids / blockFloat * blockFloat), blockSize * blockSize>>>(d_asteroid, sizeAsteroids, 0.1);	
-    
+	auto end = std::chrono::steady_clock::now();
+    float dif = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+	 MessSaver::add("GPUV3 Berechnen", dif);
+     start = std::chrono::steady_clock::now();
     cudaMemcpy(a, d_asteroid, sizeof(Asteroid)*sizeAsteroids, cudaMemcpyDeviceToHost);
+    end = std::chrono::steady_clock::now();
+    dif = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+         MessSaver::add("GPUV3 Zurückkopieren", dif);
 }
 

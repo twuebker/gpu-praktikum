@@ -6,6 +6,7 @@ CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/app/GuiMainWindow.cpp
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/app/GuiMainWindow.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/cuda/physics_v2.cu
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/data/data.h
+CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/mess/MessSaver.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/widgets/AsteroidPixmapItem.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/widgets/AsteroidsScene.h
 CMakeFiles/GPU.dir/src/app/GuiMainWindow.cpp.o: ../src/widgets/ForceFieldPixmapItem.h
@@ -2386,6 +2387,9 @@ CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: /usr/include/aarch64-li
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidgetaction.h
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwizard.h
 CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o: GPU_autogen/ui/ui_ForceFieldDialog.h
+
+CMakeFiles/GPU.dir/src/mess/MessSaver.cpp.o: ../src/mess/MessSaver.cpp
+CMakeFiles/GPU.dir/src/mess/MessSaver.cpp.o: ../src/mess/MessSaver.h
 
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: ../src/data/data.h
 CMakeFiles/GPU.dir/src/widgets/AsteroidPixmapItem.cpp.o: ../src/widgets/AsteroidPixmapItem.cpp

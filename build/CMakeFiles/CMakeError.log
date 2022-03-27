@@ -54,3 +54,59 @@ Makefile:126: recipe for target 'cmTC_d621a/fast' failed
 make: *** [cmTC_d621a/fast] Error 2
 
 
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_84994/fast"
+/usr/bin/make -f CMakeFiles/cmTC_84994.dir/build.make CMakeFiles/cmTC_84994.dir/build
+make[1]: Entering directory '/home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_84994.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -std=gnu++1z -o CMakeFiles/cmTC_84994.dir/CheckSymbolExists.cxx.o -c /home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_84994
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84994.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_84994.dir/CheckSymbolExists.cxx.o  -o cmTC_84994 
+CMakeFiles/cmTC_84994.dir/CheckSymbolExists.cxx.o: In function `main':
+CheckSymbolExists.cxx:(.text+0x14): undefined reference to `pthread_create'
+CheckSymbolExists.cxx:(.text+0x18): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_84994.dir/build.make:97: recipe for target 'cmTC_84994' failed
+make[1]: *** [cmTC_84994] Error 1
+make[1]: Leaving directory '/home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_84994/fast' failed
+make: *** [cmTC_84994/fast] Error 2
+
+File /home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b4afa/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b4afa.dir/build.make CMakeFiles/cmTC_b4afa.dir/build
+make[1]: Entering directory '/home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b4afa.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -std=gnu++1z -o CMakeFiles/cmTC_b4afa.dir/CheckFunctionExists.cxx.o -c /home/theo/gpu-praktikum/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_b4afa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4afa.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_b4afa.dir/CheckFunctionExists.cxx.o  -o cmTC_b4afa -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b4afa.dir/build.make:97: recipe for target 'cmTC_b4afa' failed
+make[1]: *** [cmTC_b4afa] Error 1
+make[1]: Leaving directory '/home/theo/gpu-praktikum/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b4afa/fast' failed
+make: *** [cmTC_b4afa/fast] Error 2
+
+

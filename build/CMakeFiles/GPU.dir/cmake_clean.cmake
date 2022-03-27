@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/GPU.dir/src/widgets/ForceFieldPixmapItem.cpp.o"
   "CMakeFiles/GPU.dir/src/widgets/MassSlider.cpp.o"
   "CMakeFiles/GPU.dir/src/app/CreateForceFieldDialog.cpp.o"
+  "CMakeFiles/GPU.dir/src/mess/MessSaver.cpp.o"
   "CMakeFiles/GPU.dir/GPU_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/GPU.dir/GPU_autogen/EWIEGA46WW/qrc_res.cpp.o"
   "CMakeFiles/GPU.dir/cmake_device_link.o"

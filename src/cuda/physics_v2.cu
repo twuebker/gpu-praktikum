@@ -5,6 +5,7 @@
 #include <utility>
 #include <thrust/device_vector.h>
 #include <stdio.h>
+#include "../mess/MessSaver.h"
 
 void __global__ calculate_forces_v2(Asteroid* d_a, float dt, int size, ForceField* d_f, int sizeFF) 	//DelteTime ist die Zeit die zwischen zwei Berechnungen vergeht. Mussen irgendwie
 {	
@@ -90,10 +91,15 @@ std::pair<Asteroid*, ForceField*> updateMemory_v2(std::vector<Asteroid>& asteroi
 	ForceField* d_forceField;
 	int size = sizeof(Asteroid) * asteroids.size();
 	int sizeFF = sizeof(ForceField) * forceFields.size();
+	auto start = std::chrono::steady_clock::now();
 	cudaMalloc(&d_asteroid, size);
 	cudaMalloc(&d_forceField, sizeFF);
 	cudaMemcpy(d_asteroid, asteroids.data(), size, cudaMemcpyHostToDevice);
 	cudaMemcpy(d_forceField, forceFields.data(), sizeFF, cudaMemcpyHostToDevice);
+	auto end = std::chrono::steady_clock::now();
+        float dif = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+        MessSaver::add("GPUV2 Hinkopieren", dif);
+
 	return std::make_pair(d_asteroid, d_forceField);
 }
 
@@ -102,9 +108,18 @@ void call_kernel_v2(Asteroid* a, Asteroid* d_asteroid, ForceField* d_forceField,
 	if(sizeAsteroids == 0) {
 		return;
 	}
+	auto start = std::chrono::steady_clock::now();
 	calculate_forces_v2<<<std::ceil(sizeAsteroids / 256.0), 256>>>(d_asteroid, 0.1, sizeAsteroids, d_forceField, sizeForceFields);
-	gpuErrchk_v2(cudaPeekAtLastError());
-	gpuErrchk_v2(cudaDeviceSynchronize());
+	//gpuErrchk_v2(cudaPeekAtLastError());
+	//gpuErrchk_v2(cudaDeviceSynchronize());
 	updatePositions_v2<<<std::ceil(sizeAsteroids / 256.0), 256>>>(d_asteroid, sizeAsteroids, 0.1);
+	auto end = std::chrono::steady_clock::now();
+	float dif = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+	MessSaver::add("GPUV2 Berechnen", dif);
+	start = std::chrono::steady_clock::now();
 	cudaMemcpy(a, d_asteroid, sizeof(Asteroid) * sizeAsteroids, cudaMemcpyDeviceToHost);
+	end = std::chrono::steady_clock::now();
+	dif = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+	MessSaver::add("GPUV2 Zurückkopieren", dif);
+
 }
